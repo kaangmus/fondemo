@@ -51,50 +51,51 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-            <h4 class="text-center">Emergency funds</h4>
-            @foreach ($fundposts as $key=>$fundpost)
-              <div class="latest_news  flex-column flex-md-row">
-                  <a href="{{$fundpost->link}}" target="_blank">
-                   
-                        @if($fundpost->featured_image)
-                        <img src="{{ $fundpost->featured_image->getUrl('medium') }}" alt="#" class="mr-3 wh-100">
-                        @endif
-                  </a>
-                  <div class="media-body align-self-center">
-                    <a href="{{$fundpost->link}}">
-                      <h6>{!!$fundpost->title!!}</h6>
-                    </a>
-                    <a href="{{$fundpost->link}}" class="news_paragraph">
-                      <p>{!!$fundpost->excerpt!!}</p>
-                    </a>
-                  </div>
-              </div>
-             @endforeach 
-            <h4 class="text-center">Focused Articles</h4>
-            @foreach ($faposts as $key=>$fapost)
-              <div class="latest_news  flex-column flex-md-row">
-                  <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif">
-                    @if($fapost->featured_image)
-                    <img src="{{ $fapost->featured_image->getUrl('medium') }}" alt="#" class="mr-3 wh-100">
-                    @endif
-                  </a>
-                  <div class="media-body align-self-center">
-                    <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif">
-                      <h6>{!!$fapost->title!!}</h6>
-                    </a>
-                    <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" class="news_paragraph">
-                      <p>{!!$fapost->excerpt!!}</p>
-                    </a>
-                  </div>
-              </div>
-            @endforeach
+        <h4 class="text-center">Emergency funds</h4>
+        @foreach ($fundposts as $key=>$fundpost)
+        <div class="latest_news  flex-column flex-md-row">
+          <a href="{{$fundpost->link}}" target="_blank">
+
+            @if($fundpost->featured_image)
+            <img src="{{ $fundpost->featured_image->getUrl('medium') }}" alt="#" class="mr-3 wh-100">
+            @endif
+          </a>
+          <div class="media-body align-self-center">
+            <a href="{{$fundpost->link}}">
+              <h6>{!!$fundpost->title!!}</h6>
+            </a>
+            <a href="{{$fundpost->link}}" class="news_paragraph">
+              <p>{!!$fundpost->excerpt!!}</p>
+            </a>
+          </div>
         </div>
+        @endforeach
+        <h4 class="text-center">Focused Articles</h4>
+        @foreach ($faposts as $key=>$fapost)
+        <div class="latest_news  flex-column flex-md-row">
+          <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif">
+            @if($fapost->featured_image)
+            <img src="{{ $fapost->featured_image->getUrl('medium') }}" alt="#" class="mr-3 wh-100">
+            @endif
+          </a>
+          <div class="media-body align-self-center">
+            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif">
+              <h6>{!!$fapost->title!!}</h6>
+            </a>
+            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" class="news_paragraph">
+              <p>{!!$fapost->excerpt!!}</p>
+            </a>
+          </div>
+        </div>
+        @endforeach
+      </div>
       <!-- end col-md-4-->
       <div class="col-md-8">
         <div class="post-thumb ts-resize">
-           <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" rel="bookmark" title="Bel-Air anchored by a multi level mansion property complete">
+          <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" rel="bookmark"
+            title="Bel-Air anchored by a multi level mansion property complete">
             @if($larges->featured_image)
-                <img src="{{ $larges->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
+            <img src="{{ $larges->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
             @endif
           </a>
           <div class="new_second_text">
@@ -107,10 +108,11 @@
           </a>
         </div>
         <div class="row">
-         @foreach ($mediums as $key=>$medium)
+          @foreach ($mediums as $key=>$medium)
           <div class="col-md-6">
             <div class="post-thumb ts-resize">
-              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" rel="bookmark" title="Bel-Air anchored by a multi level mansion property complete">
+              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" rel="bookmark"
+                title="Bel-Air anchored by a multi level mansion property complete">
                 @if($medium->featured_image)
                 <img src="{{ $medium->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
                 @endif
@@ -125,8 +127,8 @@
               </a>
             </div>
           </div>
-         @endforeach 
-          
+          @endforeach
+
         </div>
       </div>
       <!-- row -->
