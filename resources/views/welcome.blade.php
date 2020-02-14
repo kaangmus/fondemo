@@ -467,9 +467,9 @@
 <section id='instagram'>
   <h1 class='maincolor text-center'>Follow Us On Instagram</h1>
   <!-- LightWidget WIDGET -->
-  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
-    src="//lightwidget.com/widgets/49165ff706375b139e92779080940213.html" scrolling="no" allowtransparency="true"
-    class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+  <!-- SnapWidget -->
+ 
+ 
 </section>
 {{-- instagram  --}}
 @endsection
