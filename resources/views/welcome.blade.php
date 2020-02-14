@@ -475,7 +475,7 @@
 @endsection
 @section('scripts')
 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script defer>
   var locations = [
     ['Bondi Beach', -33.890542, 151.274856, 4],
