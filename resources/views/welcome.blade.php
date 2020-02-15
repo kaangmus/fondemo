@@ -6,7 +6,7 @@
     <div id="ensign-nivoslider" class="slides">
       @foreach($sliders as $key => $slider)
       @if($slider->image)
-      <img src="{{ asset($slider->image->getUrl('large')) }}" alt="" title="#slider-direction-{{ $slider->id ?? '' }}" />
+      <img src="{{ asset($slider->image->getUrl()) }}" alt="" title="#slider-direction-{{ $slider->id ?? '' }}" />
       @endif
       @endforeach
     </div>
