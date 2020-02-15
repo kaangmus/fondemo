@@ -6,7 +6,7 @@
     <div id="ensign-nivoslider" class="slides">
       @foreach($sliders as $key => $slider)
       @if($slider->image)
-      <img src="{{ asset($slider->image->getUrl()) }}" alt="" title="#slider-direction-{{ $slider->id ?? '' }}" />
+      <img src="{{ asset($slider->image->getUrl('large')) }}" alt="" title="#slider-direction-{{ $slider->id ?? '' }}" />
       @endif
       @endforeach
     </div>
@@ -18,7 +18,7 @@
             <div class="slider-content">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                <h1 id="fontsize">{{ $slider->title ?? '' }}</h1>
+                <h2 class="maincolor text-light text-center">{{ $slider->title ?? '' }}</h2>
               </div>
               <!-- layer 2 -->
               <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
