@@ -1214,6 +1214,7 @@ section.post a {
 .new_second_text p {
     margin: 0;
     font-size: 14px;
+    text-transform: uppercase;
 }
 a.news_paragraph p {
     font-size: 14px;
