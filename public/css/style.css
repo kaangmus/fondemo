@@ -1210,7 +1210,8 @@ section.post a {
     Impact,
     sans-serif;
 }
-.new_third_text p {
+.new_third_text p,
+.new_second_text p {
     margin: 0;
     font-size: 14px;
 }
