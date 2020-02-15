@@ -41,6 +41,7 @@ class Slider extends Model implements HasMedia
     {
         $this->addMediaConversion('thumb')
             ->withResponsiveImages();
+       $this->addMediaConversion('large')->width(1700)->height(850);
         $this->addMediaConversion('grayscale')
              ->greyscale()
             ->withResponsiveImages();
@@ -53,6 +54,7 @@ class Slider extends Model implements HasMedia
         if ($file) {
             $file->url       = $file->getUrl();
             $file->thumbnail = $file->getUrl('thumb');
+            $file->large = $file->getUrl('large');
         }
 
         return $file;

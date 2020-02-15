@@ -403,9 +403,12 @@ img.rimage{
     margin-right: 20px;
 }
 nav.navbar.navbar-expand-lg.fixed-top.myheader.sticky {
-    background-image: url(/images/menubg.gif);
+   background-color: #ffffff;
     box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, .1);
     background-size: cover;
+}
+nav.navbar.navbar-expand-lg.fixed-top.myheader.is_desktop.sticky a {
+    color: #000;
 }
 nav.navbar.navbar-expand-lg.fixed-top.myheader a,nav.navbar.navbar-expand-lg.fixed-top.myheader svg{
     color: #ffffff;
@@ -1195,4 +1198,12 @@ section.post a {
 .wh-100 {
     width: 100px;
     height: 100px;
+}
+.new_third_text h3 p {
+    font-size: 27px;
+    font-weight: 500;
+    margin: 0;
+    font-family: Fjalla One,
+    Impact,
+    sans-serif;
 }

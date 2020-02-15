@@ -156,6 +156,7 @@
 <script>
    
     CKEDITOR.replace( 'page_text', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
+    CKEDITOR.replace( 'excerpt', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
    
 </script>
 <script>

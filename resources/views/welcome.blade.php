@@ -112,7 +112,7 @@
               <div class="new_third_text">
                 <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" @if($medium->link)target="_blank"@endif>
                   <h6>{{$medium->title}}</h6>
-                  <h3>{{$medium->excerpt}}</h3>
+                  <h3>{!!$medium->excerpt!!}</h3>
                   <span><i class="fas fa-bars"></i> READ</span>
                 </a>
               </div>
@@ -390,7 +390,7 @@
 <div id='species_essay' class="grants_home bg-dark">
   <img src="{{asset('images/sub_banner.png')}}" alt="Snow" style="width:100%;">
   <div class="centered">
-    <h1 class="maincolor text-light">SPECIES & ESSAY</h1>
+    <h1 class="maincolor text-light">SPEECHES & ESSAYS</h1>
     <a href="#">
       <h3 class="text-center">THE LIVING SEA Portugal National Museum of Natural History and Science</h3>
     </a>
@@ -472,9 +472,7 @@
 @endsection
 @section('scripts')
 
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHE3I3Mio2UB-X5CReLaSEc5L1cOV-If0&callback=initMap">
-</script>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script defer>
   var locations = [
     ['Bondi Beach', -33.890542, 151.274856, 4],
