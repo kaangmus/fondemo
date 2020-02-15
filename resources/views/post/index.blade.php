@@ -19,7 +19,7 @@
 <section class="post">
    <div class="container py-3">
         @foreach ($posts as $post)
-        <a href="/post/{{$post->id}}">
+        <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" @if($fapost->link)target="_blank"@endif">
                 <div class="row justify-content-center my-5 ">
                     <div class="col-md-4">
                         @if($post->featured_image)

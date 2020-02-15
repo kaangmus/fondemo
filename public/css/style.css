@@ -758,7 +758,15 @@ div#species_essay img {
     bottom: 8px;
     right: 16px;
 }
-
+.toped {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h2.maincolor.text-center.grant_tcolor {
+    color: yellow;
+}
 .centered {
     position: absolute;
     top: 50%;

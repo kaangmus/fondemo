@@ -24,7 +24,7 @@ class WelcomeController extends Controller
         foreach ($larges as $key => $large) {
             $larges=$large;
         }
-        $faposts = Contentpage::where('type','small')->whereHas('categories', function($q){$q->whereIn('name', ['Focused Articles']);})->orderBy('published_at', 'asc')->take(6)->get();
+        $faposts = Contentpage::where('type','small')->whereHas('categories', function($q){$q->whereIn('name', ['Focused Articles']);})->orderBy('published_at', 'desc')->take(6)->get();
         
         $fundposts = Contentpage::where('type','small')->whereHas('categories', function($q){$q->whereIn('name', ['Emergency funds']);})->orderBy('published_at', 'desc')->take(2)->get();
        

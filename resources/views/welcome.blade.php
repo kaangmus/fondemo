@@ -44,12 +44,6 @@
 <section id="blog">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1 class='maincolor'>EXPLORE TODAY</h1>
-        <p>Through the eyes of our Explorers, photographers, journalists, and filmmakers</p>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-md-4">
         <h4 class="text-center">Emergency funds</h4>
         @foreach ($fundposts as $key=>$fundpost)
@@ -140,7 +134,7 @@
       <div class="col-md-6 who_we_are">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="maincolor">who we are</h2>
+            <h2 class="maincolor">WHO WE ARE</h2>
           </div>
         </div>
         <div class="row">
@@ -163,7 +157,7 @@
       <div class="col-md-6 advisor">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="maincolor">advisor</h2>
+            <h2 class="maincolor">ADVISERS</h2>
           </div>
         </div>
         <div class="row">
@@ -189,11 +183,12 @@
 <!-- Grands -->
 <div id="grants_homeid" class="grants_home">
   <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
-  <div class="centered">
-    <h1 class="bannertitle text-light text-center">GRANTS</h1>
-    <h1 class="bannertitle text-light text-center">PARTICIPATE IN THE PROJECTS YOU CARE
-      ABOUT:$<?php echo number_format($ngopricestotal); ?></h1>
-    <button class="btn donate_btn" type="button">view details</button>
+  <div class="toped">
+    <a href="/grants" class="grants_button">
+    <h2 class="maincolor text-center grant_tcolor">GRANTS TIMELINE</h2>
+    <h2 class="maincolor text-light text-center">USD <?php echo number_format($ngopricestotal); ?> FOCUSED ON NATURE GRANTS TO WILDLIFE CONSERVATION PROJECTS SINCE 2009
+     </h2>
+   </a>
   </div>
 </div>
 {{-- end grands --}}

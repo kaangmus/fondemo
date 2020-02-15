@@ -18,6 +18,16 @@ class CreateAdvisorsTable extends Migration
             $table->longText('description')->nullable();
 
             $table->string('status');
+             
+            $table->string('facebook')->nullable();
+
+            $table->string('instagram')->nullable();
+              
+            $table->string('email')->nullable();
+
+            $table->string('twitter')->nullable();
+
+            $table->string('website')->nullable();
             
             $table->date('published_at')->nullable();
             
