@@ -424,13 +424,13 @@ li.nav-item.social {
 nav.navbar.navbar-expand-lg.fixed-top.myheader .dropdown-menu a {
     color: #000;
 }
-/* nav.navbar.navbar-expand-lg.fixed-top.myheader.sticky a,nav.navbar.navbar-expand-lg.fixed-top.myheader.sticky svg,
+nav.navbar.navbar-expand-lg.fixed-top.myheader.sticky a,nav.navbar.navbar-expand-lg.fixed-top.myheader.sticky svg,
 nav.navbar.navbar-expand-lg.fixed-top.myheader.sticky>
 .dropdown-toggle::before {
-    color: #4F9DBD;
-    fill:#4F9DBD;
+    color: #000;
+    fill:#000;
     
-} */
+} 
 
 button.btn.donate_btn {
     background: #e45832;
