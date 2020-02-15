@@ -94,8 +94,8 @@
           <div class="new_second_text">
             <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" @if($larges->link)target="_blank"@endif>
               <h6>{{$larges->title}}</h6>
-              <h3>{!!$larges->excerpt!!}</h3>
-              <span><i class="fas fa-bars"></i> READ</span>
+              <p>{!!$larges->excerpt!!}</p>
+      
             </a>
           </div>
           </a>
@@ -112,8 +112,8 @@
               <div class="new_third_text">
                 <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" @if($medium->link)target="_blank"@endif>
                   <h6>{{$medium->title}}</h6>
-                  <h3>{!!$medium->excerpt!!}</h3>
-                  <span><i class="fas fa-bars"></i> READ</span>
+                  <p>{!!$medium->excerpt!!}</p>
+       
                 </a>
               </div>
               </a>

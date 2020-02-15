@@ -5,6 +5,9 @@
 h1,h2,h3,h4,h5,h6{
     font-family: Fjalla One, Impact, sans-serif;
 }
+h6{
+    font-size: 18px;
+}
 .container{
     max-width: 1450px;
 }
@@ -1206,4 +1209,10 @@ section.post a {
     font-family: Fjalla One,
     Impact,
     sans-serif;
+}
+.new_third_text p {
+    margin: 0;
+}
+a.news_paragraph p {
+    font-size: 14px;
 }
