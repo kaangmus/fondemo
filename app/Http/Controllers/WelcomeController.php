@@ -15,8 +15,8 @@ class WelcomeController extends Controller
     public function index()
     {
         $sliders = Slider::orderBy('published_at', 'desc')->take(20)->get();
-        $advisors=Advisor::where('status','advisor')->orderBy('published_at', 'desc')->get();
-        $whoweares=Advisor::where('status','whoweare')->orderBy('published_at', 'desc')->get();
+        $advisors=Advisor::where('status','advisor')->orderBy('published_at', 'asc')->get();
+        $whoweares=Advisor::where('status','whoweare')->orderBy('published_at', 'asc')->get();
         
         
         $mediums=Contentpage::where('type','medium')->orderBy('published_at','desc')->take(2)->get();
