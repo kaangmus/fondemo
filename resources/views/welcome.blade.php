@@ -64,7 +64,8 @@
           </div>
         </div>
         @endforeach
-        <h4 class="text-center">Focused Articles</h4>
+        <span class="p-1"></span>
+       <h4 class="text-center">Focused Articles</h4>
         @foreach ($faposts as $key=>$fapost)
         <div class="latest_news  flex-column flex-md-row">
           <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" @if($fapost->link)target="_blank"@endif>
@@ -93,7 +94,7 @@
           </a>
           <div class="new_second_text">
             <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" @if($larges->link)target="_blank"@endif>
-              <h6>{{$larges->title}}</h6>
+              <h3>{{$larges->title}}</h3>
               <p>{!!$larges->excerpt!!}</p>
       
             </a>
@@ -111,7 +112,7 @@
               </a>
               <div class="new_third_text">
                 <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" @if($medium->link)target="_blank"@endif>
-                  <h6>{{$medium->title}}</h6>
+                  <h3>{{$medium->title}}</h3>
                   <p>{!!$medium->excerpt!!}</p>
        
                 </a>
@@ -141,7 +142,7 @@
           @foreach ($whoweares as $whoweare)
           <div class="advisor col-md-6 col-xs-6">
             @if($whoweare->photp)
-            <img src="{{$whoweare->photp->getUrl('thumb')}}" alt="#" class="mr-3 advisor"
+            <img src="{{$whoweare->photp->getUrl()}}" alt="#" class="mr-3 advisor"
               style="width:100px;height:100px">
             @endif
             <div class="advisor_text">
@@ -164,7 +165,7 @@
           @foreach ($advisors as $key=>$advisor)
           <div class="col-md-6 col-xs-6 advisor mb-2">
             @if($advisor->photp)
-            <img src="{{$advisor->photp->getUrl('thumb')}}" alt="#" class="mr-3 advisor"
+            <img src="{{$advisor->photp->getUrl()}}" alt="#" class="mr-3 advisor"
               style="width:100px;height:100px">
             @endif
             <div class="advisor_text">
