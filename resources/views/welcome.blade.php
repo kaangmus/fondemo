@@ -61,10 +61,10 @@
             @endif
           </a>
           <div class="media-body align-self-center">
-            <a href="{{$fundpost->link}}">
+            <a href="{{$fundpost->link}}" target="_blank">
               <h6>{!!$fundpost->title!!}</h6>
             </a>
-            <a href="{{$fundpost->link}}" class="news_paragraph">
+            <a href="{{$fundpost->link}}" class="news_paragraph" target="_blank">
               <p>{!!$fundpost->excerpt!!}</p>
             </a>
           </div>
@@ -73,16 +73,16 @@
         <h4 class="text-center">Focused Articles</h4>
         @foreach ($faposts as $key=>$fapost)
         <div class="latest_news  flex-column flex-md-row">
-          <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif">
+          <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" @if($fapost->link)target="_blank"@endif>
             @if($fapost->featured_image)
             <img src="{{ $fapost->featured_image->getUrl('medium') }}" alt="#" class="mr-3 wh-100">
             @endif
           </a>
           <div class="media-body align-self-center">
-            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif">
+            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" @if($fapost->link)target="_blank"@endif>
               <h6>{!!$fapost->title!!}</h6>
             </a>
-            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" class="news_paragraph">
+            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" class="news_paragraph" @if($fapost->link)target="_blank"@endif>
               <p>{!!$fapost->excerpt!!}</p>
             </a>
           </div>
@@ -92,14 +92,13 @@
       <!-- end col-md-4-->
       <div class="col-md-8">
         <div class="post-thumb ts-resize">
-          <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" rel="bookmark"
-            title="Bel-Air anchored by a multi level mansion property complete">
+          <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" @if($larges->link)target="_blank"@endif>
             @if($larges->featured_image)
             <img src="{{ $larges->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
             @endif
           </a>
           <div class="new_second_text">
-            <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif">
+            <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" @if($larges->link)target="_blank"@endif>
               <h6>{{$larges->title}}</h6>
               <h3>{!!$larges->excerpt!!}</h3>
               <span><i class="fas fa-bars"></i> READ</span>
@@ -111,14 +110,13 @@
           @foreach ($mediums as $key=>$medium)
           <div class="col-md-6">
             <div class="post-thumb ts-resize">
-              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" rel="bookmark"
-                title="Bel-Air anchored by a multi level mansion property complete">
+              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" @if($medium->link)target="_blank"@endif>
                 @if($medium->featured_image)
                 <img src="{{ $medium->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
                 @endif
               </a>
               <div class="new_third_text">
-                <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif">
+                <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" @if($medium->link)target="_blank"@endif>
                   <h6>{{$medium->title}}</h6>
                   <h3>{{$medium->excerpt}}</h3>
                   <span><i class="fas fa-bars"></i> READ</span>
@@ -478,8 +476,10 @@
 {{-- instagram  --}}
 @endsection
 @section('scripts')
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHE3I3Mio2UB-X5CReLaSEc5L1cOV-If0&callback=initMap">
+</script>
 <script defer>
   var locations = [
     ['Bondi Beach', -33.890542, 151.274856, 4],
