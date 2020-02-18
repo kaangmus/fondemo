@@ -66,7 +66,7 @@
           </div>
         </div>
         @endforeach
-        <span class="p-1"></span>
+        <h4 class="p-1"></h4>
        <h4 class="text-center">Focused Articles</h4>
         @foreach ($faposts as $key=>$fapost)
         <div class="latest_news  flex-column flex-md-row">
