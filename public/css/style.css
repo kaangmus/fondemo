@@ -1219,3 +1219,9 @@ section.post a {
 a.news_paragraph p {
     font-size: 14px;
 }
+.exb-item{
+    border-bottom: 1px solid #cad4f6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: background-color ease-in-out 0.3s;
+}

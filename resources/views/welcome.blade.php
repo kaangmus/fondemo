@@ -232,160 +232,7 @@
 {{-- end google map --}}
 
 {{-- exivation timeline --}}
-<section id="exhibiton" class="exhibiton_section">
-  <h1 class="text-center maincolor">Exhibiton Timeline</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <section class="cd-horizontal-timeline">
-          <div class="timeline">
-            <div class="events-wrapper">
-              <div class="events">
-                <ol>
-                  <li><a href="#0" data-date="01/09/2015" class="selected">2015</a></li>
-                  <li><a href="#0" data-date="01/09/2016">2016</a></li>
-                  <li><a href="#0" data-date="01/09/2017">2017</a></li>
-                  <li><a href="#0" data-date="01/09/2018">2018</a></li>
-                  <li><a href="#0" data-date="01/09/2019">2019</a></li>
-                  <li><a href="#0" data-date="01/09/2020">2020</a></li>
-                </ol>
-                <span class="filling-line" aria-hidden="true"></span>
-              </div>
-              <!-- .events -->
-            </div>
-            <!-- .events-wrapper -->
-            <ul class="cd-timeline-navigation">
-              <li><a href="#0" class="prev inactive">Prev</a></li>
-              <li><a href="#0" class="next">Next</a></li>
-            </ul>
-            <!-- .cd-timeline-navigation -->
-          </div>
-          <!-- .timeline -->
-          <div class="events-content">
-            <ol>
-              <li class="selected" data-date="16/01/2014">
-                <h2>An Introduction to Infosec</h2>
-                <em>January, 2017</em>
-                <p>
-                  Back in January, 2017 I began my journey of studies into different areas of infosec to see if it was a
-                  challenge I would enjoy and a future prospect for further learning through college.
-                </p>
-              </li>
-              <li data-date="01/09/2015">
-                <h2>Fanshawe College Cyber Security</h2>
-                <em>September, 2017</em>
-                <p>
-                  In September, 2018 I enrolled into the Cyber Security course at Fanshawe College.
-                </p>
-                <br>
-                <p>Key courses include: </p>
-              </li>
-              <li data-date="01/12/2017">
-                <h2>CTF</h2>
-                <em>December, 2017</em>
-                <p>
-                  Participated in CTF.
-                </p>
-              </li>
-              <li data-date="01/03/2018">
-                <h2>Event title here</h2>
-                <em>May 20th, 2014</em>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae
-                  ipsa,
-                  quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur
-                  quae, ut
-                  harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                  quibusdam
-                  quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-              </li>
-              <li data-date="01/09/2016">
-                <h2>Event title here</h2>
-                <em>July 9th, 2014</em>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae
-                  ipsa,
-                  quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur
-                  quae, ut
-                  harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                  quibusdam
-                  quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-              </li>
-              <li data-date="01/09/2017">
-                <h2>Event title here</h2>
-                <em>August 30th, 2014</em>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae
-                  ipsa,
-                  quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur
-                  quae, ut
-                  harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                  quibusdam
-                  quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-              </li>
-              <li data-date="01/09/2018">
-                <h2>Event title here</h2>
-                <em>September 15th, 2014</em>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae
-                  ipsa,
-                  quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur
-                  quae, ut
-                  harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                  quibusdam
-                  quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-              </li>
-              <li data-date="01/09/2019">
-                <h2>Event title here</h2>
-                <em>November 1st, 2014</em>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae
-                  ipsa,
-                  quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur
-                  quae, ut
-                  harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                  quibusdam
-                  quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-              </li>
-              <li data-date="01/09/2020">
-                <h2>Event title here</h2>
-                <em>December 10th, 2014</em>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae
-                  ipsa,
-                  quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur
-                  quae, ut
-                  harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                  quibusdam
-                  quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-              </li>
-              <li data-date="19/01/2015">
-                <h2>Event title here</h2>
-                <em>January 19th, 2015</em>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae
-                  ipsa,
-                  quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur
-                  quae, ut
-                  harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet
-                  quibusdam
-                  quisquam, quae, temporibus dolores porro doloribus.
-                </p>
-              </li>
-            </ol>
-          </div>
-          <!-- .events-content -->
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
+@include('exhibition')
 {{-- exbition timeline --}}
 {{-- species essay --}}
 <div id='species_essay' class="grants_home bg-dark">
@@ -472,7 +319,12 @@
 {{-- instagram  --}}
 @endsection
 @section('scripts')
-
+<script type="text/javascript">
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+</script>
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script defer>
   var locations = [

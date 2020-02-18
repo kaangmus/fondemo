@@ -48,4 +48,9 @@ class Year extends Model
     {
         return $this->hasMany('App\NgoPrice','year_id');
     }
+
+    public function yearExhibationCategories()
+    {
+        return $this->hasMany(ExhibationCategory::class, 'year_id', 'id');
+    }
 }
