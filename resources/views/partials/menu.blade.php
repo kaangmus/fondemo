@@ -114,7 +114,69 @@
                         </ul>
                     </li>
                 @endcan
-              
+              @can('exhibitation_access')
+                    <li class="nav-item has-treeview {{ request()->is('admin/exhibation-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/years*') ? 'menu-open' : '' }} {{ request()->is('admin/exhibition-posts*') ? 'menu-open' : '' }} {{ request()->is('admin/exhibition-galleries*') ? 'menu-open' : '' }}">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="fa-fw fas fa-cogs">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.exhibitation.title') }}</span>
+                                <i class="right fa fa-fw fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            @can('exhibation_category_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.exhibation-categories.index") }}" class="nav-link {{ request()->is('admin/exhibation-categories') || request()->is('admin/exhibation-categories/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.exhibationCategory.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('year_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.years.index") }}" class="nav-link {{ request()->is('admin/years') || request()->is('admin/years/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.year.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('exhibition_post_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.exhibition-posts.index") }}" class="nav-link {{ request()->is('admin/exhibition-posts') || request()->is('admin/exhibition-posts/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.exhibitionPost.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('exhibition_gallery_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.exhibition-galleries.index") }}" class="nav-link {{ request()->is('admin/exhibition-galleries') || request()->is('admin/exhibition-galleries/*') ? 'active' : '' }}">
+                                        <i class="fa-fw fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('cruds.exhibitionGallery.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
                 <li class="nav-item">
                     <a href="{{ route("admin.galleries.index") }}" class="nav-link {{ request()->is('admin/galleries') || request()->is('admin/galleries/*') ? 'active' : '' }}">
                         <i class="fa-fw far fa-images">

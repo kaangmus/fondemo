@@ -10,6 +10,7 @@ Route::get('post/{post}', 'PostsController@show')->name('post');
 Route::get('/post/{id}', 'PostsController@showBlogDetail');
 Route::get('/categories/{id}', 'WelcomeController@showBlogDetail');
 Route::get('/shop', 'ShopController@index');
+Route::get('/exhibition/epost/{id}', 'WelcomeController@exhibitionPost');
 
 
 
@@ -106,6 +107,24 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('products/destroy', 'ProductController@massDestroy')->name('products.massDestroy');
     Route::post('products/media', 'ProductController@storeMedia')->name('products.storeMedia');
     Route::resource('products', 'ProductController');
+
+     // Exhibation Categories
+    Route::delete('exhibation-categories/destroy', 'ExhibationCategoryController@massDestroy')->name('exhibation-categories.massDestroy');
+    Route::post('exhibation-categories/media', 'ExhibationCategoryController@storeMedia')->name('exhibation-categories.storeMedia');
+    Route::post('exhibation-categories/ckmedia', 'ExhibationCategoryController@storeCKEditorImages')->name('exhibation-categories.storeCKEditorImages');
+    Route::resource('exhibation-categories', 'ExhibationCategoryController');
+
+    // Exhibition Posts
+    Route::delete('exhibition-posts/destroy', 'ExhibitionPostController@massDestroy')->name('exhibition-posts.massDestroy');
+    Route::post('exhibition-posts/media', 'ExhibitionPostController@storeMedia')->name('exhibition-posts.storeMedia');
+    Route::post('exhibition-posts/ckmedia', 'ExhibitionPostController@storeCKEditorImages')->name('exhibition-posts.storeCKEditorImages');
+    Route::resource('exhibition-posts', 'ExhibitionPostController');
+
+    // Exhibition Galleries
+    Route::delete('exhibition-galleries/destroy', 'ExhibitionGalleryController@massDestroy')->name('exhibition-galleries.massDestroy');
+    Route::post('exhibition-galleries/media', 'ExhibitionGalleryController@storeMedia')->name('exhibition-galleries.storeMedia');
+    Route::post('exhibition-galleries/ckmedia', 'ExhibitionGalleryController@storeCKEditorImages')->name('exhibition-galleries.storeCKEditorImages');
+    Route::resource('exhibition-galleries', 'ExhibitionGalleryController');
     
     ctf0\MediaManager\MediaRoutes::routes();
 });
