@@ -6,7 +6,7 @@
     <div id="ensign-nivoslider" class="slides">
       @foreach($sliders as $key => $slider)
       @if($slider->image)
-      <img srcset="{{$slider->image->getUrl('thumb') }} 600w,{{$slider->image->getUrl('large') }} 1200w" src="{{ asset($slider->image->getUrl('large')) }}" title="#slider-direction-{{ $slider->id}}" height="750px">
+      <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}" title="#slider-direction-{{ $slider->id}}" height="750px">
      
       
       @endif
@@ -185,14 +185,16 @@
 {{-- who we are --}}
 <!-- Grands -->
 <div id="grants_homeid" class="grants_home">
+  <a href="/grants" class="grants_button">
   <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
   <div class="toped">
-    <a href="/grants" class="grants_button">
+   
     <h2 class="maincolor text-center grant_tcolor">GRANTS TIMELINE</h2>
-    <h2 class="maincolor text-light text-center">USD <?php echo number_format($ngopricestotal); ?> FOCUSED ON NATURE GRANTS TO WILDLIFE CONSERVATION PROJECTS SINCE 2009
-     </h2>
-   </a>
+    <p class="text-light text-center">USD <?php echo number_format($ngopricestotal); ?> FOCUSED ON NATURE GRANTS TO WILDLIFE CONSERVATION PROJECTS SINCE 2009
+     </p>
+   
   </div>
+  </a>
 </div>
 {{-- end grands --}}
 <!-- digital brounch -->
@@ -392,7 +394,7 @@
 {{-- exbition timeline --}}
 {{-- species essay --}}
 <div id='species_essay' class="grants_home bg-dark">
-  <img src="{{asset('images/sub_banner.png')}}" alt="Snow" style="width:100%;">
+  <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
   <div class="centered">
     <h1 class="maincolor text-light">SPEECHES & ESSAYS</h1>
     <a href="#">
