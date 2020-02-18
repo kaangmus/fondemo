@@ -6,7 +6,8 @@
     <div id="ensign-nivoslider" class="slides">
       @foreach($sliders as $key => $slider)
       @if($slider->image)
-      <img src="{{ asset($slider->image->getUrl()) }}" alt="" title="#slider-direction-{{ $slider->id ?? '' }}" />
+      <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}" title="#slider-direction-{{ $slider->id}}">
+      
       @endif
       @endforeach
     </div>
@@ -233,7 +234,8 @@
 
 {{-- exivation timeline --}}
 <section id="exhibiton" class="exhibiton_section">
-  <h1 class="text-center maincolor">Exhibiton Timeline</h1>
+  <h1 class="text-center maincolor">Exhibitions Timeline</h1>
+  <P>sfsa asdfasdfsa sadfsadfsadfasfasd sadfsadf asdfasdfa </P>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -413,7 +415,6 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h1 class='maincolor'>SHOP</h1>
-        <p>Through the eyes of our Explorers, photographers, journalists, and filmmakers</p>
       </div>
     </div>
     <div class="row">
