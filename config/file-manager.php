@@ -25,7 +25,7 @@ return [
      * List of disk names that you want to use
      * (from config/filesystems)
      */
-    'diskList' => ['main'],
+    'diskList' => ['images'],
 
     /**
      * Default disk for left manager
