@@ -120,7 +120,10 @@
 <script>
     Dropzone.options.pdfDropzone = {
     url: '{{ route('admin.digital-brochures.storeMedia') }}',
-    maxFilesize: 1000, // MB
+    maxFilesize: 100, // MB
+    acceptedFiles: '.pdf',
+    maxFiles: 1,
+    addRemoveLinks: true,
     maxFiles: 1,
     addRemoveLinks: true,
     headers: {

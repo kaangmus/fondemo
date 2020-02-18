@@ -47,6 +47,7 @@ return [
             'root'   => public_path('images'),
             'url'    => '/images/',
         ],
+       
 
         'public' => [
             'driver' => 'local',

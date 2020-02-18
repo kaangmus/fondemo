@@ -6,7 +6,9 @@
     <div id="ensign-nivoslider" class="slides">
       @foreach($sliders as $key => $slider)
       @if($slider->image)
-      <img src="{{ asset($slider->image->getUrl()) }}" alt="" title="#slider-direction-{{ $slider->id ?? '' }}" />
+      <img srcset="{{$slider->image->getUrl('thumb') }} 600w,{{$slider->image->getUrl('large') }} 1200w" src="{{ asset($slider->image->getUrl('large')) }}" title="#slider-direction-{{ $slider->id}}" height="750px">
+     
+      
       @endif
       @endforeach
     </div>
@@ -64,7 +66,7 @@
           </div>
         </div>
         @endforeach
-        <span class="p-1"></span>
+        <h4 class="p-1"></h4>
        <h4 class="text-center">Focused Articles</h4>
         @foreach ($faposts as $key=>$fapost)
         <div class="latest_news  flex-column flex-md-row">
@@ -260,7 +262,6 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h1 class='maincolor'>SHOP</h1>
-        <p>Through the eyes of our Explorers, photographers, journalists, and filmmakers</p>
       </div>
     </div>
     <div class="row">
@@ -326,6 +327,8 @@
     });
 </script>
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+
+<script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script defer>
   var locations = [
     ['Bondi Beach', -33.890542, 151.274856, 4],
