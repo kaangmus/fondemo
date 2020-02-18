@@ -6,7 +6,8 @@
     <div id="ensign-nivoslider" class="slides">
       @foreach($sliders as $key => $slider)
       @if($slider->image)
-      <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}" title="#slider-direction-{{ $slider->id}}">
+      <img srcset="{{$slider->image->getUrl('thumb') }} 600w,{{$slider->image->getUrl('large') }} 1200w" src="{{ asset($slider->image->getUrl('large')) }}" title="#slider-direction-{{ $slider->id}}" height="750px">
+     
       
       @endif
       @endforeach
@@ -474,7 +475,7 @@
 @endsection
 @section('scripts')
 
-<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script defer>
   var locations = [
     ['Bondi Beach', -33.890542, 151.274856, 4],
