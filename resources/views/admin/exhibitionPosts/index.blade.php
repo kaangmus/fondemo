@@ -35,6 +35,9 @@
                             {{ trans('cruds.exhibitionPost.fields.feature_image') }}
                         </th>
                         <th>
+                            {{ trans('cruds.exhibitionPost.fields.public_date') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -61,6 +64,10 @@
                                     </a>
                                 @endif
                             </td>
+                            <td>
+                                {{ $exhibitionPost->public_date ?? '' }}
+                            </td>
+
                             <td>
                                 @can('exhibition_post_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.exhibition-posts.show', $exhibitionPost->id) }}">

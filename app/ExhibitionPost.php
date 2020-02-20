@@ -30,6 +30,7 @@ class ExhibitionPost extends Model implements HasMedia
         'created_at',
         'updated_at',
         'deleted_at',
+        'public_date',
         'exhibition_category_id',
     ];
 

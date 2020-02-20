@@ -45,5 +45,10 @@ class WelcomeController extends Controller
         $exhibitionCategory = ExhibationCategory::find($id);
         return view('exhibitionpost',compact('exhibitionCategory'));
     }
+    public function exhibitionGallery($id)
+    {
+          $exhibitionCategory = ExhibationCategory::find($id);
+          return view('exhibitiongallery',compact('exhibitionCategory'));
+    }
     
 }

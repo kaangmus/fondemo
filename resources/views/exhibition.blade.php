@@ -31,7 +31,7 @@
 							    VIEW VIDEO HERE
 							</a>
 	  					@else
-	  						<a href="#" class="btn btn-md btn-warning">
+	  						<a href="/exhibition/egallery/{{$exbcategory->id}}" class="btn btn-md btn-warning">
 		  						VIEW EXHIBITION HERE
 		  					</a>
 	  					@endif

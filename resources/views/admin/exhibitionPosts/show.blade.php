@@ -59,6 +59,14 @@
                             {!! $exhibitionPost->content !!}
                         </td>
                     </tr>
+                     <tr>
+                        <th>
+                            {{ trans('cruds.exhibitionPost.fields.public_date') }}
+                        </th>
+                        <td>
+                            {{ $exhibitionPost->public_date }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">
