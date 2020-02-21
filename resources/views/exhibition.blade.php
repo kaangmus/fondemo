@@ -15,13 +15,13 @@
 		  <div class="tab-pane fade {{$key == 0 ? 'show active':''}}" id="pills-{{$key}}" role="tabpanel" aria-labelledby="pills-{{$key}}-tab">
 		  	@foreach($year->yearExhibationCategories as $k=>$exbcategory)
 	  			<div class="row exb-item mt-2">
-		  			<div class="col-3 text-center">
+		  			<div class="col-md-3 col-sm-12 text-center">
 		  				{{$exbcategory->title}}
 		  			</div>
-		  			<div class="col-6">
+		  			<div class="col-md-6 col-sm-12">
 		  				{!! $exbcategory->description !!}
 		  			</div>
-		  			<div class="col-3 d-flex align-items-center">
+		  			<div class="col-md-3 col-sm-12 d-flex align-items-center">
 	  					@if($exbcategory->type == 'epost')
 		  					<a href="/exhibition/epost/{{$exbcategory->id}}" class="btn btn-md btn-warning">
 		  						VIEW EXHIBITION HERE
@@ -31,7 +31,7 @@
 							    VIEW VIDEO HERE
 							</a>
 	  					@else
-	  						<a href="#" class="btn btn-md btn-warning">
+	  						<a href="/exhibition/egallery/{{$exbcategory->id}}" class="btn btn-md btn-warning">
 		  						VIEW EXHIBITION HERE
 		  					</a>
 	  					@endif

@@ -11,6 +11,7 @@ Route::get('/post/{id}', 'PostsController@showBlogDetail');
 Route::get('/categories/{id}', 'WelcomeController@showBlogDetail');
 Route::get('/shop', 'ShopController@index');
 Route::get('/exhibition/epost/{id}', 'WelcomeController@exhibitionPost');
+Route::get('/exhibition/egallery/{id}', 'WelcomeController@exhibitionGallery');
 
 
 

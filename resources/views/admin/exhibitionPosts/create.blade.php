@@ -47,6 +47,14 @@
                 <span class="help-block">{{ trans('cruds.exhibitionPost.fields.content_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="public_date">{{ trans('cruds.exhibitionPost.fields.public_date') }}</label>
+                <input class="form-control {{ $errors->has('public_date') ? 'is-invalid' : '' }}" type="text" name="public_date" id="public_date" value="{{ old('public_date', '') }}">
+                @if($errors->has('public_date'))
+                    <span class="text-danger">{{ $errors->first('public_date') }}</span>
+                @endif
+                <span class="help-block">{{ trans('cruds.exhibitionPost.fields.public_date_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

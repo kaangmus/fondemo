@@ -39,6 +39,7 @@
             'updated_at',
             'deleted_at',
             'description',
+            'public_date',
             'e_cat_post_description',
         ];
 
@@ -54,7 +55,7 @@
 
         public function exhibitionCategoryExhibitionGalleries()
         {
-            return $this->hasMany(ExhibitionGallery::class, 'exhibition_category_id', 'id');
+            return $this->hasOne(ExhibitionGallery::class, 'exhibition_category_id', 'id');
         }
 
         public function year()

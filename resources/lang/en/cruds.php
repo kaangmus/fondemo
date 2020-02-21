@@ -413,6 +413,8 @@ return [
             'deleted_at_helper'             => '',
             'year'                          => 'Year',
             'year_helper'                   => '',
+             'public_date'                   => 'Public Date',
+            'public_date_helper'            => '',
         ],
     ],
     'exhibitionPost'     => [
@@ -435,6 +437,8 @@ return [
             'updated_at_helper'          => '',
             'deleted_at'                 => 'Deleted at',
             'deleted_at_helper'          => '',
+             'public_date'                => 'Public Date',
+            'public_date_helper'         => '',
         ],
     ],
     'exhibitionGallery'  => [

@@ -87,6 +87,14 @@
                             {{ $exhibationCategory->e_cat_post_description }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.exhibationCategory.fields.public_date') }}
+                        </th>
+                        <td>
+                            {{ $exhibationCategory->public_date }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

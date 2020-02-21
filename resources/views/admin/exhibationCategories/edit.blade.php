@@ -51,7 +51,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.exhibationCategory.fields.type_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="e_cat_video" style="{{$exhibationCategory->type == 'evideo'?'':'display: none'}}">
                 <label for="e_cat_video">{{ trans('cruds.exhibationCategory.fields.e_cat_video') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('e_cat_video') ? 'is-invalid' : '' }}" id="e_cat_video-dropzone">
                 </div>
@@ -60,23 +60,33 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.exhibationCategory.fields.e_cat_video_helper') }}</span>
             </div>
-            <div class="form-group">
-                <label for="e_cat_post_video">{{ trans('cruds.exhibationCategory.fields.e_cat_post_video') }}</label>
-                <div class="needsclick dropzone {{ $errors->has('e_cat_post_video') ? 'is-invalid' : '' }}" id="e_cat_post_video-dropzone">
+            <div  id="e_cat_post">
+                <div class="form-group" style="{{$exhibationCategory->type == 'epost'?'':'display: none'}}">
+                    <label for="e_cat_post_video">{{ trans('cruds.exhibationCategory.fields.e_cat_post_video') }}</label>
+                    <div class="needsclick dropzone {{ $errors->has('e_cat_post_video') ? 'is-invalid' : '' }}" id="e_cat_post_video-dropzone">
+                    </div>
+                    @if($errors->has('e_cat_post_video'))
+                        <span class="text-danger">{{ $errors->first('e_cat_post_video') }}</span>
+                    @endif
+                    <span class="help-block">{{ trans('cruds.exhibationCategory.fields.e_cat_post_video_helper') }}</span>
                 </div>
-                @if($errors->has('e_cat_post_video'))
-                    <span class="text-danger">{{ $errors->first('e_cat_post_video') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.exhibationCategory.fields.e_cat_post_video_helper') }}</span>
-            </div>
-            <div class="form-group">
-                <label for="e_cat_post_description">{{ trans('cruds.exhibationCategory.fields.e_cat_post_description') }}</label>
-                <textarea class="form-control {{ $errors->has('e_cat_post_description') ? 'is-invalid' : '' }}" name="e_cat_post_description" id="e_cat_post_description">{{ old('e_cat_post_description', $exhibationCategory->e_cat_post_description) }}</textarea>
-                @if($errors->has('e_cat_post_description'))
-                    <span class="text-danger">{{ $errors->first('e_cat_post_description') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.exhibationCategory.fields.e_cat_post_description_helper') }}</span>
-            </div>
+                <div class="form-group" style="{{$exhibationCategory->type == 'epost'?'':'display: none'}}">
+                    <label for="e_cat_post_description">{{ trans('cruds.exhibationCategory.fields.e_cat_post_description') }}</label>
+                    <textarea class="form-control {{ $errors->has('e_cat_post_description') ? 'is-invalid' : '' }}" name="e_cat_post_description" id="e_cat_post_description">{{ old('e_cat_post_description', $exhibationCategory->e_cat_post_description) }}</textarea>
+                    @if($errors->has('e_cat_post_description'))
+                        <span class="text-danger">{{ $errors->first('e_cat_post_description') }}</span>
+                    @endif
+                    <span class="help-block">{{ trans('cruds.exhibationCategory.fields.e_cat_post_description_helper') }}</span>
+                </div>
+              </div>
+                 <div class="form-group">
+                  <label for="public_date">{{ trans('cruds.exhibationCategory.fields.public_date') }}</label>
+                  <input class="form-control {{ $errors->has('public_date') ? 'is-invalid' : '' }}" type="text" name="public_date" id="public_date" value="{{ old('public_date', $exhibationCategory->public_date) }}">
+                  @if($errors->has('public_date'))
+                      <span class="text-danger">{{ $errors->first('public_date') }}</span>
+                  @endif
+                  <span class="help-block">{{ trans('cruds.exhibationCategory.fields.public_date_helper') }}</span>
+              </div>
             <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
@@ -92,7 +102,28 @@
 
 @section('scripts')
 <script>
-    $(document).ready(function () {
+   
+    CKEDITOR.replace( 'description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
+    CKEDITOR.replace( 'e_cat_post_description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
+   
+</script>
+<script>
+   $(document).ready(function () {
+    $('#type').on('change',function(){
+      var type_index = $(this).val();
+      if (type_index != 'egallery') {
+          if(type_index == 'evideo'){
+            $('#e_cat_video').show();
+            $('#e_cat_post').hide();
+          }else{
+            $('#e_cat_post').show();
+            $('#e_cat_video').hide();
+          }
+      }else{
+        $('#e_cat_post').hide();
+        $('#e_cat_video').hide();
+      }
+    });
   function SimpleUploadAdapter(editor) {
     editor.plugins.get('FileRepository').createUploadAdapter = function(loader) {
       return {

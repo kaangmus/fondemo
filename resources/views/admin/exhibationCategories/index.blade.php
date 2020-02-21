@@ -41,6 +41,9 @@
                             {{ trans('cruds.exhibationCategory.fields.e_cat_post_description') }}
                         </th> -->
                         <th>
+                            {{ trans('cruds.exhibationCategory.fields.public_date') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -60,6 +63,9 @@
                             </td>
                             <td>
                                 {{ App\ExhibationCategory::TYPE_SELECT[$exhibationCategory->type] ?? '' }}
+                            </td>
+                             <td>
+                                {{ $exhibationCategory->public_date ?? '' }}
                             </td>
                            <!--  <td>
                                 @if($exhibationCategory->e_cat_video)

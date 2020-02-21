@@ -12,6 +12,7 @@ class CreateExhibitionPostsTable extends Migration
             $table->increments('id');
             $table->string('name')->nullable();
             $table->longText('content')->nullable();
+            $table->string('public_date')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
