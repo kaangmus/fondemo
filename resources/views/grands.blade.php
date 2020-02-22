@@ -47,10 +47,9 @@
             </div>
           </div>
         <div class='image-container'>
-          <img src="{{asset('images/gbanner.jpg')}}" class="bannertp lazyload w-100">
-          <div class='curtain'>
-            <div class='shine'></div>
-        </div>
+         
+          <img src="{{asset('images/gbanner.jpg')}}" data-src="{{asset('images/gbanner.jpg')}}" class="bannertp  w-100">
+         
           
           </div>
 
@@ -429,14 +428,16 @@
 
 
 
-      $(".image-container img").one('lazyloaded load', function () {
-      $(this).parent().find(".curtain").remove();
-      }).each(function (e) {
-      if (this.complete) {
-      $(this).trigger("lazyloaded load");
-      $(this).parent().find(".curtain").remove();
-      }
-      });
+     $(function(){
+    $(window).on('load', function(){
+    $('[data-src]').each(function(){
+    var $this = $(this),
+    src = $(this).data('src');
+    $this.attr('src', src);
+    console.log(src);
+    });
+    });
+    });
 </script>
 </body>
 

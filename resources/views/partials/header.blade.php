@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg fixed-top myheader is_desktop">
 
   <a class="navbar-brand" href="/" id="mainfont"> 
-    {{-- <img src="{{ settings('favicon') }}" width="30" height="30" class="d-inline-block align-top" alt=""> --}}
     FOCUSED ON NATURE
+    <img class="logo_black" src="{{asset('images/focus-on-nature-logo.png')}}" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img class="logo_white" src="{{asset('images/focus-on-nature-logo-w.png')}}" width="30" height="30"
+      class="d-inline-block align-top" alt="">
   </a>
 
  <div class="collapse navbar-collapse header_top" id="navbar">
@@ -67,7 +69,6 @@
 <header>
 <nav class="navbar is_mobile navbar-expand-lg navbar-light bg-light sticky-top">
    <a class="navbar-brand" href="/" id="mainfont">
-    <img src="{{ settings('favicon') }}" width="30" height="30" class="d-inline-block align-top" alt="">
     FOCUSED ON NATURE
   </a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
