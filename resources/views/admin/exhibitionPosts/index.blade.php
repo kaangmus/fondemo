@@ -65,7 +65,7 @@
                                 @endif
                             </td>
                             <td>
-                                {{ $exhibitionPost->public_date ?? '' }}
+                                {{ date('d F Y',strtotime($exhibitionPost->public_date)) ?? '' }}
                             </td>
 
                             <td>

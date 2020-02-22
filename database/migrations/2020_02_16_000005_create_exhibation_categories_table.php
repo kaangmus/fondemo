@@ -14,7 +14,7 @@ class CreateExhibationCategoriesTable extends Migration
             $table->longText('description')->nullable();
             $table->string('type');
             $table->longText('e_cat_post_description')->nullable();
-            $table->string('public_date')->nullable();
+            $table->date('public_date')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

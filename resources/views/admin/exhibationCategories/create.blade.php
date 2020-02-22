@@ -80,7 +80,7 @@
             </div>
             <div class="form-group">
                 <label for="public_date">{{ trans('cruds.exhibationCategory.fields.public_date') }}</label>
-                <input class="form-control {{ $errors->has('public_date') ? 'is-invalid' : '' }}" type="text" name="public_date" id="public_date" value="{{ old('public_date', '') }}">
+                <input class="form-control date {{ $errors->has('public_date') ? 'is-invalid' : '' }}" type="text" name="public_date" id="public_date" value="{{ old('public_date', '') }}">
                 @if($errors->has('public_date'))
                     <span class="text-danger">{{ $errors->first('public_date') }}</span>
                 @endif
