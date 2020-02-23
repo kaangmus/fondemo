@@ -188,7 +188,7 @@
     <p class="text-center">slide show content</p>
 
      <div class="row">
-      <div class="col-md-10 offset-md-2 text-center text-white">
+      <div class="col-md-10 offset-md-1 text-center text-white overflow-hidden">
        <div class="swiper-slideshow">
         <div class="swiper-wrapper">
           
@@ -334,7 +334,7 @@ $jsons=array_slice($json, -11, 11, true);
 <section id="digital" class="digital_section">
   <div class="container">
     <h2 class="maincolor text-center">DIGITAL BROCHURES</h2>
-    <p class="text-center">Flick through the latest Digital Brochures</p>
+    <p class="text-center">Discover the latest Digital Brochures</p>
   </div>
   </div>
   </div>
