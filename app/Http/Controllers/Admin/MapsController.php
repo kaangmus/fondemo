@@ -100,7 +100,7 @@ class MapsController extends Controller
         
         $map->load('categories', 'created_by');
 
-        return view('admin.maps.show', compact('map',));
+        return view('admin.maps.show', compact('map'));
     }
 
     public function destroy(map $map)

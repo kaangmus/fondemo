@@ -303,7 +303,7 @@
 </section>
 {{-- end online shop --}}
 <!-- instagram -->
-<section id='instagram'>
+<section id='instagram bg-dark'>
   <h1 class='maincolor text-center'>Follow Us On Instagram</h1>
   <!-- LightWidget WIDGET -->
   <!-- SnapWidget -->
@@ -357,7 +357,7 @@ mapTypeId: 'satellite',
     })(marker, place));
     }
     }
- google.maps.event.addDomListener(window, 'load', initialize);
+ 
 
 function generateContent(place)
 {
