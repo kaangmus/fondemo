@@ -30,43 +30,19 @@
       startSlide: 0,
       directionNav: true,
       controlNavThumbs: false,
-      pauseOnHover: true,
+      pauseOnHover: false,
       manualAdvance: false,
 
   })
 
 
 
-
- $(document).ready(function () {
-     $('.owl-carousel').owlCarousel({
-         loop: true,
-         margin: 10,
-         autoplay: true,
-         responsiveClass: true,
-         responsive: {
-             0: {
-                 items: 2,
-                 nav: true
-             },
-             600: {
-                 items: 3,
-                 nav: false
-             },
-             1000: {
-                 items: 5,
-                 nav: true,
-                 loop: false
-             }
-         }
-     })
- });
  var swiper = new Swiper('.swiper-container', {
      effect: 'coverflow',
      grabCursor: true,
      centeredSlides: true,
      slidesPerView: 'auto',
-     initialSlide:'3',
+     initialSlide:'6',
      coverflowEffect: {
          rotate: 0,
          stretch: 1,

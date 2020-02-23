@@ -188,8 +188,116 @@
     <p class="text-center">slide show content</p>
 
      <div class="row">
-   
-    </div>
+      <div class="col-md-10 offset-md-2 text-center text-white">
+       <div class="swiper-slideshow">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <div class="post-thumb ts-resize">
+              <a href="/post/18">
+                <img src="{{asset('images/gbanner.jpg')}}"
+                  class="attachment-digiqole-medium" alt="" width="445px" height="250px">
+              </a>
+              <div class="new_third_text">
+                <a href="/post/18">
+                  <h3>Clarion Call speech</h3>
+                  <p></p>
+                <p>EAT Stockholm Food Forum, Sweden</p>
+          
+                <p>June 13, 2019</p>
+                <p></p>
+          
+              </a>
+             </div>
+            </div> 
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="post-thumb ts-resize">
+              <a href="/post/18">
+                <img src="{{asset('images/gbanner.jpg')}}"
+                  class="attachment-digiqole-medium" alt="" width="445px" height="250px">
+              </a>
+              <div class="new_third_text">
+                <a href="/post/18">
+                  <h3>Clarion Call speech</h3>
+                  <p></p>
+                <p>EAT Stockholm Food Forum, Sweden</p>
+          
+                <p>June 13, 2019</p>
+                <p></p>
+          
+              </a>
+             </div>
+            </div> 
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="post-thumb ts-resize">
+              <a href="/post/18">
+                <img src="{{asset('images/gbanner.jpg')}}"
+                  class="attachment-digiqole-medium" alt="" width="445px" height="250px">
+              </a>
+              <div class="new_third_text">
+                <a href="/post/18">
+                  <h3>Clarion Call speech</h3>
+                  <p></p>
+                <p>EAT Stockholm Food Forum, Sweden</p>
+          
+                <p>June 13, 2019</p>
+                <p></p>
+          
+              </a>
+             </div>
+            </div> 
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="post-thumb ts-resize">
+              <a href="/post/18">
+                <img src="{{asset('images/gbanner.jpg')}}"
+                  class="attachment-digiqole-medium" alt="" width="445px" height="250px">
+              </a>
+              <div class="new_third_text">
+                <a href="/post/18">
+                  <h3>Clarion Call speech</h3>
+                  <p></p>
+                <p>EAT Stockholm Food Forum, Sweden</p>
+          
+                <p>June 13, 2019</p>
+                <p></p>
+          
+              </a>
+             </div>
+            </div> 
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="post-thumb ts-resize">
+              <a href="/post/18">
+                <img src="{{asset('images/gbanner.jpg')}}"
+                  class="attachment-digiqole-medium" alt="" width="445px" height="250px">
+              </a>
+              <div class="new_third_text">
+                <a href="/post/18">
+                  <h3>Clarion Call speech</h3>
+                  <p></p>
+                <p>EAT Stockholm Food Forum, Sweden</p>
+          
+                <p>June 13, 2019</p>
+                <p></p>
+          
+              </a>
+             </div>
+            </div> 
+          </div>
+          <!-- Add Pagination -->
+         </div> 
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+       
+       </div>
+      </div>
   </div>
 
 </section>
@@ -212,6 +320,17 @@
 </div>
 {{-- end grands --}}
 <!-- digital brounch -->
+
+@php
+$data = file_get_contents ('http://hakimages.com/ws_brochures.php');
+$json = json_decode($data);
+$jsons=array_slice($json, -11, 11, true);
+
+
+
+@endphp
+
+
 <section id="digital" class="digital_section">
   <div class="container">
     <h2 class="maincolor text-center">DIGITAL BROCHURES</h2>
@@ -223,18 +342,21 @@
     <div class="col-md-8 offset-md-2 text-center text-white">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          @foreach ($digitalbrochures as $pdfid=> $digitalbrochure)
-          <div class="swiper-slide digital">
-            <td>
-              @if($digitalbrochure->digitalphoto)
-              <img src="{{ $digitalbrochure->digitalphoto->getUrl() }}" class="swiper-lazy"> @endif
-            </td>
-            <div class="digital_slider_text">
-              <h2 class="digital_title">{{$digitalbrochure->name}}</h2>
-              <a href="{{$app_url}}/digitalpdf/{{$digitalbrochure->id}}" class="btn digit_read_button ajax-popup-link"
-                type="button"><i class="fas fa-bars"></i>VIEW</a>
-            </div>
-          </div>
+          @foreach ($jsons as $key=> $value)
+            
+              
+           
+
+                <div class="swiper-slide digital">
+                  <td>
+                    
+                    <img class='crop' src='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/files/shot.jpg'
+                      data-rel='fh5-light-box-demo' data-href='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/'
+                      data-width='1000' data-height='600' data-title='Flick through the Digital Brochure'> 
+                  </td>
+                  
+                </div>
+           
           @endforeach
         </div>
         <!-- Add Pagination -->
@@ -335,6 +457,7 @@
         $(this).ekkoLightbox();
     });
 </script>
+<script src='https://fliphtml5.com/plugin/LightBox/js/fliphtml5-light-box-api-min.js'></script>
 <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script>
 var map = new google.maps.Map(document.getElementById('map'), {
@@ -452,7 +575,7 @@ return content;
     });
     new WOW().init();
 
-    var swiper = new Swiper('.swiper-exibiton', {
+    var swiper = new Swiper('.swiper-slideshow', {
         slidesPerView: 3,
         spaceBetween: 30,
         slidesPerGroup: 3,
@@ -478,5 +601,15 @@ return content;
             $('.cont').removeClass('blur');
         });
     });
+
+   $(function() {
+  
+  
+  
+  Books.init();
+  
+  
+  
+  });
 </script>
 @endsection
