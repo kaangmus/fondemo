@@ -499,7 +499,8 @@ $jsons=array_slice($json, -11, 11, true);
 
 
  {{-- google map --}}
-<div id="map" style="width: 100%; height: 700px;"></div>
+
+<div id="map" style="width: 100%; height: 700px;" ></div> 
 {{-- end google map --}} 
 
 

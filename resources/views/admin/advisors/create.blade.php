@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group {{ $errors->has('level') ? 'has-error' : '' }}">
                             <label for="level">{{ trans('cruds.advisor.fields.level') }}</label>
-                            <input class="form-control" type="text" name="level" id="level" value="{{ old('level', '') }}">
+                            <input class="form-control ckeditor" type="text" name="level" id="level" value="{{ old('level', '') }}">
                             @if($errors->has('level'))
                                 <span class="help-block" role="alert">{{ $errors->first('level') }}</span>
                             @endif
@@ -123,6 +123,9 @@
 @endsection
 
 @section('scripts')
+<script>
+    CKEDITOR.replace( 'level', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
+</script>
 <script>
     Dropzone.options.photpDropzone = {
     url: '{{ route('admin.advisors.storeMedia') }}',

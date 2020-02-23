@@ -1353,3 +1353,6 @@ a.main_button:hover {
     color: #fff;
     border: 3px solid;
 }
+#map{
+    display: none;
+}
