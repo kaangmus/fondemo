@@ -180,6 +180,21 @@
   </div>
 </section>
 {{-- who we are --}}
+
+{{-- slide showcontent --}}
+<section id="digital" class="digital_section">
+  <div class="container">
+    <h2 class="maincolor text-center">Slideshows</h2>
+    <p class="text-center">slide show content</p>
+
+     <div class="row">
+   
+    </div>
+  </div>
+
+</section>
+{{-- end slde show --}}
+
 <!-- Grands -->
 <div id="grants_homeid" class="grants_home">
   <a href="/grants" class="grants_button">
