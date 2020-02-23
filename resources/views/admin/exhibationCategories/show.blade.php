@@ -55,7 +55,7 @@
                             {{ App\ExhibationCategory::TYPE_SELECT[$exhibationCategory->type] ?? '' }}
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="{{$exhibationCategory->type == 'evideo'?'':'display: none'}}">
                         <th>
                             {{ trans('cruds.exhibationCategory.fields.e_cat_video') }}
                         </th>
@@ -67,7 +67,7 @@
                             @endif
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="{{$exhibationCategory->type == 'epost'?'':'display: none'}}">
                         <th>
                             {{ trans('cruds.exhibationCategory.fields.e_cat_post_video') }}
                         </th>
@@ -79,7 +79,7 @@
                             @endif
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="{{$exhibationCategory->type == 'epost'?'':'display: none'}}">
                         <th>
                             {{ trans('cruds.exhibationCategory.fields.e_cat_post_description') }}
                         </th>
@@ -106,30 +106,6 @@
     </div>
 </div>
 
-<div class="card">
-    <div class="card-header">
-        {{ trans('global.relatedData') }}
-    </div>
-    <ul class="nav nav-tabs" role="tablist" id="relationship-tabs">
-        <li class="nav-item">
-            <a class="nav-link" href="#exhibition_category_exhibition_posts" role="tab" data-toggle="tab">
-                {{ trans('cruds.exhibitionPost.title') }}
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#exhibition_category_exhibition_galleries" role="tab" data-toggle="tab">
-                {{ trans('cruds.exhibitionGallery.title') }}
-            </a>
-        </li>
-    </ul>
-    <div class="tab-content">
-        <div class="tab-pane" role="tabpanel" id="exhibition_category_exhibition_posts">
-            @includeIf('admin.exhibationCategories.relationships.exhibitionCategoryExhibitionPosts', ['exhibitionPosts' => $exhibationCategory->exhibitionCategoryExhibitionPosts])
-        </div>
-        <div class="tab-pane" role="tabpanel" id="exhibition_category_exhibition_galleries">
-            @includeIf('admin.exhibationCategories.relationships.exhibitionCategoryExhibitionGalleries', ['exhibitionGalleries' => $exhibationCategory->exhibitionCategoryExhibitionGalleries])
-        </div>
-    </div>
-</div>
+
 
 @endsection

@@ -65,7 +65,7 @@
                                 {{ App\ExhibationCategory::TYPE_SELECT[$exhibationCategory->type] ?? '' }}
                             </td>
                              <td>
-                                {{ $exhibationCategory->public_date ?? '' }}
+                                {{ date('d F Y',strtotime($exhibationCategory->public_date)) ?? '' }}
                             </td>
                            <!--  <td>
                                 @if($exhibationCategory->e_cat_video)

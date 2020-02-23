@@ -1,7 +1,7 @@
 <?php
 
     namespace App;
-
+    use Carbon\Carbon;
     use Illuminate\Database\Eloquent\Model;
     use Illuminate\Database\Eloquent\SoftDeletes;
     use Spatie\MediaLibrary\HasMedia\HasMedia;
@@ -23,6 +23,7 @@
             'created_at',
             'updated_at',
             'deleted_at',
+            'public_date',
         ];
 
         const TYPE_SELECT = [
@@ -71,5 +72,14 @@
         public function getECatPostVideoAttribute()
         {
             return $this->getMedia('e_cat_post_video')->last();
+        }
+         public function getPublicDateAttribute($value)
+        {
+            return $value ? Carbon::parse($value)->format(config('panel.date_format')) : null;
+        }
+
+        public function setPublicDateAttribute($value)
+        {
+            $this->attributes['public_date'] = $value ? Carbon::createFromFormat(config('panel.date_format'), $value)->format('Y-m-d') : null;
         }
     }
