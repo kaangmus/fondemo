@@ -129,7 +129,7 @@
     </div>
 </section>
 <!-- MEMBER -->
-<section id="team" class="member bg-dark text-white">
+<section id="team" class="member bg_black text-white">
   <div class="container ">
     <div class="row">
       <!-- who we are -->
@@ -314,7 +314,7 @@ $jsons=array_slice($json, -11, 11, true);
 @endphp
 
 
-<section id="digital" class="digital_section bg-dark">
+<section id="digital" class="digital_section bg_black">
   <div class="container">
     <h2 class="maincolor text-center">DIGITAL BROCHURES</h2>
     <p class="text-center text-light">Discover the latest Digital Brochures</p>
@@ -553,7 +553,7 @@ $jsons=array_slice($json, -11, 11, true);
 </section>
 {{-- end online shop --}}
 <!-- instagram -->
-<section id='instagram bg-dark'>
+<section id='instagram bg_black'>
   <h1 class='maincolor text-center'>Follow Us On Instagram</h1>
   <!-- LightWidget WIDGET -->
   <!-- SnapWidget -->

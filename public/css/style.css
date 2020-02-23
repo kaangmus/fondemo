@@ -102,6 +102,7 @@ p{
     -webkit-transition: margin .3s cubic-bezier(.86, 0, .07, 1);
     transition: margin .3s cubic-bezier(.86, 0, .07, 1);
     position: relative;
+    width: 240px;
    
 }
 
@@ -131,7 +132,7 @@ p{
     font-family: Fjalla One, Impact, sans-serif;
     font-size: 12px;
     line-height: 1.42;
-    padding: 0 2.4rem;
+    padding: 0 3.4rem;
     text-transform: uppercase;
     letter-spacing: .075em;
     will-change: color;

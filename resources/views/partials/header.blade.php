@@ -19,7 +19,7 @@
           <div class="dropdown_list">
            <a class="dropdown-item" href="#">OUR MISSION</a>
           <a class="dropdown-item" href="/#team">WHO WE ARE</a>
-           <a class="dropdown-item" href="/#team">ADVISORS</a>
+           <a class="dropdown-item" href="/#team">ADVISERS</a>
            <a class="dropdown-item" href="/grants">GRANTS</a>
            <a class="dropdown-item" href="/EXHIBITIONS">EXHIBITIONS</a>
           </div>
@@ -32,9 +32,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <div class="dropdown_list">
-          <a class="dropdown-item" href="/news">NEWS</a>
+          <a class="dropdown-item" href="/news">ARTICLES</a>
           <a class="dropdown-item" href="/speciesandessay">SPEECHES & ESSAYS</a>
-          <a class="dropdown-item" href="/#map">SEARCH MAP</a>
+          <a class="dropdown-item" href="/#map">PHOTO SEARCH MAP</a>
           <a class="dropdown-item" href="/digital">DIGITAL BROCHURES</a>
           <a class="dropdown-item" href="/#instagram">INSTRAGRAM</a>
           </div>

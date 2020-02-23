@@ -838,7 +838,9 @@ h3 {
 .timeline-horizontal .timeline-item:after {
     display: none;
 }
-
+.bg_black{
+    background-color: #000000;
+}
 .timeline-horizontal .timeline-item .timeline-badge {
     top: auto;
     bottom: 0px;
