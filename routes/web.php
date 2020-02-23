@@ -126,6 +126,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('exhibition-galleries/media', 'ExhibitionGalleryController@storeMedia')->name('exhibition-galleries.storeMedia');
     Route::post('exhibition-galleries/ckmedia', 'ExhibitionGalleryController@storeCKEditorImages')->name('exhibition-galleries.storeCKEditorImages');
     Route::resource('exhibition-galleries', 'ExhibitionGalleryController');
+
+    // Maps
+    Route::delete('maps/destroy', 'MapsController@massDestroy')->name('maps.massDestroy');
+    Route::post('maps/media', 'MapsController@storeMedia')->name('maps.storeMedia');
+    Route::resource('maps', 'MapsController');
+
+    Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
+    Route::resource('categories', 'CategoriesController');
     
     ctf0\MediaManager\MediaRoutes::routes();
 });

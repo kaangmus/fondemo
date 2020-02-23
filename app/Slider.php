@@ -17,6 +17,11 @@ class Slider extends Model implements HasMedia
     protected $appends = [
         'image',
     ];
+    const position_SELECT = [
+        'content_top' => 'Top',
+        'content_center'  => 'Center',
+        'content_bottom'  => 'Bottom',
+    ];
 
     protected $dates = [
         'created_at',
@@ -29,6 +34,7 @@ class Slider extends Model implements HasMedia
         'title',
         'btn_text',
         'btn_link',
+        'position',
         'published_at',
         'created_at',
         'updated_at',

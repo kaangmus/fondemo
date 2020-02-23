@@ -234,7 +234,7 @@ Supports Thumbs: true
 /* Normal desktop :992px. */
 
 @media (min-width: 1400px) and (max-width:1920px) {
-    .slider-content {
+    .content_center {
         padding: 340px 0;
     }
 }
@@ -242,7 +242,7 @@ Supports Thumbs: true
 /* Normal desktop :992px. */
 
 @media (min-width: 992px) and (max-width: 1169px) {
-    .slider-content {
+    .content_center {
         padding: 144px 0;
     }
 }
@@ -250,7 +250,7 @@ Supports Thumbs: true
 /* Tablet desktop :768px. */
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .slider-content {
+    .content_center {
         padding: 93px 0;
     }
 
@@ -271,7 +271,7 @@ Supports Thumbs: true
         display: none;
     }
 
-    .slider-content {
+    .content_center {
         padding: 46px 0px;
     }
 
@@ -296,7 +296,7 @@ Supports Thumbs: true
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .slider-content {
+    .content_center {
         padding: 70px 0px;
     }
 
@@ -853,7 +853,7 @@ h3 {
         padding-bottom: 50px;
     }
 
-    .swiper-slide {
+    .digital {
         background-position: center;
         background-size: cover;
         width: 233px;
@@ -861,7 +861,7 @@ h3 {
         background-color: #000;
 
     }
-    .swiper-slide img{
+    .digital img {
         opacity: 0.8;
     }
 /* timeline horizontal */

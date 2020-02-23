@@ -1,23 +1,18 @@
-@extends('layouts.front')
-@section('content')
+@extends('layouts.front') @section('content')
 <!-- Start Slider Area -->
 <div id="slidercontainer" class="slider-area">
   <div class="bend niceties preview-2">
     <div id="ensign-nivoslider" class="slides">
-      @foreach($sliders as $key => $slider)
-      @if($slider->image)
-      <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}" title="#slider-direction-{{ $slider->id}}" height="750px">
-     
-      
-      @endif
-      @endforeach
+      @foreach($sliders as $key => $slider) @if($slider->image)
+      <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}"
+        title="#slider-direction-{{ $slider->id}}" height="750px"> @endif @endforeach
     </div>
     @foreach($sliders as $key => $slider)
     <div id="slider-direction-{{ $slider->id ?? '' }}" class="slider-direction slider-one">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="slider-content">
+            <div class="{{$slider->position}}">
               <!-- layer 1 -->
               <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
                 <h2 class="maincolor text-light text-center">{{ $slider->title ?? '' }}</h2>
@@ -42,13 +37,11 @@
 </div>
 <!-- End Slider Area -->
 
-
 <section id="blog">
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h4 class="text-center">Emergency funds</h4>
-        @foreach ($fundposts as $key=>$fundpost)
+        <h4 class="text-center">Emergency funds</h4> @foreach ($fundposts as $key=>$fundpost)
         <div class="latest_news  flex-column flex-md-row">
           <a href="{{$fundpost->link}}" target="_blank">
 
@@ -67,19 +60,21 @@
         </div>
         @endforeach
         <h4 class="p-1"></h4>
-       <h4 class="text-center">Focused Articles</h4>
-        @foreach ($faposts as $key=>$fapost)
+        <h4 class="text-center">Focused Articles</h4> @foreach ($faposts as $key=>$fapost)
         <div class="latest_news  flex-column flex-md-row">
-          <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" @if($fapost->link)target="_blank"@endif>
+          <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif"
+            @if($fapost->link)target="_blank"@endif>
             @if($fapost->featured_image)
             <img src="{{ $fapost->featured_image->getUrl('medium') }}" alt="#" class="mr-3 wh-100">
             @endif
           </a>
           <div class="media-body align-self-center">
-            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" @if($fapost->link)target="_blank"@endif>
+            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif"
+              @if($fapost->link)target="_blank"@endif>
               <h6>{!!$fapost->title!!}</h6>
             </a>
-            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" class="news_paragraph" @if($fapost->link)target="_blank"@endif>
+            <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif" class="news_paragraph"
+              @if($fapost->link)target="_blank"@endif>
               <p>{!!$fapost->excerpt!!}</p>
             </a>
           </div>
@@ -89,16 +84,18 @@
       <!-- end col-md-4-->
       <div class="col-md-8">
         <div class="post-thumb ts-resize">
-          <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" @if($larges->link)target="_blank"@endif>
+          <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif"
+            @if($larges->link)target="_blank"@endif>
             @if($larges->featured_image)
             <img src="{{ $larges->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
             @endif
           </a>
           <div class="new_second_text">
-            <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif" @if($larges->link)target="_blank"@endif>
+            <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif"
+              @if($larges->link)target="_blank"@endif>
               <h3>{{$larges->title}}</h3>
               <p>{!!$larges->excerpt!!}</p>
-      
+
             </a>
           </div>
           </a>
@@ -107,16 +104,18 @@
           @foreach ($mediums as $key=>$medium)
           <div class="col-md-6">
             <div class="post-thumb ts-resize">
-              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" @if($medium->link)target="_blank"@endif>
+              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif"
+                @if($medium->link)target="_blank"@endif>
                 @if($medium->featured_image)
                 <img src="{{ $medium->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
                 @endif
               </a>
               <div class="new_third_text">
-                <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif" @if($medium->link)target="_blank"@endif>
+                <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif"
+                  @if($medium->link)target="_blank"@endif>
                   <h3>{{$medium->title}}</h3>
                   <p>{!!$medium->excerpt!!}</p>
-       
+
                 </a>
               </div>
               </a>
@@ -144,8 +143,7 @@
           @foreach ($whoweares as $whoweare)
           <div class="advisor col-md-6 col-xs-6">
             @if($whoweare->photp)
-            <img src="{{$whoweare->photp->getUrl()}}" alt="#" class="mr-3 advisor"
-              style="width:100px;height:100px">
+            <img src="{{$whoweare->photp->getUrl()}}" alt="#" class="mr-3 advisor" style="width:100px;height:100px">
             @endif
             <div class="advisor_text">
               <h4>{{$whoweare->name ?? '' }}</h4>
@@ -167,8 +165,7 @@
           @foreach ($advisors as $key=>$advisor)
           <div class="col-md-6 col-xs-6 advisor mb-2">
             @if($advisor->photp)
-            <img src="{{$advisor->photp->getUrl()}}" alt="#" class="mr-3 advisor"
-              style="width:100px;height:100px">
+            <img src="{{$advisor->photp->getUrl()}}" alt="#" class="mr-3 advisor" style="width:100px;height:100px">
             @endif
             <div class="advisor_text">
               <h4>{{$advisor->name ?? ''}}</h4>
@@ -186,14 +183,16 @@
 <!-- Grands -->
 <div id="grants_homeid" class="grants_home">
   <a href="/grants" class="grants_button">
-  <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
-  <div class="toped">
-   
-    <h2 class="maincolor text-center grant_tcolor">GRANTS TIMELINE</h2>
-    <p class="text-light text-center">USD <?php echo number_format($ngopricestotal); ?> FOCUSED ON NATURE GRANTS TO WILDLIFE CONSERVATION PROJECTS SINCE 2009
-     </p>
-   
-  </div>
+    <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
+    <div class="toped">
+
+      <h2 class="maincolor text-center grant_tcolor">GRANTS TIMELINE</h2>
+      <p class="text-light text-center">USD
+        <?php echo number_format($ngopricestotal); ?> FOCUSED ON NATURE GRANTS TO WILDLIFE CONSERVATION PROJECTS SINCE
+        2009
+      </p>
+
+    </div>
   </a>
 </div>
 {{-- end grands --}}
@@ -201,6 +200,7 @@
 <section id="digital" class="digital_section">
   <div class="container">
     <h2 class="maincolor text-center">DIGITAL BROCHURES</h2>
+    <p class="text-center">Flick through the latest Digital Brochures</p>
   </div>
   </div>
   </div>
@@ -209,11 +209,10 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           @foreach ($digitalbrochures as $pdfid=> $digitalbrochure)
-          <div class="swiper-slide">
+          <div class="swiper-slide digital">
             <td>
               @if($digitalbrochure->digitalphoto)
-              <img src="{{ $digitalbrochure->digitalphoto->getUrl() }}" class="swiper-lazy">
-              @endif
+              <img src="{{ $digitalbrochure->digitalphoto->getUrl() }}" class="swiper-lazy"> @endif
             </td>
             <div class="digital_slider_text">
               <h2 class="digital_title">{{$digitalbrochure->name}}</h2>
@@ -227,17 +226,14 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
+      <a class=" main_button" href="#">View all Brochures</a>
     </div>
   </div>
-</section>
-{{-- end digital --}}
-{{-- google map --}}
-<div id="map" style="width: 100%; height: 400px;"></div>
-{{-- end google map --}}
 
-{{-- exivation timeline --}}
-@include('exhibition')
-{{-- exbition timeline --}}
+</section>
+{{-- end digital --}} {{-- google map --}}
+<div id="map" style="width: 100%; height: 700px;"></div>
+{{-- end google map --}} {{-- exivation timeline --}} @include('exhibition') {{-- exbition timeline --}}
 {{-- species essay --}}
 <div id='species_essay' class="grants_home bg-dark">
   <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
@@ -257,8 +253,7 @@
     <p>September 2019</p>
   </div>
 </div>
-{{-- species essay --}}
-{{-- online shop --}}
+{{-- species essay --}} {{-- online shop --}}
 <section id="online_shop">
   <div class="container">
     <div class="row">
@@ -316,140 +311,157 @@
   <script src="https://snapwidget.com/js/snapwidget.js"></script>
   <iframe src="https://snapwidget.com/embed/791321" class="snapwidget-widget" allowtransparency="true" frameborder="0"
     scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
- 
- 
+
 </section>
-{{-- instagram  --}}
-@endsection
-@section('scripts')
+{{-- instagram --}} @endsection @section('scripts')
 <script type="text/javascript">
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();
         $(this).ekkoLightbox();
     });
 </script>
-<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-
 <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-<script defer>
-  var locations = [
-    ['Bondi Beach', -33.890542, 151.274856, 4],
-    ['Coogee Beach', -33.923036, 151.259052, 5],
-    ['Myanmar', 18.7807153, 151.157507, 3],
-    ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-    ['Maroubra Beach', -33.950198, 151.259302, 1],
-    ['Maroubra Beach', -41.0000, 151.259302, 5],
-    ['india',20.0123533,64.4487244,6],
-    ['pa',9.0000,-80.0000,7],
-    ['pe',-10.0000,-76.0000,8],
-    ['pf',-15.0000,-140.0000,9],
-    ['pg',-6.0000,147.0000,10],
-    ['ph',13.0000,122.0000,11],
-    ['pk',30.0000,70.0000,12],
-    ['pl',52.0000,20.0000,13],
-    ['pm',46.8333,-56.3333,14],
-    ['pr',18.2500,-66.5000,15],
-    ['ps',32.0000,35.2500,16],
-    ['pt',39.5000,-8.0000,17],
-    ['pw',7.5000,134.5000,18],
-    ['py',-23.0000,-58.0000,19],
-    ['qa',25.5000,51.2500,20],
-    ['re',-21.1000,55.6000,21],
-    ['ro',46.0000,25.0000,22],
-    ['rs',44.0000,21.0000,23],
-   
-    ];
+<script>
+var map = new google.maps.Map(document.getElementById('map'), {
+
+Zoom: 2,
+
+center: {lat: 51.5174361, lng: -0.1562695000000076},
+mapTypeId: 'satellite',
+});
+  
+  var image = new google.maps.MarkerImage("/images/pin.png", null, null, null, new google.maps.Size(40,52));
+  var places = @json($mapplaces);
+ 
     
-    var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 1,
-    center: {lat: 18.2500, lng: -66.5000},
-    mapTypeId: 'satellite',
-    });
-    
+  
     var infowindow = new google.maps.InfoWindow();
     
-    var marker, i;
-    
-    for (i = 0; i < locations.length; i++) { marker=new google.maps.Marker({ position: new
-      google.maps.LatLng(locations[i][1], locations[i][2]), map: map }); 
-      google.maps.event.addListener(marker, 'click', (function (marker, i) {
-                      return function () {
-                         
-                          infowindow.setContent(generateContent(i))
-                          infowindow.open(map, marker);
-                      }
-                  })(marker, i)); }
-   
-                 
-   
-      function generateContent(i)
-      {
-          var content = `
-              <div class="gd-bubble" style="">
-                <div class="gggg">
-                  <h4>country</h4>
-                  <ul>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                  </ul>
+  for(place in places)
+    {
+    place = places[place];
+    if(place.latitude && place.longitude)
+    {
+    var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(place.latitude, place.longitude),
+    icon:image,
+    map: map,
+    title: place.name
+    });
+    var infowindow = new google.maps.InfoWindow();
+    google.maps.event.addListener(marker, 'click', (function (marker, place) {
+    return function () {
+    infowindow.setContent(generateContent(place))
+    infowindow.open(map, marker);
+    }
+    })(marker, place));
+    }
+    }
+ google.maps.event.addDomListener(window, 'load', initialize);
+
+function generateContent(place)
+{
+var content = `
+<div class="gd-bubble" style="">
+  <div class="gd-bubble-inside">
+    <div class="geodir-bubble_desc">
+      <div class="geodir-bubble_image">
+        <div class="geodir-post-slider">
+          <div class="geodir-image-container geodir-image-sizes-medium_large ">
+            <div id="geodir_images_5de53f2a45254_189" class="geodir-image-wrapper" data-controlnav="1">
+              <ul class="geodir-post-image geodir-images clearfix">
+                <li>
+                  <div class="geodir-post-title">
+                    <h4 class="geodir-entry-title">
+                      <h3  title="View: `+place.name+`">`+place.name+`</h3>
+                    </h4>
                   </div>
-             <div>
-                  <h4>country</h4>
-                  <ul>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                    <li><a href="#">sadfasdfasdf</a></li>
-                  </ul>
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="geodir-bubble-meta-side">
+    <div class="geodir-output-location">
+      <div class="geodir-output-location geodir-output-location-mapbubble">
+        <div class="geodir_post_meta  geodir-field-post_title"><span class="geodir_post_meta_icon geodir-i-text">
+  
+            
+            <div class="flex-container">
+              <div>
+                <h5>year</h5>
+                <p>year</p>
+                <p>sadfsf</p>
               </div>
+              <div>
+                <h5>categories</h5>
+                  <p>sadfsf</p>
+                  <p>sadfsf</p>
               </div>
-             
-          
-              `;
-   
-      return content;
-   
-      }
-    
-   
-   $('.ajax-popup-link').magnificPopup({
-   type: 'iframe',
-   
-   
-   iframe: {
-   patterns: {
-   dailymotion: {
-   
-   index: '{{$app_url}}/digitalpdf/',
-   
-   id: '/',
-   
-   src: '{{$app_url}}/digitalpdf/%id%'
-   
-   }
-   }
-   }
-   
-   
-   });
-   new WOW().init();
+            
+            </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>`;
+
+return content;
+
+}
+
+    $('.ajax-popup-link').magnificPopup({
+        type: 'iframe',
+
+        iframe: {
+            patterns: {
+                dailymotion: {
+
+                    index: '{{$app_url}}/digitalpdf/',
+
+                    id: '/',
+
+                    src: '{{$app_url}}/digitalpdf/%id%'
+
+                }
+            }
+        }
+
+    });
+    new WOW().init();
+
+    var swiper = new Swiper('.swiper-exibiton', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    $(function() {
+        $('#button').click(function() {
+            $('.modal').addClass('open');
+
+            if ($('.modal').hasClass('open')) {
+                $('.cont').addClass('blur');
+            }
+        });
+
+        $('.close').click(function() {
+            $('.modal').removeClass('open');
+            $('.cont').removeClass('blur');
+        });
+    });
 </script>
 @endsection

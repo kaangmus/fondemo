@@ -63,7 +63,7 @@
                         </ul>
                     </li>
            
-                @can('content_management_access')
+                
                     <li class="nav-item has-treeview {{ request()->is('admin/content-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/content-tags*') ? 'menu-open' : '' }} {{ request()->is('admin/content-pages*') ? 'menu-open' : '' }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
                             <i class="fa-fw fas fa-book">
@@ -75,7 +75,7 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            @can('content_category_access')
+                            
                                 <li class="nav-item">
                                     <a href="{{ route("admin.content-categories.index") }}" class="nav-link {{ request()->is('admin/content-categories') || request()->is('admin/content-categories/*') ? 'active' : '' }}">
                                         <i class="fa-fw fas fa-folder">
@@ -86,8 +86,7 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
-                            @can('content_tag_access')
+                           
                                 <li class="nav-item">
                                     <a href="{{ route("admin.content-tags.index") }}" class="nav-link {{ request()->is('admin/content-tags') || request()->is('admin/content-tags/*') ? 'active' : '' }}">
                                         <i class="fa-fw fas fa-tags">
@@ -98,8 +97,7 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
-                            @can('content_page_access')
+                           
                                 <li class="nav-item">
                                     <a href="{{ route("admin.content-pages.index") }}" class="nav-link {{ request()->is('admin/content-pages') || request()->is('admin/content-pages/*') ? 'active' : '' }}">
                                         <i class="fa-fw fas fa-file">
@@ -110,11 +108,10 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
+                         
                         </ul>
                     </li>
-                @endcan
-              @can('exhibitation_access')
+             
                     <li class="nav-item has-treeview {{ request()->is('admin/exhibation-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/years*') ? 'menu-open' : '' }} {{ request()->is('admin/exhibition-posts*') ? 'menu-open' : '' }} {{ request()->is('admin/exhibition-galleries*') ? 'menu-open' : '' }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
                             <i class="fa-fw fas fa-cogs">
@@ -126,7 +123,7 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            @can('exhibation_category_access')
+                            
                                 <li class="nav-item">
                                     <a href="{{ route("admin.exhibation-categories.index") }}" class="nav-link {{ request()->is('admin/exhibation-categories') || request()->is('admin/exhibation-categories/*') ? 'active' : '' }}">
                                         <i class="fa-fw fas fa-cogs">
@@ -137,8 +134,7 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
-                            @can('year_access')
+                        
                                 <li class="nav-item">
                                     <a href="{{ route("admin.years.index") }}" class="nav-link {{ request()->is('admin/years') || request()->is('admin/years/*') ? 'active' : '' }}">
                                         <i class="fa-fw fas fa-cogs">
@@ -149,8 +145,7 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
-                            @can('exhibition_post_access')
+               
                                 <li class="nav-item">
                                     <a href="{{ route("admin.exhibition-posts.index") }}" class="nav-link {{ request()->is('admin/exhibition-posts') || request()->is('admin/exhibition-posts/*') ? 'active' : '' }}">
                                         <i class="fa-fw fas fa-cogs">
@@ -161,8 +156,7 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
-                            @can('exhibition_gallery_access')
+                            
                                 <li class="nav-item">
                                     <a href="{{ route("admin.exhibition-galleries.index") }}" class="nav-link {{ request()->is('admin/exhibition-galleries') || request()->is('admin/exhibition-galleries/*') ? 'active' : '' }}">
                                         <i class="fa-fw fas fa-cogs">
@@ -173,10 +167,10 @@
                                         </p>
                                     </a>
                                 </li>
-                            @endcan
+                      
                         </ul>
                     </li>
-                @endcan
+             
                 <li class="nav-item">
                     <a href="{{ route("admin.galleries.index") }}" class="nav-link {{ request()->is('admin/galleries') || request()->is('admin/galleries/*') ? 'active' : '' }}">
                         <i class="fa-fw far fa-images">
@@ -225,6 +219,20 @@
                     <a href="{{ url("admin/laravel-filemanager") }}" class="nav-link {{ request()->is('admin/laravel-filemanager ') || request()->is('admin/laravel-filemanager /*') ? 'active' : '' }}">
                         <i class="fas fa-tools"></i>
                         <span>Filemanager</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url("admin/categories") }}"
+                        class="nav-link {{ request()->is('admin/categories ') || request()->is('admin/categories /*') ? 'active' : '' }}">
+                        <i class="fas fa-tools"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url("admin/maps") }}"
+                        class="nav-link {{ request()->is('admin/maps ') || request()->is('admin/maps /*') ? 'active' : '' }}">
+                        <i class="fas fa-tools"></i>
+                        <span>Maps</span>
                     </a>
                 </li>
                 <li class="nav-item">
