@@ -1263,7 +1263,7 @@ a.news_paragraph p {
 }
 
 a.main_button {
-    
+    border: 1px solid #4F9DBD;
     border-radius: 30px;
     color: #fff;
     cursor: pointer;
@@ -1279,6 +1279,7 @@ a.main_button {
     background: #4F9DBD;
 }
 a.main_button:hover {
+    border:1px solid #fff;
     text-decoration: none;
     background: transparent;
     color: #fff;
