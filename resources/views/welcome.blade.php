@@ -185,7 +185,7 @@
 <section id="digital" class="digital_section">
   <div class="container">
     <h2 class="maincolor text-center">Slideshows</h2>
-    <p class="text-center">slide show content</p>
+  
 
      <div class="row">
       <div class="col-md-10 offset-md-1 text-center text-white overflow-hidden">
@@ -302,6 +302,180 @@
 
 </section>
 {{-- end slde show --}}
+<!-- digital brounch -->
+
+@php
+$data = file_get_contents ('http://hakimages.com/ws_brochures.php');
+$json = json_decode($data);
+$jsons=array_slice($json, -11, 11, true);
+
+
+
+@endphp
+
+
+<section id="digital" class="digital_section bg-dark">
+  <div class="container">
+    <h2 class="maincolor text-center">DIGITAL BROCHURES</h2>
+    <p class="text-center text-light">Discover the latest Digital Brochures</p>
+  </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 offset-md-2 text-center text-white">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          @foreach ($jsons as $key=> $value)
+
+
+
+
+          <div class="swiper-slide digital">
+            <td>
+
+              <img class='crop' src='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/files/shot.jpg'
+                data-rel='fh5-light-box-demo' data-href='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/'
+                data-width='1000' data-height='600' data-title='Flick through the Digital Brochure'>
+            </td>
+
+          </div>
+
+          @endforeach
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <a class=" main_button" href="#">View all Brochures</a>
+    </div>
+  </div>
+
+</section>
+{{-- end digital --}}
+
+{{-- slide showcontent --}}
+<section id="digital" class="digital_section">
+  <div class="container">
+    <h2 class="maincolor text-center">Speeches & Essays</h2>
+    <p class="text-center"></p>
+
+    <div class="row">
+      <div class="col-md-10 offset-md-1 text-center text-white overflow-hidden">
+        <div class="swiper-slideshow">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="250px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="250px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="250px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="250px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Speeches & Essays</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="250px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+      </div>
+    </div>
+
+</section>
+{{-- end slde show --}}
+
+
 
 <!-- Grands -->
 <div id="grants_homeid" class="grants_home">
@@ -319,78 +493,17 @@
   </a>
 </div>
 {{-- end grands --}}
-<!-- digital brounch -->
 
-@php
-$data = file_get_contents ('http://hakimages.com/ws_brochures.php');
-$json = json_decode($data);
-$jsons=array_slice($json, -11, 11, true);
+{{-- exivation timeline --}} @include('exhibition') {{-- exbition timeline --}}
 
 
 
-@endphp
-
-
-<section id="digital" class="digital_section">
-  <div class="container">
-    <h2 class="maincolor text-center">DIGITAL BROCHURES</h2>
-    <p class="text-center">Discover the latest Digital Brochures</p>
-  </div>
-  </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 offset-md-2 text-center text-white">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          @foreach ($jsons as $key=> $value)
-            
-              
-           
-
-                <div class="swiper-slide digital">
-                  <td>
-                    
-                    <img class='crop' src='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/files/shot.jpg'
-                      data-rel='fh5-light-box-demo' data-href='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/'
-                      data-width='1000' data-height='600' data-title='Flick through the Digital Brochure'> 
-                  </td>
-                  
-                </div>
-           
-          @endforeach
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-      <a class=" main_button" href="#">View all Brochures</a>
-    </div>
-  </div>
-
-</section>
-{{-- end digital --}} {{-- google map --}}
+ {{-- google map --}}
 <div id="map" style="width: 100%; height: 700px;"></div>
-{{-- end google map --}} {{-- exivation timeline --}} @include('exhibition') {{-- exbition timeline --}}
-{{-- species essay --}}
-<div id='species_essay' class="grants_home bg-dark">
-  <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
-  <div class="centered">
-    <h1 class="maincolor text-light">SPEECHES & ESSAYS</h1>
-    <a href="#">
-      <h3 class="text-center">THE LIVING SEA Portugal National Museum of Natural History and Science</h3>
-    </a>
-    <p>September 2019</p>
-    <a href="#">
-      <h3 class="text-center">THE LIVING SEAPortugal History and Science</h3>
-    </a>
-    <p>September 2019</p>
-    <a href="#">
-      <h3 class="text-center">THE LIVING SEAPortugal History and Science</h3>
-    </a>
-    <p>September 2019</p>
-  </div>
-</div>
-{{-- species essay --}} {{-- online shop --}}
+{{-- end google map --}} 
+
+
+{{-- online shop --}}
 <section id="online_shop">
   <div class="container">
     <div class="row">
