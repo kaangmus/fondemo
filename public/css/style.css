@@ -1281,7 +1281,6 @@ a.main_button {
 a.main_button:hover {
     text-decoration: none;
     background: transparent;
-    border: 1px solid;
     color: #fff;
 }
 .content_top {
