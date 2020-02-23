@@ -322,7 +322,7 @@ $jsons=array_slice($json, -11, 11, true);
   </div>
   </div>
   <div class="row">
-    <div class="col-md-8 offset-md-2 text-center text-white">
+    <div class="col-md-12 text-center text-white">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           @foreach ($jsons as $key=> $value)
