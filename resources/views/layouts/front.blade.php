@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('nivo-slider/css/nivo-slider.css')}}" >
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('css/video.popup.css') }}">
@@ -38,9 +37,7 @@
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
     <script src="{{ asset('js/swiper.min.js') }}"></script>
-    <script src="{{ asset('js/wow.min.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/slick.min.js') }}"></script>
+     <script src="{{ asset('js/slick.min.js') }}"></script>
     <script src="{{ asset('nivo-slider/js/jquery.nivo.slider.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/video.popup.js')}}"></script>
     <script src="{{ asset('js/custom.js') }}" type="text/javascript"></script>

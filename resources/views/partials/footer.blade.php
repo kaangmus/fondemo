@@ -1,6 +1,6 @@
 
 <!-- ========================= Subscribe ========================= -->
-<footer class="footer-area bg-dark text-light">
+<footer class="footer-area bg_black text-light">
         <section class="section-subscribe text-center">
             <div class="container">
               

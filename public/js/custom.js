@@ -19,23 +19,23 @@
     });
 
 
+$(document).ready(function () {
+    $('#ensign-nivoslider').nivoSlider({
+        effect: 'fade',
+        slices: 15,
+        boxCols: 12,
+        boxRows: 8,
+        animSpeed: 500,
+        pauseTime: 5000,
+        startSlide: 0,
+        directionNav: true,
+        controlNavThumbs: false,
+        pauseOnHover: true,
+        manualAdvance: false,
 
-  $('#ensign-nivoslider').nivoSlider({
-      effect: 'fade',
-      slices: 15,
-      boxCols: 12,
-      boxRows: 8,
-      animSpeed: 500,
-      pauseTime: 5000,
-      startSlide: 0,
-      directionNav: true,
-      controlNavThumbs: false,
-      pauseOnHover: false,
-      manualAdvance: false,
+    })
 
-  })
-
-
+});
 
  var swiper = new Swiper('.swiper-container', {
      effect: 'coverflow',
