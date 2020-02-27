@@ -26,7 +26,7 @@
             </div>
             @if($slider->btn_text)
             <div class="slider_button" >
-              <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="video/intro.mp4" id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
+              <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="/video/intro.mp4" id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
             </div>
             @endif
           </div>
