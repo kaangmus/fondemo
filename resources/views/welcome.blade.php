@@ -3,9 +3,13 @@
 <div id="slidercontainer" class="slider-area">
   <div class="bend niceties preview-2">
     <div id="ensign-nivoslider" class="slides">
-      @foreach($sliders as $key => $slider) @if($slider->image)
+      @foreach($sliders as $key => $slider)
+      @if($slider->image)
       <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}"
-        title="#slider-direction-{{ $slider->id}}" > @endif @endforeach
+        title="#slider-direction-{{ $slider->id}}">
+      @endif
+
+      @endforeach
     </div>
     @foreach($sliders as $key => $slider)
     <div id="slider-direction-{{ $slider->id ?? '' }}" class="slider-direction slider-one">
@@ -13,29 +17,28 @@
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="{{$slider->position}}">
-              <!-- layer 1 -->
-            
-                <h2 class="maincolor text-light text-center">{{ $slider->title ?? '' }}</h2>
-         
-              <!-- layer 2 -->
-            
-                <p id="fontsize">{{ $slider->description ?? '' }}</p>
-       
-              <!-- layer 3 -->
-             
+              <h2 class="maincolor text-light text-center">{{ $slider->title ?? '' }}</h2>
+              <p id="fontsize">{{ $slider->description ?? '' }}</p>
+
             </div>
-            @if($slider->btn_text)
-            <div class="slider_button" >
-              <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="{{$app_url}}/video/intro.mp4" id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
-            </div>
-            @endif
+
           </div>
+        </div>
+        <div class="row">
+          @if($slider->btn_text)
+          <div class="bottom-right">
+            <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="{{$app_url}}/video/intro.mp4"
+              id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
+          </div>
+          @endif
+
         </div>
       </div>
     </div>
     @endforeach
   </div>
 </div>
+
 
 
 
@@ -233,8 +236,8 @@
             <div class="swiper-slide">
               <div class="post-thumb ts-resize">
                 <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                  <img src="{{asset('slideshow/slideshow1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -253,8 +256,8 @@
             <div class="swiper-slide">
               <div class="post-thumb ts-resize">
                 <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                  <img src="{{asset('slideshow/slideshow2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -273,8 +276,8 @@
             <div class="swiper-slide">
               <div class="post-thumb ts-resize">
                 <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                  <img src="{{asset('slideshow/slideshow3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -293,28 +296,8 @@
             <div class="swiper-slide">
               <div class="post-thumb ts-resize">
                 <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
-                </a>
-                <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Speeches & Essays</h3>
-                    <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
-  
-                    <p>June 13, 2019</p>
-                    <p></p>
-  
-                  </a>
-                </div>
-              </div>
-            </div>
-  
-            <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
-                <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                  <img src="{{asset('slideshow/slideshow4.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -329,6 +312,71 @@
                 </div>
               </div>
             </div>
+  
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('slideshow/slideshow5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+  
+                    <p>June 13, 2019</p>
+                    <p></p>
+  
+                  </a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('slideshow/slideshow6.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+  
+                    <p>June 13, 2019</p>
+                    <p></p>
+  
+                  </a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('slideshow/slideshow7.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+  
+                    <p>June 13, 2019</p>
+                    <p></p>
+  
+                  </a>
+                </div>
+              </div>
+            </div>
+  
+
+  
+            
+  
             <!-- Add Pagination -->
           </div>
           <div class="swiper-button-prev"></div>
@@ -405,7 +453,7 @@ $jsons=array_slice($json, -11, 11, true);
             <div class="swiper-slide">
               <div class="post-thumb ts-resize">
                 <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                  <img src="{{asset('species/species1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
                 <div class="new_third_text">
@@ -425,7 +473,7 @@ $jsons=array_slice($json, -11, 11, true);
             <div class="swiper-slide">
               <div class="post-thumb ts-resize">
                 <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                  <img src="{{asset('species/species2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
                 <div class="new_third_text">
@@ -445,8 +493,8 @@ $jsons=array_slice($json, -11, 11, true);
             <div class="swiper-slide">
               <div class="post-thumb ts-resize">
                 <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                  <img src="{{asset('species/species3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -465,7 +513,26 @@ $jsons=array_slice($json, -11, 11, true);
             <div class="swiper-slide">
               <div class="post-thumb ts-resize">
                 <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                  <img src="{{asset('species/species4.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="250px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Speeches & Essays</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('species/species5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
                 <div class="new_third_text">
@@ -482,24 +549,8 @@ $jsons=array_slice($json, -11, 11, true);
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
-                <a href="/post/18">
-                  <img src="{{asset('images/gbanner.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
-                </a>
-                <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
-                    <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
-
-                    <p>June 13, 2019</p>
-                    <p></p>
-
-                  </a>
-                </div>
-              </div>
+           
+             
             </div>
             <!-- Add Pagination -->
           </div>
@@ -555,52 +606,90 @@ $jsons=array_slice($json, -11, 11, true);
 
 
 {{-- online shop --}}
-<section id="online_shop">
+<section id="digital" class="digital_section">
+
+  <h2 class="maincolor text-center">SHOP</h2>
+  <p class="text-center"></p>
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1 class='maincolor'>SHOP</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card-banner"
-          style="height:250px;background-size:cover; background-image: url('{{asset('images/gbanner.jpg')}}');">
-          <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
-            <div class="text-center">
-              <h5 class="who-title text-white">Primary text as title</h5>
-              <a href="/shop" class="btn btn-warning btn-sm"> View All </a>
+      <div class="col-md-12 overflow-hidden">
+        <div class="swiper-slideshow">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('shop/shop1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="250px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
             </div>
-          </article>
-        </div>
-        <!-- who.// -->
-      </div>
-      <div class="col-md-4">
-        <div class="card-banner"
-          style="height:250px;background-size:cover; background-image: url('{{asset('images/gbanner.jpg')}}');">
-          <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
-            <div class="text-center">
-              <h5 class="who-title text-white">Primary text as title</h5>
-              <a href="/shop" class="btn btn-warning btn-sm"> View All </a>
+
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('shop/shop2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="250px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
             </div>
-          </article>
-        </div>
-        <!-- card.// -->
-      </div>
-      <div class="col-md-4">
-        <div class="card-banner"
-          style="height:250px;background-size:cover; background-image: url('{{asset('images/gbanner.jpg')}}');">
-          <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
-            <div class="text-center">
-              <h5 class="card-title text-white">Primary text as title</h5>
-              <a href="/shop" class="btn btn-warning btn-sm"> View All </a>
+
+            <div class="swiper-slide">
+              <div class="post-thumb ts-resize">
+                <a href="/post/18">
+                  <img src="{{asset('shop/shop3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                    height="300px">
+                </a>
+                <div class="new_third_text">
+                  <a href="/post/18">
+                    <h3>Clarion Call speech</h3>
+                    <p></p>
+                    <p>EAT Stockholm Food Forum, Sweden</p>
+
+                    <p>June 13, 2019</p>
+                    <p></p>
+
+                  </a>
+                </div>
+              </div>
             </div>
-          </article>
+
+            
+
+
+
+          </div>
+          <!-- Add Pagination -->
         </div>
-        <!-- card.// -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
       </div>
     </div>
   </div>
+
 </section>
 {{-- end online shop --}}
 <!-- instagram -->

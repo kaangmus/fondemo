@@ -779,8 +779,9 @@ div#species_essay img {
 
 .bottom-right {
     position: absolute;
-    bottom: 8px;
-    right: 16px;
+        padding-bottom: 10%;
+        left: 47%;
+  
 }
 .toped {
     position: absolute;

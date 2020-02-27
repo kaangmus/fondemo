@@ -19,11 +19,12 @@
     });
 
 
-$(document).ready(function () {
+$(window).load(function (){
     $('#ensign-nivoslider').nivoSlider({
         effect: 'fade',
         slices: 15,
         boxCols: 12,
+        autoplay: false,
         boxRows: 8,
         animSpeed: 500,
         pauseTime: 5000,
