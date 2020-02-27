@@ -38,7 +38,7 @@ class WelcomeController extends Controller
         }
         $digitalbrochures=DigitalBrochure::orderBy('published_at', 'desc')->take(7)->get();
         $app_url = config('app.url');
-        $years = Year::whereHas('yearExhibationCategories')->get();
+        $years = Year::whereHas('yearExhibationCategories')->orderBy('year','desc')->get();
 
         //map
 
