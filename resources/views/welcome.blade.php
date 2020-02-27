@@ -26,7 +26,7 @@
             </div>
             @if($slider->btn_text)
             <div class="slider_button" >
-              <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="/video/intro.mp4" id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
+              <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="{{$app_url}}/video/intro.mp4" id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
             </div>
             @endif
           </div>
@@ -109,8 +109,7 @@
           @foreach ($mediums as $key=>$medium)
           <div class="col-md-6">
             <div class="post-thumb ts-resize">
-              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif"
-                @if($medium->link)target="_blank"@endif>
+              <a @if($medium->video) href="javascript:void(0)" vidUrl="{{$app_url}}/video/intro.mp4" id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>
                 @if($medium->featured_image)
                 <img src="{{ $medium->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
                 @endif
@@ -137,50 +136,85 @@
 <section id="team" class="member bg_black text-white">
   <div class="container ">
     <div class="row">
-      <!-- who we are -->
-      <div class="col-md-6 who_we_are">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="maincolor">WHO WE ARE</h2>
+       <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tablinks" onclick="openCity(event, 'bbbb')">Paris</button>
+       
+      </div>
+      
+      <div id="London" class="tabcontent">
+       <div class="who">
+        <div class="box">
+          <div class="img">
+            <img src="https://www.planwallpaper.com/static/images/cool-wallpaper-5_G6Qe1wU.jpg">
           </div>
-        </div>
-        <div class="row">
-          @foreach ($whoweares as $whoweare)
-          <div class="advisor col-md-6 col-xs-6">
-            @if($whoweare->photp)
-            <img src="{{$whoweare->photp->getUrl()}}" alt="#" class="mr-3 advisor" style="width:100px;height:100px">
-            @endif
-            <div class="advisor_text">
-              <h4>{{$whoweare->name ?? '' }}</h4>
-              <p>{{$whoweare->level ?? '' }}</p>
-            </div>
-          </div>
-          @endforeach
+          <h2>Prakash Prajapati<br><span>Web Graphic Designer</span></h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et.</p>
+          <span>
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+              <li><a href="#"><i class="fas fa-globe"></i></a></li>
+              <li><a href="#"><i class="fas fa-envelope-square"></i></a></li>
+            </ul>
+          </span>
         </div>
       </div>
-      <!-- end who we are -->
-      <!-- advisor -->
-      <div class="col-md-6 advisor">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="maincolor">ADVISERS</h2>
-          </div>
-        </div>
-        <div class="row">
-          @foreach ($advisors as $key=>$advisor)
-          <div class="col-md-6 col-xs-6 advisor mb-2">
-            @if($advisor->photp)
-            <img src="{{$advisor->photp->getUrl()}}" alt="#" class="mr-3 advisor" style="width:100px;height:100px">
-            @endif
-            <div class="advisor_text">
-              <h4>{{$advisor->name ?? ''}}</h4>
-              <p>{{$advisor->level ?? ''}}</p>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <div class="who">
+          <div class="box">
+            <div class="img">
+              <img src="https://www.planwallpaper.com/static/images/cool-wallpaper-5_G6Qe1wU.jpg">
             </div>
+            <h2>Prakash Prajapati<br><span>Web Graphic Designer</span></h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et.</p>
+            <span>
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                <li><a href="#"><i class="fas fa-envelope-square"></i></a></li>
+              </ul>
+            </span>
           </div>
-          @endforeach
         </div>
       </div>
-      <!-- edn advisor     -->
+      
+      <div id="Tokyo" class="tabcontent">
+        
+          <div class="box">
+            <div class="img">
+              <img src="https://www.planwallpaper.com/static/images/cool-wallpaper-5_G6Qe1wU.jpg">
+            </div>
+            <h2>Prakash Prajapati<br><span>Web Graphic Designer</span></h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et.</p>
+            <span>
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                <li><a href="#"><i class="fas fa-envelope-square"></i></a></li>
+              </ul>
+            </span>
+          </div>
+        
+      </div>
+
+      <div class="lab">
+        <button class="tablinks" onclick="openCity(event, 'kkk')" >London</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        
+        <button class="tablinks" onclick="openCity(event, 'ccc')">Tokyo</button>
+      </div>
     </div>
   </div>
 </section>
@@ -507,6 +541,18 @@ $jsons=array_slice($json, -11, 11, true);
 <div id="map" style="width: 100%; height: 700px;" ></div> 
 {{-- end google map --}} 
 
+<div id="serach_map" class="grants_home">
+  <a href="#" class="search map">
+    <img src="{{asset('images/searchmap.jpg')}}" alt="Snow" style="width:100%;">
+    <div class="toped">
+
+      <h2 class="maincolor text-center grant_tcolor">SERARCH MAP</h2>
+     
+
+    </div>
+  </a>
+</div>
+
 
 {{-- online shop --}}
 <section id="online_shop">
@@ -518,23 +564,23 @@ $jsons=array_slice($json, -11, 11, true);
     </div>
     <div class="row">
       <div class="col-md-4">
-        <div class="card-banner"
+        <div class="who-banner"
           style="height:250px;background-size:cover; background-image: url('{{asset('images/gbanner.jpg')}}');">
           <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
             <div class="text-center">
-              <h5 class="card-title text-white">Primary text as title</h5>
+              <h5 class="who-title text-white">Primary text as title</h5>
               <a href="/shop" class="btn btn-warning btn-sm"> View All </a>
             </div>
           </article>
         </div>
-        <!-- card.// -->
+        <!-- who.// -->
       </div>
       <div class="col-md-4">
-        <div class="card-banner"
+        <div class="who-banner"
           style="height:250px;background-size:cover; background-image: url('{{asset('images/gbanner.jpg')}}');">
           <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
             <div class="text-center">
-              <h5 class="card-title text-white">Primary text as title</h5>
+              <h5 class="who-title text-white">Primary text as title</h5>
               <a href="/shop" class="btn btn-warning btn-sm"> View All </a>
             </div>
           </article>
@@ -758,5 +804,24 @@ $('.main-vid-box').fadeOut(500);
 $('.close').fadeOut(500);
 });
 });
+</script>
+
+<script>
+  function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
 @endsection

@@ -111,26 +111,7 @@
     </div>
    
 </section>
-<div class="banner">
-    <div class="container-fluid">
-        <div class="row  justify-content-center sub_banner_title">
-            <h1 class="bannertitle text-light text-center">{{$post->title }}</h1>
-        </div>
-        @if($post->featured_image)
-        <div class="sub_img">
-            <div class='image-container'>
 
-                <img src="{{ $post->featured_image->getUrl() }}" class="bannertp lazyload">
-
-                <div class='curtain'>
-                    <div class='shine'></div>
-                </div>
-            </div>
-        </div>
-        @endif
-
-    </div>
-</div>
 
 
 

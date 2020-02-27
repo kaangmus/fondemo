@@ -25,21 +25,21 @@
 				<div class="col-md-6 col-sm-12">
 					{!! $exbcategory->description !!}
 				</div>
-				<div class="col-md-3 col-sm-12 d-flex align-items-center">
+				<div class="col-md-3 col-sm-12  align-items-center">
 					@if($exbcategory->post)
-					<a href="/exhibition/epost/{{$exbcategory->id}}" class="btn btn-md btn-warning">
-						VIEW EXHIBITION HERE
+					<a href="/exhibition/epost/{{$exbcategory->id}}" class="btn m-2 btn-md btn-warning">
+						VIEW EXHIBITION POST
 					</a>
 					@endif
 					@if($exbcategory->video)
 					<a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-max-width="600"
-						class="btn btn-md btn-warning">
+						class="btn m-2 btn-md btn-warning">
 						VIEW VIDEO HERE
 					</a>
 					@endif
 					@if($exbcategory->gallery)
-					<a href="/exhibition/egallery/{{$exbcategory->id}}" class="btn btn-md btn-warning">
-						VIEW EXHIBITION HERE
+					<a href="/exhibition/egallery/{{$exbcategory->id}}" class="btn m-2 btn-md btn-warning">
+						VIEW EXHIBITION GALLERY
 					</a>
 					@endif
 
