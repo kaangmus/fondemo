@@ -564,7 +564,7 @@ $jsons=array_slice($json, -11, 11, true);
     </div>
     <div class="row">
       <div class="col-md-4">
-        <div class="who-banner"
+        <div class="card-banner"
           style="height:250px;background-size:cover; background-image: url('{{asset('images/gbanner.jpg')}}');">
           <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
             <div class="text-center">
@@ -576,7 +576,7 @@ $jsons=array_slice($json, -11, 11, true);
         <!-- who.// -->
       </div>
       <div class="col-md-4">
-        <div class="who-banner"
+        <div class="card-banner"
           style="height:250px;background-size:cover; background-image: url('{{asset('images/gbanner.jpg')}}');">
           <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
             <div class="text-center">
