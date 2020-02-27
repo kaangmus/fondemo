@@ -1,3 +1,6 @@
+/*
+ * Author: Sławomir Netteria.NET https://netteria.net
+ */
 (function ($) {
 
     $.fn.VideoPopUp = function (options) {
@@ -46,10 +49,9 @@
         });
         $("#closer_videopopup").on('click', function () {
             if (settings.pausevideo == true) {
-                // $('#' + settings.idvideo + '').trigger('pause');
-                $("#v1")[0].pause()
+                $('#' + settings.idvideo + '').trigger('pause');
             } else {
-                  $("#v1")[0].pause()
+                stopVideo();
             }
             $('#' + patter + "").hide();
         });

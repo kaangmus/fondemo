@@ -22,8 +22,7 @@ class UpdateExhibationCategoryRequest extends FormRequest
             'year_id' => [
                 'required',
                 'integer'],
-            'type'    => [
-                'required'],
+           
         ];
     }
 }

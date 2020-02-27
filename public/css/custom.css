@@ -1352,3 +1352,80 @@ Main Components
         transform: translateX(0%);
     }
 }
+
+.video-link {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    background-color: #336699;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0 20px 0;
+    transition: all 0.5s;
+}
+
+.video-link:hover {
+    background-color: #000;
+}
+
+.videooverlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0.9;
+    display: none;
+}
+
+
+.close {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 16px;
+    height: 16px;
+    z-index: 9999999999999;
+    display: none;
+    cursor: pointer;
+}
+
+.main-vid-box {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 99999999999;
+}
+
+
+.videoWrapper {
+    position: relative;
+    z-index: 999;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.videoWrapper video {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100% !important;
+    height: 100% !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-width: 40px;
+    border-style: solid;
+    border-color: transparent;
+}

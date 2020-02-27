@@ -26,7 +26,7 @@
             </div>
             @if($slider->btn_text)
             <div class="slider_button" >
-              <a class="main_button" href="{{$slider->btn_link}}">{{$slider->btn_text}}</a>
+              <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="video/intro.mp4" id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
             </div>
             @endif
           </div>
@@ -36,6 +36,10 @@
     @endforeach
   </div>
 </div>
+
+
+
+
 <!-- End Slider Area -->
 
 <section id="blog">
@@ -565,6 +569,18 @@ $jsons=array_slice($json, -11, 11, true);
         scrolling="no" style="border:none; overflow:hidden;  width:100%; height: 610px;"></iframe>
    </div>
 </section>
+
+
+<div class="videooverlay vid-link" vidUrl="#"></div>
+  <div class="main-vid-box">
+  
+    <div class="videoWrapper">
+      <video autoplay="autoplay" class="myVideo" src="" frameborder="0" controls></video>
+    </div>
+  </div>
+  
+  <img class="close vid-link" vidUrl="#" src="images/cancel.svg">
+
 {{-- instagram --}} @endsection @section('scripts')
 <script type="text/javascript">
   $(document).on('click', '[data-toggle="lightbox"]', function(event) {
@@ -700,7 +716,47 @@ return content;
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        responsive: [{
+          
+          breakpoint: 1024,
+          settings: {
+          slidesToShow: 3,
+          infinite: true
+          }
+          
+          }, {
+          
+          breakpoint: 600,
+          settings: {
+          slidesToShow: 2,
+          dots: true
+          }
+          
+          }, {
+          
+          breakpoint: 300,
+          settings: "unslick" // destroys slick
+          
+          }]
     });
 
+</script>
+<script type="text/javascript">
+ $( document ).ready(function() {
+$('#video_lightbox').click(function() {
+$('.myVideo').attr("src", $(this).attr("vidUrl"));
+$('.overlay').fadeIn(500, function(){
+$('.main-vid-box').fadeIn(500);
+$('.close').fadeIn(500);
+});
+});
+
+$('.close, .overlay').click(function() {
+$('.overlay').fadeOut(500);
+$('.myVideo').attr("src", $(this).attr("vidUrl"));
+$('.main-vid-box').fadeOut(500);
+$('.close').fadeOut(500);
+});
+});
 </script>
 @endsection

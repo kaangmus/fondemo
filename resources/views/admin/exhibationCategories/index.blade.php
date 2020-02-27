@@ -29,7 +29,7 @@
                             {{ trans('cruds.exhibationCategory.fields.title') }}
                         </th>
                         <th>
-                            {{ trans('cruds.exhibationCategory.fields.type') }}
+                            
                         </th>
                         <!-- <th>
                             {{ trans('cruds.exhibationCategory.fields.e_cat_video') }}
@@ -61,9 +61,7 @@
                             <td>
                                 {{ $exhibationCategory->title ?? '' }}
                             </td>
-                            <td>
-                                {{ App\ExhibationCategory::TYPE_SELECT[$exhibationCategory->type] ?? '' }}
-                            </td>
+                       
                              <td>
                                 {{ date('d F Y',strtotime($exhibationCategory->public_date)) ?? '' }}
                             </td>

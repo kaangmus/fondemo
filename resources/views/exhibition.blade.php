@@ -20,22 +20,24 @@
 			@foreach($year->yearExhibationCategories as $k=>$exbcategory)
 			<div class="row exb-item mt-2">
 				<div class="col-md-3 col-sm-12 text-center">
-					{{$exbcategory->title}}
+					{!! $exbcategory->title !!}
 				</div>
 				<div class="col-md-6 col-sm-12">
 					{!! $exbcategory->description !!}
 				</div>
 				<div class="col-md-3 col-sm-12 d-flex align-items-center">
-					@if($exbcategory->type == 'epost')
+					@if($exbcategory->post)
 					<a href="/exhibition/epost/{{$exbcategory->id}}" class="btn btn-md btn-warning">
 						VIEW EXHIBITION HERE
 					</a>
-					@elseif($exbcategory->type == 'evideo')
+					@endif
+					@if($exbcategory->video)
 					<a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-max-width="600"
 						class="btn btn-md btn-warning">
 						VIEW VIDEO HERE
 					</a>
-					@else
+					@endif
+					@if($exbcategory->gallery)
 					<a href="/exhibition/egallery/{{$exbcategory->id}}" class="btn btn-md btn-warning">
 						VIEW EXHIBITION HERE
 					</a>
