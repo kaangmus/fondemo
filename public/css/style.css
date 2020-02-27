@@ -15,6 +15,10 @@ h6{
     color: #4F9DBD;
     font-size: 42px;
     line-height: 56px;
+    font-family: 'Audiowide',
+    cursive;
+    text-transform: uppercase;
+    
 }
 #mainfont{
     font-family: 'Audiowide',
@@ -748,6 +752,9 @@ img{
 .digit_read_button:hover{
     background:#fff;
     color: #000!important;
+}
+a.search.map .toped {
+    top: 10%;
 }
 
  .grants_home{

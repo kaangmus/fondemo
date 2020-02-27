@@ -592,14 +592,15 @@ $jsons=array_slice($json, -11, 11, true);
 <div id="map" style="width: 100%; height: 700px;" ></div> 
 {{-- end google map --}} 
 
-<div id="serach_map" class="grants_home">
+<div id="grants_homeid" class="grants_home">
   <a href="#" class="search map">
     <img src="{{asset('images/searchmap.jpg')}}" alt="Snow" style="width:100%;">
     <div class="toped">
-
-      <h2 class="maincolor text-center grant_tcolor">SERARCH MAP</h2>
-     
-
+    
+      <h2 class="maincolor text-center grant_tcolor">PHOTO SEARCH MAP</h2>
+      <p class="text-light text-center">
+      </p>
+    
     </div>
   </a>
 </div>
