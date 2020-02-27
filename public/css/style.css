@@ -15,8 +15,6 @@ h6{
     color: #4F9DBD;
     font-size: 42px;
     line-height: 56px;
-    font-family: 'Audiowide',
-    cursive;
     text-transform: uppercase;
     
 }
@@ -47,6 +45,12 @@ p{
     font-family: 'Lato','Helvetica', sans-serif;
     font-size:18px;
     
+}
+.sliderfont{
+    font-family: 'Lato',
+    'Helvetica',
+    sans-serif;
+    font-size:30px;
 }
 .myheader {
     background-color: transparent;
