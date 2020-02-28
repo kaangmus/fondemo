@@ -140,9 +140,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('categories', 'CategoriesController');
     ctf0\MediaManager\MediaRoutes::routes();
 });
-Route::group(['prefix' => 'admin/laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-     \UniSharp\LaravelFilemanager\Lfm::routes();
- });
 
 
 
