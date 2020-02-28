@@ -11,13 +11,15 @@ use App\DigitalBrochure;
 use App\Year;
 use App\ExhibationCategory;
 use App\ExhibationPost;
+use App\Category;
+use App\Map;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::orderBy('published_at', 'desc')->take(20)->get();
+        $sliders = Slider::orderBy('published_at', 'asc')->take(20)->get();
         $advisors=Advisor::where('status','advisor')->orderBy('published_at', 'asc')->get();
         $whoweares=Advisor::where('status','whoweare')->orderBy('published_at', 'asc')->get();
         $mediums=Contentpage::where('type','medium')->orderBy('published_at','desc')->take(2)->get();
@@ -36,9 +38,19 @@ class WelcomeController extends Controller
         }
         $digitalbrochures=DigitalBrochure::orderBy('published_at', 'desc')->take(7)->get();
         $app_url = config('app.url');
-        $years = Year::whereHas('yearExhibationCategories')->get();
+        $years = Year::whereHas('yearExhibationCategories')->orderBy('year','desc')->get();
+
+        //map
+
+        $categories = Category::all();
+        $maps = Map::with(['categories'])->get();
+
+        $mapplaces = $maps->makeHidden([ 'photos', 'media']);
+        $latitude = $maps->count() && (request()->filled('category') || request()->filled('search')) ? $maps->average('latitude') : 51.5073509;
+        $longitude = $maps->count() && (request()->filled('category') || request()->filled('search')) ? $maps->average('longitude') : -0.12775829999998223;
+      
         return view('welcome', compact('sliders','advisors','whoweares',
-        'ngopricestotal','digitalbrochures','app_url','fundposts','faposts','larges','mediums','years'));
+        'ngopricestotal','digitalbrochures','app_url','fundposts','faposts','larges','mediums','years','maps','mapplaces','latitude','longitude'));
     }
     public function exhibitionPost($id)
     {

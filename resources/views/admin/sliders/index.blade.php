@@ -34,7 +34,7 @@
                                         {{ trans('cruds.slider.fields.image') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.slider.fields.description') }}
+                                        Content Position
                                     </th>
                                     <th>
                                         Button text
@@ -70,7 +70,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            {{ $slider->description ?? '' }}
+                                            {{ $slider->position ?? '' }}
                                         </td>
                                         <td>
                                             {{ $slider->btn_text ?? '' }}

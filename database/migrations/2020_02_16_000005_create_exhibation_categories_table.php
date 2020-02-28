@@ -12,7 +12,9 @@ class CreateExhibationCategoriesTable extends Migration
             $table->increments('id');
             $table->string('title')->nullable();
             $table->longText('description')->nullable();
-            $table->string('type');
+            $table->string('post');
+            $table->string('video');
+            $table->string('gallery');
             $table->longText('e_cat_post_description')->nullable();
             $table->date('public_date')->nullable();
             $table->timestamps();

@@ -53,6 +53,20 @@
                             @endif
                         
                         </div>
+                        <div class="form-group {{ $errors->has('position') ? 'has-error' : '' }}">
+                            <label class="required">Content Position</label>
+                            <select class="form-control" name="position" id="position" required>
+                                <option value disabled {{ old('position', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}
+                                </option>
+                                @foreach(App\Slider::position_SELECT as $key => $label)
+                                <option value="{{ $key }}" {{ old('position', $slider->position) === (string) $key ? 'selected' : '' }}>{{ $label }}</option>
+                                @endforeach
+                            </select>
+                            @if($errors->has('position'))
+                            <span class="help-block" role="alert">{{ $errors->first('position') }}</span>
+                            @endif
+                        
+                        </div>
                         <div class="form-group">
                             <label for="published_at">published_at</label>
                             <input class="form-control date {{ $errors->has('published_at') ? 'is-invalid' : '' }}" type="text"

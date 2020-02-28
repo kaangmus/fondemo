@@ -79,8 +79,6 @@
 /* Caption styles */
 .nivo-caption {
 	position:absolute;
-	left:0px;
-	bottom:0px;
 	color:#fff;
 	width:100%;
 	z-index:8;

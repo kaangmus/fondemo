@@ -19,54 +19,31 @@
     });
 
 
+$(window).load(function (){
+    $('#ensign-nivoslider').nivoSlider({
+        effect: 'fade',
+        slices: 15,
+        boxCols: 12,
+        autoplay: false,
+        boxRows: 8,
+        animSpeed: 500,
+        pauseTime: 5000,
+        startSlide: 0,
+        directionNav: true,
+        controlNavThumbs: false,
+        pauseOnHover: true,
+        manualAdvance: false,
 
-  $('#ensign-nivoslider').nivoSlider({
-      effect: 'fade',
-      slices: 15,
-      boxCols: 12,
-      boxRows: 8,
-      animSpeed: 500,
-      pauseTime: 5000,
-      startSlide: 0,
-      directionNav: true,
-      controlNavThumbs: false,
-      pauseOnHover: true,
-      manualAdvance: false,
+    })
 
-  })
+});
 
-
-
-
- $(document).ready(function () {
-     $('.owl-carousel').owlCarousel({
-         loop: true,
-         margin: 10,
-         autoplay: true,
-         responsiveClass: true,
-         responsive: {
-             0: {
-                 items: 2,
-                 nav: true
-             },
-             600: {
-                 items: 3,
-                 nav: false
-             },
-             1000: {
-                 items: 5,
-                 nav: true,
-                 loop: false
-             }
-         }
-     })
- });
  var swiper = new Swiper('.swiper-container', {
      effect: 'coverflow',
      grabCursor: true,
      centeredSlides: true,
      slidesPerView: 'auto',
-     initialSlide:'3',
+     initialSlide:'6',
      coverflowEffect: {
          rotate: 0,
          stretch: 1,
@@ -92,13 +69,3 @@
      }
  });
 
-    $(function () {
-        $(window).on('load', function () {
-            $('[data-src]').each(function () {
-                var $this = $(this),
-                    src = $(this).data('src');
-                $this.attr('src', src);
-                console.log(src);
-            });
-        });
-    });

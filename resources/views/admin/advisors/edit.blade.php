@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group {{ $errors->has('level') ? 'has-error' : '' }}">
                             <label for="level">{{ trans('cruds.advisor.fields.level') }}</label>
-                            <input class="form-control" type="text" name="level" id="level" value="{{ old('level', $advisor->level) }}">
+                            <input class="form-control ckeditor" type="text" name="level" id="level" value="{{ old('level', $advisor->level) }}">
                             @if($errors->has('level'))
                                 <span class="help-block" role="alert">{{ $errors->first('level') }}</span>
                             @endif
@@ -57,6 +57,47 @@
                                 <span class="help-block" role="alert">{{ $errors->first('status') }}</span>
                             @endif
                             
+                        </div>
+
+                        <div class="form-group {{ $errors->has('facebook') ? 'has-error' : '' }}">
+                            <label for="facebook">facebook</label>
+                            <input class="form-control" type="text" name="facebook" id="facebook" value="{{ old('facebook', $advisor->facebook) }}">
+                            @if($errors->has('facebook'))
+                            <span class="help-block" role="alert">{{ $errors->first('facebook') }}</span>
+                            @endif
+                        
+                        </div>
+                        <div class="form-group {{ $errors->has('twitter') ? 'has-error' : '' }}">
+                            <label for="twitter">twitter</label>
+                            <input class="form-control" type="text" name="twitter" id="twitter" value="{{ old('twitter', $advisor->twitter) }}">
+                            @if($errors->has('twitter'))
+                            <span class="help-block" role="alert">{{ $errors->first('twitter') }}</span>
+                            @endif
+                        
+                        </div>
+                        <div class="form-group {{ $errors->has('instagram') ? 'has-error' : '' }}">
+                            <label for="instagram">instagram</label>
+                            <input class="form-control" type="text" name="instagram" id="instagram" value="{{ old('instagram', $advisor->instagram) }}">
+                            @if($errors->has('instagram'))
+                            <span class="help-block" role="alert">{{ $errors->first('instagram') }}</span>
+                            @endif
+                        
+                        </div>
+                        <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                            <label for="email">email</label>
+                            <input class="form-control" type="text" name="email" id="email" value="{{ old('email', $advisor->email) }}">
+                            @if($errors->has('email'))
+                            <span class="help-block" role="alert">{{ $errors->first('email') }}</span>
+                            @endif
+                        
+                        </div>
+                        <div class="form-group {{ $errors->has('website') ? 'has-error' : '' }}">
+                            <label for="website">website</label>
+                            <input class="form-control" type="text" name="website" id="website" value="{{ old('website', $advisor->website) }}">
+                            @if($errors->has('website'))
+                            <span class="help-block" role="alert">{{ $errors->first('website') }}</span>
+                            @endif
+                        
                         </div>
                         <div class="form-group">
                             <label for="published_at">published_at</label>
@@ -84,6 +125,10 @@
 @endsection
 
 @section('scripts')
+<script>
+CKEDITOR.replace( 'level', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
+</script>
+
 <script>
     Dropzone.options.photpDropzone = {
     url: '{{ route('admin.advisors.storeMedia') }}',

@@ -26,15 +26,14 @@
             'public_date',
         ];
 
-        const TYPE_SELECT = [
-            'epost'    => 'Post',
-            'evideo'   => 'Video',
-            'egallery' => 'Gallery',
-        ];
+     
 
         protected $fillable = [
-            'type',
+        
             'title',
+            'post',
+            'video',
+            'gallery',
             'year_id',
             'created_at',
             'updated_at',

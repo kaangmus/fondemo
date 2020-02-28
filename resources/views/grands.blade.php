@@ -434,7 +434,7 @@
     var $this = $(this),
     src = $(this).data('src');
     $this.attr('src', src);
-    console.log(src);
+    
     });
     });
     });

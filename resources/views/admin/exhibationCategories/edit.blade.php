@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label for="title">{{ trans('cruds.exhibationCategory.fields.title') }}</label>
-                <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', $exhibationCategory->title) }}">
+                <textarea class="form-control ckeditor {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" >{!! old('title', $exhibationCategory->title) !!}</textarea>
                 @if($errors->has('title'))
                     <span class="text-danger">{{ $errors->first('title') }}</span>
                 @endif
@@ -36,29 +36,51 @@
                 @if($errors->has('description'))
                     <span class="text-danger">{{ $errors->first('description') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.exhibationCategory.fields.description_helper') }}</span>
+                
             </div>
-            <div class="form-group">
-                <label class="required">{{ trans('cruds.exhibationCategory.fields.type') }}</label>
-                <select class="form-control {{ $errors->has('type') ? 'is-invalid' : '' }}" name="type" id="type" required>
-                    <option value disabled {{ old('type', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
-                    @foreach(App\ExhibationCategory::TYPE_SELECT as $key => $label)
-                        <option value="{{ $key }}" {{ old('type', $exhibationCategory->type) === (string) $key ? 'selected' : '' }}>{{ $label }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('type'))
-                    <span class="text-danger">{{ $errors->first('type') }}</span>
-                @endif
-                <span class="help-block">{{ trans('cruds.exhibationCategory.fields.type_helper') }}</span>
+           <div class="form-group {{ $errors->has('post') ? 'has-error' : '' }}">
+              <div>
+                <input type="hidden" name="post" value="0">
+                <input type="checkbox" name="post" id="post" value="1" {{ $exhibationCategory->post || old('post', 0) === 1 ? 'checked' : '' }}>
+                <label for="post" style="font-weight: 400">POST</label>
+              </div>
+              @if($errors->has('post'))
+              <span class="help-block" role="alert">{{ $errors->first('post') }}</span>
+              @endif
+             
+            </div>
+            <div class="form-group {{ $errors->has('video') ? 'has-error' : '' }}">
+              <div>
+                <input type="hidden" name="video" value="0">
+                <input type="checkbox" name="video" id="video" value="1"
+                  {{ $exhibationCategory->video || old('video', 0) === 1 ? 'checked' : '' }}>
+                <label for="video" style="font-weight: 400">VIDEO</label>
+              </div>
+              @if($errors->has('video'))
+              
+              @endif
+              
+            </div>
+            <div class="form-group {{ $errors->has('gallery') ? 'has-error' : '' }}">
+              <div>
+                <input type="hidden" name="gallery" value="0">
+                <input type="checkbox" name="gallery" id="gallery" value="1"
+                  {{ $exhibationCategory->gallery || old('gallery', 0) === 1 ? 'checked' : '' }}>
+                <label for="gallery" style="font-weight: 400">Gallery</label>
+              </div>
+              @if($errors->has('gallery'))
+              
+              @endif
+             
             </div>
             <div class="form-group" id="e_cat_video" style="{{$exhibationCategory->type == 'evideo'?'':'display: none'}}">
-                <label for="e_cat_video">{{ trans('cruds.exhibationCategory.fields.e_cat_video') }}</label>
+                <label for="e_cat_video">video</label>
                 <div class="needsclick dropzone {{ $errors->has('e_cat_video') ? 'is-invalid' : '' }}" id="e_cat_video-dropzone">
                 </div>
                 @if($errors->has('e_cat_video'))
                     <span class="text-danger">{{ $errors->first('e_cat_video') }}</span>
                 @endif
-                <span class="help-block">{{ trans('cruds.exhibationCategory.fields.e_cat_video_helper') }}</span>
+                
             </div>
             <div  id="e_cat_post">
                 <div class="form-group" style="{{$exhibationCategory->type == 'epost'?'':'display: none'}}">
@@ -102,7 +124,7 @@
 
 @section('scripts')
 <script>
-   
+    CKEDITOR.replace( 'title', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
     CKEDITOR.replace( 'description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
     CKEDITOR.replace( 'e_cat_post_description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
    
