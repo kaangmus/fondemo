@@ -287,13 +287,13 @@ table.dataTable thead .sorting_desc {
 /* -------------------------------------
 preview-1
 ---------------------------------------- */
-.preview-2 .nivoSlider:hover .nivo-directionNav a.nivo-prevNav {
+/* .preview-2 .nivoSlider:hover .nivo-directionNav a.nivo-prevNav {
     left: 50px;
 }
 
 .preview-2 .nivoSlider:hover .nivo-directionNav a.nivo-nextNav {
     right: 50px;
-}
+} */
 
 .preview-2 .nivoSlider .nivo-directionNav a.nivo-prevNav {
     font-size: 0;
