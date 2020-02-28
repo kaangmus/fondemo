@@ -1,40 +1,40 @@
 @extends('layouts.front') @section('content')
 <!-- Start Slider Area -->
 <div id="slidercontainer" class="slider-area">
-  <div class="bend niceties preview-2">
-    <div id="ensign-nivoslider" class="slides">
-      @foreach($sliders as $key => $slider)
-      @if($slider->image)
-      <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}"
-        title="#slider-direction-{{ $slider->id}}">
-      @endif
-
-      @endforeach
-    </div>
+<div class="bend niceties preview-2">
+  <div id="ensign-nivoslider" class="slides">
     @foreach($sliders as $key => $slider)
-    <div id="slider-direction-{{ $slider->id ?? '' }}" class="slider-direction slider-one">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="{{$slider->position}}">
-              <h2 class="sliderfont text-light text-center">{{ $slider->title ?? '' }}</h2>
-              <p id="fontsize">{{ $slider->description ?? '' }}</p>
-              @if($slider->btn_text)
-              <div class="slider_button">
-                <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="{{$app_url}}/video/intro.mp4"
-                  id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
-              </div>
-              @endif
+    @if($slider->image)
+    <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}"
+      title="#slider-direction-{{ $slider->id}}">
+    @endif
 
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
     @endforeach
   </div>
+  @foreach($sliders as $key => $slider)
+  <div id="slider-direction-{{ $slider->id ?? '' }}" class="slider-direction slider-one">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="{{$slider->position}}">
+            <h2 class="sliderfont text-light text-center">{{ $slider->title ?? '' }}</h2>
+            <p id="fontsize">{{ $slider->description ?? '' }}</p>
+            @if($slider->btn_text)
+            <div class="slider_button">
+              <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="{{$app_url}}/video/intro.mp4"
+                id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
+            </div>
+            @endif
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  @endforeach
+</div>
 </div>
 
 
