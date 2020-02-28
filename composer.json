@@ -25,6 +25,7 @@
         "spatie/laravel-backup": "^6.7",
         "spatie/laravel-medialibrary": "^7.12",
         "typicms/nestablecollection": "^1.1",
+        "unisharp/laravel-filemanager": "^2.0",
         "yajra/laravel-datatables-oracle": "^9.7"
     },
     "require-dev": {

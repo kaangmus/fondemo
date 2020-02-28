@@ -126,9 +126,21 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('exhibition-galleries/media', 'ExhibitionGalleryController@storeMedia')->name('exhibition-galleries.storeMedia');
     Route::post('exhibition-galleries/ckmedia', 'ExhibitionGalleryController@storeCKEditorImages')->name('exhibition-galleries.storeCKEditorImages');
     Route::resource('exhibition-galleries', 'ExhibitionGalleryController');
+
+     // Pages
+    Route::delete('pages/destroy', 'PageController@massDestroy')->name('pages.massDestroy');
+    Route::post('pages/media', 'PageController@storeMedia')->name('pages.storeMedia');
+    Route::post('pages/ckmedia', 'PageController@storeCKEditorImages')->name('pages.storeCKEditorImages');
+    Route::resource('pages', 'PageController');
+
+     // \UniSharp\LaravelFilemanager\Lfm::routes();
     
     ctf0\MediaManager\MediaRoutes::routes();
 });
+Route::group(['prefix' => 'admin/laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+     \UniSharp\LaravelFilemanager\Lfm::routes();
+ });
+
 
 
 Route::get('/years','GrandsController@testAry');
