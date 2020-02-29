@@ -213,7 +213,7 @@
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
                 
-                 
+                 <a href="#">
                   <img src="{{asset('slideshow/slideshow1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="300px">
                     <div class="middle">
@@ -237,7 +237,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('slideshow/slideshow2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -260,7 +260,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                 <a href="#">
                   <img src="{{asset('slideshow/slideshow3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -269,9 +269,9 @@
                 </a>
                 <div class="new_third_text">
                   
-                    <h3>Best of</h3>
+                    <h3>Best of 2014-2019</h3>
                     <p></p>
-                    <p>2014-2019</p>
+                    <p></p>
   
                     <p></p>
   
@@ -282,7 +282,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('slideshow/slideshow4.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                     <div class="middle">
@@ -305,7 +305,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('slideshow/slideshow5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -327,7 +327,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('slideshow/slideshow6.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -348,7 +348,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('slideshow/slideshow7.JPG')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -448,7 +448,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('species/species1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -459,10 +459,10 @@ $jsons=array_slice($json, -11, 11, true);
                   
                     <h3>The Living Sea</h3>
                     <p></p>
-                    <p>National Museum of Natural History and Science, Lisbon, </p>
+                    <p>National Museum of Natural History and Science , </p>
 
-                    <p>September 2019</p>
-                    <p></p>
+                    <p>Lisbon, September 2019</p>
+                    
 
                   </a>
                 </div>
@@ -471,7 +471,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('species/species2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -482,9 +482,9 @@ $jsons=array_slice($json, -11, 11, true);
                   
                     <h3>The Living Sea</h3>
                     <p></p>
-                    <p>MUNHAC, Lisbon, </p>
+                    <p>MUNHAC  </p>
 
-                    <p>September 2019</p>
+                    <p>Lisbon, September 2019</p>
                     <p></p>
 
                   </a>
@@ -494,7 +494,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('species/species3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -505,9 +505,9 @@ $jsons=array_slice($json, -11, 11, true);
                   
                     <h3>Clarion Call</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden, </p>
+                    <p>EAT Stockholm Food Forum  </p>
 
-                    <p>June 13, 2019</p>
+                    <p>Sweden, June 13, 2019</p>
                     <p></p>
 
                   </a>
@@ -517,7 +517,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('species/species4.JPG')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -526,11 +526,11 @@ $jsons=array_slice($json, -11, 11, true);
                 </a>
                 <div class="new_third_text">
                   
-                    <h3>Clarion Cal</h3>
+                    <h3>Clarion Call</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden, </p>
+                    <p>EAT Stockholm Food Forum  </p>
 
-                    <p>June 13, 2019</p>
+                    <p>Sweden, June 13, 2019</p>
                     <p></p>
 
                   </a>
@@ -539,7 +539,7 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('species/species5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                   <div class="middle">
@@ -631,18 +631,14 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('shop/shop1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
                 <div class="new_third_text">
                   
                     <h3>Art Prints</h3>
-                    <p></p>
-                    <p>Books</p>
-
-                    <p>June 13, 2019</p>
-                    <p></p>
+                 
 
                   </a>
                 </div>
@@ -651,15 +647,14 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('shop/shop2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
                 <div class="new_third_text">
                   
-                    <h3>Stenella</h3>
-                    <p></p>
-                    <p>Scarves</p>
+                    <h3>Books</h3>
+                  
 
                   </a>
                 </div>
@@ -668,18 +663,15 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                
+                <a href="#">
                   <img src="{{asset('shop/shop3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="300px">
                 </a>
                 <div class="new_third_text">
                   
-                    <h3>Clarion Call speech</h3>
-                    <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
-
-                    <p>June 13, 2019</p>
-                    <p></p>
+                    <h3>Stenella</h3>
+                    <p>Scarves</p>
+                  
 
                   </a>
                 </div>
