@@ -1468,7 +1468,8 @@ Main Components
     padding: 0px 12px;
     width: 100%;
     border-left: none;
-    height: 300px;
+    height: 730px;
+    overflow-y: auto;
 }
 .who .box ul {
     padding-left: 40%;
