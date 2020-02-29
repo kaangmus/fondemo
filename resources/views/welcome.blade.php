@@ -228,7 +228,7 @@
                     <p>Meeting with Hussain Aga Khan and Marta Lourenço</p>
   
                     <p>MUHNAC-University of Lisbon, 11 December 2019</p>
-                    <p></p>
+                 
   
                   </a>
                 </div>
@@ -248,9 +248,9 @@
                   
                     <h3>Clarion Call</h3>
                     <p></p>
-                    <p>EAT Stockholm Foof Forum,</p>
+                    <p>EAT Stockholm Food Forum</p>
   
-                    <p>13 June 2019</p>
+                    <p>Sweden, 13 June 2019</p>
                     <p></p>
   
                   </a>
@@ -428,7 +428,7 @@ $jsons=array_slice($json, -11, 11, true);
         <div class="swiper-button-prev swiper-button-prev2"></div>
         <div class="swiper-button-next swiper-button-next2"></div>
       </div>
-      <a class=" main_button" href="#">View all Brochures</a>
+      <a class="button_main" href="#">View all Brochures</a>
     </div>
   </div>
 
@@ -579,15 +579,14 @@ $jsons=array_slice($json, -11, 11, true);
 
 
 <!-- Grands -->
-<div id="grants_homeid" class="grants_home">
+<div id="grants_homeid" class="grants_home overflow-hidden">
   <a href="/grants" class="grants_button">
     <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
-    <div class="toped">
+    <div class="granttimelime">
 
-      <h2 class="maincolor text-center grant_tcolor">GRANTS TIMELINE</h2>
+      <h2 class="maincolor text-center ">GRANTS TIMELINE</h2>
       <p class="text-light text-center">USD
-        <?php echo number_format($ngopricestotal); ?> FOCUSED ON NATURE GRANTS TO WILDLIFE CONSERVATION PROJECTS SINCE
-        2009
+        <?php echo number_format($ngopricestotal); ?> FON Grants to wildlife conservation projects since 2009
       </p>
 
     </div>
@@ -609,8 +608,9 @@ $jsons=array_slice($json, -11, 11, true);
     <img src="{{asset('images/searchmap.jpg')}}" alt="Snow" style="width:100%;">
     <div class="toped">
     
-      <h2 class="maincolor text-center grant_tcolor">PHOTO SEARCH MAP</h2>
-      <p class="text-light text-center">
+      {{-- <h2 class="maincolor text-center grant_tcolor"></h2> --}}
+      <p class="text-center text-light gsubtitle">
+       Search Photos by country / by year / by category
       </p>
     
     </div>
@@ -619,7 +619,7 @@ $jsons=array_slice($json, -11, 11, true);
 
 
 {{-- online shop --}}
-<section id="digital" class="digital_section">
+<section id="digital" class="shop_section">
 
   <h2 class="maincolor text-center">SHOP</h2>
   <p class="text-center"></p>
@@ -637,7 +637,7 @@ $jsons=array_slice($json, -11, 11, true);
                 </a>
                 <div class="new_third_text">
                   
-                    <h3>Art Prints</h3>
+                    <h3 class="text-uppercase">Art Prints</h3>
                  
 
                   </a>
@@ -653,7 +653,7 @@ $jsons=array_slice($json, -11, 11, true);
                 </a>
                 <div class="new_third_text">
                   
-                    <h3>Books</h3>
+                    <h3 class="text-uppercase">Books</h3>
                   
 
                   </a>
@@ -669,9 +669,8 @@ $jsons=array_slice($json, -11, 11, true);
                 </a>
                 <div class="new_third_text">
                   
-                    <h3>Stenella</h3>
-                    <p>Scarves</p>
-                  
+                    <h3 class="text-uppercase">Stenella</h3>
+                    
 
                   </a>
                 </div>

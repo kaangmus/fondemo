@@ -794,14 +794,23 @@ div#species_essay img {
         left: 47%;
   
 }
-.toped {
+.granttimelime {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
-h2.maincolor.text-center.grant_tcolor {
-    color: yellow;
+.toped {
+    position: absolute;
+    top: 13%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+h2.maincolor.text-center.grant_tcolor,
+.gsubtitle {
+    color:#ff643a;
 }
 .centered {
     position: absolute;
@@ -1261,12 +1270,6 @@ section.post a {
 a.news_paragraph p {
     font-size: 14px;
 }
-.toped:hover {
-    text-decoration: underline;
-    text-decoration-line: underline;
-    text-decoration-style: initial;
-    text-decoration-color: initial;
-}
 .exb-item{
     border-bottom: 1px solid #cad4f6;
     padding-top: 15px;
@@ -1471,4 +1474,14 @@ a#video_link {
 .swiper-button-next4,
 .swiper-button-next5 {
     color: #4F9DBD;
+}
+a.grants_button:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+a.grants_button img{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }

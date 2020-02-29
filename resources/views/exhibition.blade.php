@@ -1,6 +1,6 @@
 <section id="exhibiton" class="exhibiton_section mr-5 ml-5">
 	<h1 class="text-center maincolor">Exhibitions Timeline</h1>
-	<p class="text-center">Publications & Events</p>
+	<p class="text-center">And a selection of publications</p>
 	<div class="d-flex justify-content-center">
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 			@foreach($years as $key=>$year)
