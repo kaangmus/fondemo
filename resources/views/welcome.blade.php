@@ -353,7 +353,7 @@
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
-                  <img src="{{asset('slideshow/slideshow7.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                  <img src="{{asset('slideshow/slideshow7.JPG')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
                       <div class="play_button"><i class="far fa-play-circle"></i></div>

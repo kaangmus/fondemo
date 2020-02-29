@@ -1393,8 +1393,10 @@ a.button_main:hover {
 }
 img.whoadvisor_photo {
     width: 350px;
+    height: 350px;
     float: left;
     margin-right: 20px;
+    border-radius: 50%;
 }
 .whodescription {
     padding-top: 40px;
