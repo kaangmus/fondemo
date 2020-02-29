@@ -126,7 +126,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('exhibition-galleries/media', 'ExhibitionGalleryController@storeMedia')->name('exhibition-galleries.storeMedia');
     Route::post('exhibition-galleries/ckmedia', 'ExhibitionGalleryController@storeCKEditorImages')->name('exhibition-galleries.storeCKEditorImages');
     Route::resource('exhibition-galleries', 'ExhibitionGalleryController');
-
+     // Pages
+    Route::delete('pages/destroy', 'PageController@massDestroy')->name('pages.massDestroy');
+    Route::post('pages/media', 'PageController@storeMedia')->name('pages.storeMedia');
+    Route::post('pages/ckmedia', 'PageController@storeCKEditorImages')->name('pages.storeCKEditorImages');
+    Route::resource('pages', 'PageController');
     // Maps
     Route::delete('maps/destroy', 'MapsController@massDestroy')->name('maps.massDestroy');
     Route::post('maps/media', 'MapsController@storeMedia')->name('maps.storeMedia');
@@ -134,9 +138,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
     Route::resource('categories', 'CategoriesController');
-    
     ctf0\MediaManager\MediaRoutes::routes();
 });
+
 
 
 Route::get('/years','GrandsController@testAry');

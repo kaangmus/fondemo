@@ -459,6 +459,20 @@ return [
             'deleted_at_helper'          => '',
         ],
     ],
+     'page'               => [
+        'title'          => 'Page',
+        'title_singular' => 'Page',
+        'fields'         => [
+            'id'                   => 'ID',
+            'id_helper'            => '',
+            'title'                => 'Title',
+            'title_helper'         => '',
+            'content'              => 'Content',
+            'content_helper'       => '',
+            'feature_image'        => 'Feature Image',
+            'feature_image_helper' => '',
+        ],
+],
      'map'           => [
         'title'          => 'Mapss',
         'title_singular' => 'map',
