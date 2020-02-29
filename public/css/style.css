@@ -1475,19 +1475,19 @@ a#video_link {
     color: #4F9DBD;
 }
 a.grants_button:hover img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 a.grants_button img{
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 a.ex_button {
-    border: 1px solid #ff643a;
+    border: 1px solid #4F9DBD;
     border-radius: 30px;
-    color: #ff643a;
+    color: #4F9DBD;
     cursor: pointer;
     display: inline-block;
     font-size: 17px;
@@ -1504,8 +1504,8 @@ a.ex_button {
 }
 a.ex_button:hover{
     color: #fff;
-    background: #ff643a;
-    border: 1px solid #ff643a;
+    background: #4F9DBD;
+    border: 1px solid #4F9DBD;
     text-decoration: none;
     
 }

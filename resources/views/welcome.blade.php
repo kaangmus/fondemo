@@ -214,7 +214,7 @@
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
                 
-                 <a href="#">
+                 <a href="javascript:void(0)">
                   <img src="{{asset('slideshow/slideshow1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="300px">
                     <div class="middle">
@@ -238,7 +238,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('slideshow/slideshow2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -261,7 +261,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                 <a href="#">
+                 <a href="javascript:void(0)">
                   <img src="{{asset('slideshow/slideshow3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -283,7 +283,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('slideshow/slideshow4.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                     <div class="middle">
@@ -306,7 +306,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('slideshow/slideshow5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -328,7 +328,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('slideshow/slideshow6.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -349,7 +349,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('slideshow/slideshow7.JPG')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -449,7 +449,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('species/species1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -472,7 +472,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('species/species2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -495,7 +495,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('species/species3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -518,7 +518,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('species/species4.JPG')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -540,7 +540,7 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('species/species5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                   <div class="middle">
@@ -630,7 +630,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('shop/shop1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
@@ -646,7 +646,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('shop/shop2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
@@ -662,7 +662,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="#">
+                <a href="javascript:void(0)">
                   <img src="{{asset('shop/shop3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="300px">
                 </a>
