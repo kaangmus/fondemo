@@ -206,13 +206,13 @@
     <h2 class="maincolor text-center">Slideshows</h2>
      <div class="container">
     <div class="row">
-      <div class="col-md-12 overflow-hidden">
-        <div class="swiper-slideshow">
+      <div class="col-md-12">
+        <div class="swiper-container swiper-slideshow">
           <div class="swiper-wrapper">
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                  
                   <img src="{{asset('slideshow/slideshow1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="300px">
@@ -222,12 +222,12 @@
                    
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>The Living Sea</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>Meeting with Hussain Aga Khan and Marta Lourenço</p>
   
-                    <p>June 13, 2019</p>
+                    <p>MUHNAC-University of Lisbon, 11 December 2019</p>
                     <p></p>
   
                   </a>
@@ -237,7 +237,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('slideshow/slideshow2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -245,12 +245,12 @@
                     </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>Clarion Call</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>EAT Stockholm Foof Forum,</p>
   
-                    <p>June 13, 2019</p>
+                    <p>13 June 2019</p>
                     <p></p>
   
                   </a>
@@ -260,7 +260,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('slideshow/slideshow3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -268,12 +268,11 @@
                     </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>Best of</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>2014-2019</p>
   
-                    <p>June 13, 2019</p>
                     <p></p>
   
                   </a>
@@ -283,7 +282,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('slideshow/slideshow4.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                     <div class="middle">
@@ -291,12 +290,12 @@
                     </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>Sharks</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>OCEANA board meeting</p>
   
-                    <p>June 13, 2019</p>
+                    <p>Washington DC, December 4-5, 2018</p>
                     <p></p>
   
                   </a>
@@ -306,7 +305,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('slideshow/slideshow5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -314,12 +313,11 @@
                     </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>Bimini</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
-  
-                    <p>June 13, 2019</p>
+                    <p>2013-1017</p>
+
                     <p></p>
   
                   </a>
@@ -329,7 +327,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('slideshow/slideshow6.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -337,12 +335,10 @@
                   </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>Cocos Island</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
-  
-                    <p>June 13, 2019</p>
+                    <p>June 2017</p>
                     <p></p>
   
                   </a>
@@ -352,7 +348,7 @@
   
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('slideshow/slideshow7.JPG')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -360,12 +356,12 @@
                     </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>The Exumas</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+
   
-                    <p>June 13, 2019</p>
+                    <p>January 2017</p>
                     <p></p>
   
                   </a>
@@ -379,7 +375,7 @@
   
             <!-- Add Pagination -->
           </div>
-          <div class="swiper-button-prev swiper-button-next3"></div>
+          <div class="swiper-button-prev swiper-button-prev3"></div>
           <div class="swiper-button-next swiper-button-next3"></div>
   
         </div>
@@ -447,12 +443,12 @@ $jsons=array_slice($json, -11, 11, true);
    <div class="container">
     <div class="row">
       <div class="col-md-12 overflow-hidden">
-        <div class="swiper-container swiper-slideshow">
+        <div class="swiper-container swiper-speecies">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('species/species1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -460,12 +456,12 @@ $jsons=array_slice($json, -11, 11, true);
                   </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>The Living Sea</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>National Museum of Natural History and Science, Lisbon, </p>
 
-                    <p>June 13, 2019</p>
+                    <p>September 2019</p>
                     <p></p>
 
                   </a>
@@ -475,7 +471,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('species/species2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     >
                     <div class="middle">
@@ -483,12 +479,12 @@ $jsons=array_slice($json, -11, 11, true);
                     </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>The Living Sea</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>MUNHAC, Lisbon, </p>
 
-                    <p>June 13, 2019</p>
+                    <p>September 2019</p>
                     <p></p>
 
                   </a>
@@ -498,7 +494,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('species/species3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
@@ -506,10 +502,10 @@ $jsons=array_slice($json, -11, 11, true);
                   </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>Clarion Call</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>EAT Stockholm Food Forum, Sweden, </p>
 
                     <p>June 13, 2019</p>
                     <p></p>
@@ -521,18 +517,18 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
-                  <img src="{{asset('species/species4.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
+                
+                  <img src="{{asset('species/species4.JPG')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                    <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Speeches & Essays</h3>
+                  
+                    <h3>Clarion Cal</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>EAT Stockholm Food Forum, Sweden, </p>
 
                     <p>June 13, 2019</p>
                     <p></p>
@@ -543,7 +539,7 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('species/species5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                    >
                   <div class="middle">
@@ -552,12 +548,12 @@ $jsons=array_slice($json, -11, 11, true);
                    
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Speeches & Essays</h3>
+                  
+                    <h3>SIPA</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>School of International and Public Affairs, </p>
 
-                    <p>June 13, 2019</p>
+                    <p>March 2019</p>
                     <p></p>
 
                   </a>
@@ -570,8 +566,8 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
             <!-- Add Pagination -->
           </div>
-          <div class="swiper-button-prev swiper-button-prev3"></div>
-          <div class="swiper-button-next swiper-button-next3"></div>
+          <div class="swiper-button-prev swiper-button-prev4"></div>
+          <div class="swiper-button-next swiper-button-next4"></div>
 
         </div>
       </div>
@@ -630,20 +626,20 @@ $jsons=array_slice($json, -11, 11, true);
   <div class="container">
     <div class="row">
       <div class="col-md-12 overflow-hidden">
-        <div class="swiper-container swiper-slideshow">
+        <div class="swiper-container swiper-shop">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('shop/shop1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>Art Prints</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
+                    <p>Books</p>
 
                     <p>June 13, 2019</p>
                     <p></p>
@@ -655,18 +651,15 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('shop/shop2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
-                    <h3>Clarion Call speech</h3>
+                  
+                    <h3>Stenella</h3>
                     <p></p>
-                    <p>EAT Stockholm Food Forum, Sweden</p>
-
-                    <p>June 13, 2019</p>
-                    <p></p>
+                    <p>Scarves</p>
 
                   </a>
                 </div>
@@ -675,12 +668,12 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="/post/18">
+                
                   <img src="{{asset('shop/shop3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="300px">
                 </a>
                 <div class="new_third_text">
-                  <a href="/post/18">
+                  
                     <h3>Clarion Call speech</h3>
                     <p></p>
                     <p>EAT Stockholm Food Forum, Sweden</p>
@@ -700,8 +693,8 @@ $jsons=array_slice($json, -11, 11, true);
           </div>
           <!-- Add Pagination -->
         </div>
-        <div class="swiper-button-prev swiper-button-prev3"></div>
-        <div class="swiper-button-next swiper-button-next3"></div>
+        <div class="swiper-button-prev swiper-button-prev5"></div>
+        <div class="swiper-button-next swiper-button-next5"></div>
 
       </div>
     </div>
@@ -885,11 +878,36 @@ document.getElementById("defaultOpen").click();
 
 var swiper = new Swiper('.swiper-slideshow', {
 slidesPerView: 3,
-loop: true,
-spaceBetween: 30,
+spaceBetween: 50,
 navigation: {
 nextEl: '.swiper-button-next3',
 prevEl: '.swiper-button-prev3',
+},
+
+
+});
+
+</script>
+<script>
+  var swiper = new Swiper('.swiper-speecies', {
+slidesPerView: 3,
+spaceBetween: 50,
+navigation: {
+nextEl: '.swiper-button-next4',
+prevEl: '.swiper-button-prev4',
+},
+
+
+});
+
+</script>
+<script>
+  var swiper = new Swiper('.swiper-shop', {
+slidesPerView: 3,
+spaceBetween: 50,
+navigation: {
+nextEl: '.swiper-button-next5',
+prevEl: '.swiper-button-prev5',
 },
 
 
