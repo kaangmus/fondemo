@@ -11,34 +11,29 @@
         if (scroll <= 90) sticky.removeClass('sticky');
         else sticky.addClass('sticky');
     }); // video light box $(function () {
-    $('#vidBox').VideoPopUp({
-        backgroundColor: "#17212a",
-        opener: "video1",
-        maxweight: "340",
-        idvideo: "v1"
-    });
 
 
-$(window).load(function (){
-    $('#ensign-nivoslider').nivoSlider({
-        effect: 'fade',
-        slices: 15,
-        boxCols: 12,
-        autoplay: false,
-        boxRows: 8,
-        animSpeed: 500,
-        pauseTime: 5000,
-        startSlide: 0,
-        directionNav: true,
-        controlNavThumbs: false,
-        pauseOnHover: true,
-        manualAdvance: false,
 
-    })
+// $(window).load(function (){
+//     $('#ensign-nivoslider').nivoSlider({
+//         effect: 'fade',
+//         slices: 15,
+//         boxCols: 12,
+//         autoplay: false,
+//         boxRows: 8,
+//         animSpeed: 500,
+//         pauseTime: 5000,
+//         startSlide: 0,
+//         directionNav: true,
+//         controlNavThumbs: false,
+//         pauseOnHover: true,
+//         manualAdvance: false,
 
-});
+//     })
 
- var swiper = new Swiper('.swiper-container', {
+// });
+
+ var swiper = new Swiper('.swiper_digital', {
      effect: 'coverflow',
      grabCursor: true,
      centeredSlides: true,
@@ -51,14 +46,14 @@ $(window).load(function (){
          modifier: 5,
          slideShadows: true,
      },
-     pagination: {
-         el: '.swiper-pagination',
-     },
+    
       navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next2',
+          prevEl: '.swiper-button-prev2',
       },
  });
+
+
 
  $(".image-container img").one('lazyloaded load', function () {
      $(this).parent().find(".curtain").remove();
@@ -69,3 +64,43 @@ $(window).load(function (){
      }
  });
 
+
+$(document).ready(function () {
+    $('#video_link').click(function () {
+
+        $('.myVideo').attr("src", $(this).attr("vidUrl"));
+        $('.overlay').fadeIn(500, function () {
+            $('.main-vid-box').fadeIn(500);
+            $('.close').fadeIn(500);
+        });
+    });
+
+    $('.close, .overlay').click(function () {
+        $('.overlay').fadeOut(500);
+        $('.myVideo').attr("src", $(this).attr("vidUrl"));
+        $('.main-vid-box').fadeOut(500);
+        $('.close').fadeOut(500);
+    });
+});
+
+$('.youtube').magnificPopup({
+    type: 'iframe',
+
+
+    iframe: {
+        patterns: {
+           youtube: {
+               index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+               id: 'v=', // String that splits URL in a two parts, second part should be %id%
+               // Or null - full URL will be returned
+               // Or a function that should return %id%, for example:
+               // id: function(url) { return 'parsed id'; }
+
+               src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+           },
+        }
+    }
+
+
+});

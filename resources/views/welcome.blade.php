@@ -1,41 +1,42 @@
 @extends('layouts.front') @section('content')
 <!-- Start Slider Area -->
 <div id="slidercontainer" class="slider-area">
-<div class="bend niceties preview-2">
-  <div id="ensign-nivoslider" class="slides">
-    @foreach($sliders as $key => $slider)
-    @if($slider->image)
-    <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}"
-      title="#slider-direction-{{ $slider->id}}">
-    @endif
+  <div class="bannerswiper">
+    <div class="swiper-wrapper">
+      @foreach($sliders as $key => $slider)
+      <div class="swiper-slide">
+            <img srcset="{{$slider->image->getUrl('thumb') }}"
+            src="{{ asset($slider->image->getUrl('large')) }}" class="swiper-lazy"
+            title="#slider-direction-{{ $slider->id}}">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              <div class="slider_content">
+                  <article class="d-flex align-items-center justify-content-center">
+                    <a class="text-center">
+                      <h2 class="sliderfont text-light text-center">{{ $slider->title ?? '' }}</h2>
+                      @if($slider->description)<h4 id="fontsize">{{ $slider->description ?? '' }}</h4>@endif
+                       
+                        @if($slider->id==1)
+                          <a href="javascript:void(0)" id="video_link"  class="main_button" vidUrl="/video/intro.mp4">{{$slider->btn_text}}</a>
+                        @else
+                           <a class="main_button" href="{{$slider->btn_link}}">{{$slider->btn_text}}</a>
+                       @endif
 
-    @endforeach
-  </div>
-  @foreach($sliders as $key => $slider)
-  <div id="slider-direction-{{ $slider->id ?? '' }}" class="slider-direction slider-one">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="{{$slider->position}}">
-            <h2 class="sliderfont text-light text-center">{{ $slider->title ?? '' }}</h2>
-            <p id="fontsize">{{ $slider->description ?? '' }}</p>
-            @if($slider->btn_text)
-            <div class="slider_button">
-              <a class="main_button" @if($slider->id==1) href="javascript:void(0)" vidUrl="{{$app_url}}/video/intro.mp4"
-                id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>{{$slider->btn_text}}</a>
+                    </div>
+                  </article>
             </div>
-            @endif
 
-          </div>
-
-        </div>
-      </div>
-
+        
+   
+      @endforeach
     </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-next1"></div>
+    <div class="swiper-button-prev swiper-button-prev1"></div>
   </div>
-  @endforeach
-</div>
-</div>
+</div>  
+
 
 
 
@@ -134,92 +135,66 @@
     </div>
 </section>
 <!-- MEMBER -->
+
+{{-- who we are --}}
 <section id="team" class="member bg_black text-white">
   <div class="container ">
     <div class="row">
-       <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-        <button class="tablinks" onclick="openCity(event, 'bbbb')">Paris</button>
-       
-      </div>
       
-      <div id="London" class="tabcontent">
-       <div class="who">
-        <div class="box">
-          <div class="img">
-            <img src="https://www.planwallpaper.com/static/images/cool-wallpaper-5_G6Qe1wU.jpg">
-          </div>
-          <h2>Prakash Prajapati<br><span>Web Graphic Designer</span></h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et.</p>
-          <span>
-            <ul>
-              <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-              <li><a href="#"><i class="fas fa-globe"></i></a></li>
-              <li><a href="#"><i class="fas fa-envelope-square"></i></a></li>
-            </ul>
-          </span>
-        </div>
+      <div class="tab">
+      <h2 class="maincolor text-center">who we are</h2>
+        @foreach($whoweares as $key=>$whoweare)
+        <button class="tablinks" onclick="openCity(event, 'who{{$whoweare->id}}')"
+          id="{{$key == 0 ? 'defaultOpen':''}}">{{$whoweare->name}}</button>
+        @endforeach
+
       </div>
-      </div>
-      
-      <div id="Paris" class="tabcontent">
-        <div class="who">
-          <div class="box">
-            <div class="img">
-              <img src="https://www.planwallpaper.com/static/images/cool-wallpaper-5_G6Qe1wU.jpg">
+      <div class="whocontent">
+         @foreach($whoadvisors as $key=>$whoadvisor)
+            <div id="who{{$whoadvisor->id}}" class="tabcontent">
+              <div class="who">
+                <div class="box">
+                  <div class="img">
+                   @if($whoadvisor->photp)
+                    <img src="{{$whoadvisor->photp->getUrl()}}" alt="{{$whoadvisor->name}}" class="whoadvisor_photo">
+                    @endif
+                  </div>
+                  <div class="whoheader">
+                    <h2>{{$whoadvisor->name}}</h2>
+                    <h4>{{$whoadvisor->level}} </h4>
+                   
+                  
+                      <ul>
+                        
+                      @if($whoadvisor->facebook) <li><a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-facebook-square"></i></a></li>@endif
+                      @if($whoadvisor->twitter)<li><a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-twitter-square"></i></a></li>@endif
+                      @if($whoadvisor->instagram) <li><a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-instagram"></i></a></li>@endif
+                      @if($whoadvisor->website)<li><a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fas fa-globe"></i></a></li>@endif
+                      @if($whoadvisor->email)<li><a href="mailto:{{$whoadvisor->facebook}}" target="_blank"><i class="fas fa-envelope-square"></i></a></li>@endif
+                      </ul>
+                    
+                    
+                  </div>
+                  <div class="whodescription">
+                    {!!$whoadvisor->description!!}
+                   </div> 
+               
+                </div>
+              </div>
             </div>
-            <h2>Prakash Prajapati<br><span>Web Graphic Designer</span></h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et.</p>
-            <span>
-              <ul>
-                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-                <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                <li><a href="#"><i class="fas fa-envelope-square"></i></a></li>
-              </ul>
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div id="Tokyo" class="tabcontent">
-        
-          <div class="box">
-            <div class="img">
-              <img src="https://www.planwallpaper.com/static/images/cool-wallpaper-5_G6Qe1wU.jpg">
-            </div>
-            <h2>Prakash Prajapati<br><span>Web Graphic Designer</span></h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et.</p>
-            <span>
-              <ul>
-                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-                <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                <li><a href="#"><i class="fas fa-envelope-square"></i></a></li>
-              </ul>
-            </span>
-          </div>
-        
+        @endforeach
       </div>
 
-      <div class="lab">
-        <button class="tablinks" onclick="openCity(event, 'kkk')" >London</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-        
-        <button class="tablinks" onclick="openCity(event, 'ccc')">Tokyo</button>
+      <div class="tab">
+        <h2 class="maincolor text-center">ADVISERS</h2>
+        @foreach($advisors as $key=>$advisor)
+        <button class="tablinks" onclick="openCity(event, 'who{{$advisor->id}}')">{{$advisor->name}}</button>
+        @endforeach
       </div>
     </div>
   </div>
 </section>
-{{-- who we are --}}
+{{-- end who we are --}}
 
 {{-- slide showcontent --}}
 <section id="digital" class="digital_section">
@@ -232,10 +207,15 @@
           <div class="swiper-wrapper">
   
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
+                 
                   <img src="{{asset('slideshow/slideshow1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="300px">
+                    <div class="middle">
+                      <div class="play_button"><i class="far fa-play-circle"></i></div>
+                    </div>
+                   
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -252,10 +232,13 @@
             </div>
   
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('slideshow/slideshow2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="300px">
+                    >
+                    <div class="middle">
+                      <div class="play_button"><i class="far fa-play-circle"></i></div>
+                    </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -272,10 +255,13 @@
             </div>
   
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('slideshow/slideshow3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="300px">
+                    >
+                    <div class="middle">
+                      <div class="play_button"><i class="far fa-play-circle"></i></div>
+                    </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -292,10 +278,13 @@
             </div>
   
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('slideshow/slideshow4.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="300px">
+                   >
+                    <div class="middle">
+                      <div class="play_button"><i class="far fa-play-circle"></i></div>
+                    </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -312,10 +301,13 @@
             </div>
   
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('slideshow/slideshow5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="300px">
+                    >
+                    <div class="middle">
+                      <div class="play_button"><i class="far fa-play-circle"></i></div>
+                    </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -332,10 +324,13 @@
             </div>
   
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('slideshow/slideshow6.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="300px">
+                   >
+                   <div class="middle">
+                    <div class="play_button"><i class="far fa-play-circle"></i></div>
+                  </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -352,10 +347,13 @@
             </div>
   
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('slideshow/slideshow7.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="300px">
+                    >
+                    <div class="middle">
+                      <div class="play_button"><i class="far fa-play-circle"></i></div>
+                    </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -377,8 +375,8 @@
   
             <!-- Add Pagination -->
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev swiper-button-next3"></div>
+          <div class="swiper-button-next swiper-button-next3"></div>
   
         </div>
       </div>
@@ -407,7 +405,7 @@ $jsons=array_slice($json, -11, 11, true);
   </div>
   <div class="row">
     <div class="col-md-12 text-center text-white">
-      <div class="swiper-container">
+      <div class="swiper-container swiper_digital">
         <div class="swiper-wrapper">
           @foreach ($jsons as $key=> $value)
 
@@ -427,8 +425,8 @@ $jsons=array_slice($json, -11, 11, true);
           @endforeach
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev swiper-button-prev2"></div>
+        <div class="swiper-button-next swiper-button-next2"></div>
       </div>
       <a class=" main_button" href="#">View all Brochures</a>
     </div>
@@ -445,14 +443,17 @@ $jsons=array_slice($json, -11, 11, true);
    <div class="container">
     <div class="row">
       <div class="col-md-12 overflow-hidden">
-        <div class="swiper-slideshow">
+        <div class="swiper-container swiper-slideshow">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('species/species1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                   >
+                   <div class="middle">
+                    <div class="read_button"><i class="fas fa-bars"></i>READ</div>
+                  </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -469,10 +470,13 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('species/species2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                    >
+                    <div class="middle">
+                      <div class="play_button"><i class="far fa-play-circle"></i></div>
+                    </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -489,10 +493,13 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('species/species3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="300px">
+                   >
+                   <div class="middle">
+                    <div class="read_button"><i class="fas fa-bars"></i>READ</div>
+                  </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -509,10 +516,13 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('species/species4.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                   >
+                   <div class="middle">
+                    <div class="play_button"><i class="far fa-play-circle"></i></div>
+                  </div>
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -528,10 +538,14 @@ $jsons=array_slice($json, -11, 11, true);
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('species/species5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                   >
+                  <div class="middle">
+                    <div class="read_button"><i class="fas fa-bars"></i>READ</div>
+                  </div>
+                   
                 </a>
                 <div class="new_third_text">
                   <a href="/post/18">
@@ -552,8 +566,8 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
             <!-- Add Pagination -->
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev swiper-button-prev3"></div>
+          <div class="swiper-button-next swiper-button-next3"></div>
 
         </div>
       </div>
@@ -612,11 +626,11 @@ $jsons=array_slice($json, -11, 11, true);
   <div class="container">
     <div class="row">
       <div class="col-md-12 overflow-hidden">
-        <div class="swiper-slideshow">
+        <div class="swiper-container swiper-slideshow">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('shop/shop1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
@@ -636,7 +650,7 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('shop/shop2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
@@ -656,7 +670,7 @@ $jsons=array_slice($json, -11, 11, true);
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize">
+              <div class="post-thumb ts-resize img_hover">
                 <a href="/post/18">
                   <img src="{{asset('shop/shop3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="300px">
@@ -682,8 +696,8 @@ $jsons=array_slice($json, -11, 11, true);
           </div>
           <!-- Add Pagination -->
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev swiper-button-prev3"></div>
+        <div class="swiper-button-next swiper-button-next3"></div>
 
       </div>
     </div>
@@ -705,23 +719,17 @@ $jsons=array_slice($json, -11, 11, true);
 </section>
 
 
-<div class="videooverlay vid-link" vidUrl="#"></div>
-  <div class="main-vid-box">
-  
-    <div class="videoWrapper">
-      <video autoplay="autoplay" class="myVideo" src="" frameborder="0" controls></video>
-    </div>
+<div class="overlay vid-link" vidUrl="#"></div>
+<div class="main-vid-box">
+
+  <div class="videoWrapper">
+    <video autoplay="autoplay" class="myVideo" src="" frameborder="0" controls></video>
   </div>
-  
-  <img class="close vid-link" vidUrl="#" src="images/cancel.svg">
+</div>
+ <img class="close vid-link" vidUrl="#" src="images/cancel.svg">
 
 {{-- instagram --}} @endsection @section('scripts')
-<script type="text/javascript">
-  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-    });
-</script>
+
 <script src='https://fliphtml5.com/plugin/LightBox/js/fliphtml5-light-box-api-min.js'></script>
 <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script>
@@ -840,59 +848,11 @@ return content;
     });
  
 
-    var swiper = new Swiper('.swiper-slideshow', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-
-        loopFillGroupWithBlank: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        responsive: [{
-          
-          breakpoint: 1024,
-          settings: {
-          slidesToShow: 3,
-          infinite: true
-          }
-          
-          }, {
-          
-          breakpoint: 600,
-          settings: {
-          slidesToShow: 2,
-          dots: true
-          }
-          
-          }, {
-          
-          breakpoint: 300,
-          settings: "unslick" // destroys slick
-          
-          }]
-    });
 
 </script>
-<script type="text/javascript">
- $( document ).ready(function() {
-$('#video_lightbox').click(function() {
-$('.myVideo').attr("src", $(this).attr("vidUrl"));
-$('.overlay').fadeIn(500, function(){
-$('.main-vid-box').fadeIn(500);
-$('.close').fadeIn(500);
-});
-});
 
-$('.close, .overlay').click(function() {
-$('.overlay').fadeOut(500);
-$('.myVideo').attr("src", $(this).attr("vidUrl"));
-$('.main-vid-box').fadeOut(500);
-$('.close').fadeOut(500);
-});
-});
-</script>
+
+
 
 <script>
   function openCity(evt, cityName) {
@@ -911,5 +871,60 @@ $('.close').fadeOut(500);
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+
+
+    
 </script>
+<script>
+
+var swiper = new Swiper('.swiper-slideshow', {
+slidesPerView: 3,
+loop: true,
+spaceBetween: 30,
+navigation: {
+nextEl: '.swiper-button-next3',
+prevEl: '.swiper-button-prev3',
+},
+
+
+});
+
+</script>
+<script>
+  var swiper = new Swiper('.bannerswiper', {
+  loop: true,
+  lazy: true,
+  pagination: {
+  el: '.swiper-pagination',
+  clickable: true,
+  },
+  navigation: {
+  nextEl: '.swiper-button-next1',
+  prevEl: '.swiper-button-prev1',
+  },
+  });
+  
+</script>
+<script>
+  $(document).ready(function () {
+  $('.video-link').click(function () {
+  
+  $('.myVideo').attr("src", $(this).attr("vidUrl"));
+  $('.overlay').fadeIn(500, function () {
+  $('.main-vid-box').fadeIn(500);
+  $('.close').fadeIn(500);
+  });
+  });
+  
+  $('.close, .overlay').click(function () {
+  $('.overlay').fadeOut(500);
+  $('.myVideo').attr("src", $(this).attr("vidUrl"));
+  $('.main-vid-box').fadeOut(500);
+  $('.close').fadeOut(500);
+  });
+  });
+</script>
+
 @endsection

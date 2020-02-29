@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="{{ asset('nivo-slider/css/nivo-slider.css')}}" >
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/video.popup.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fon.css') }}">
 
@@ -39,7 +38,6 @@
     <script src="{{ asset('js/swiper.min.js') }}"></script>
      <script src="{{ asset('js/slick.min.js') }}"></script>
     <script src="{{ asset('nivo-slider/js/jquery.nivo.slider.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/video.popup.js')}}"></script>
     <script src="{{ asset('js/custom.js') }}" type="text/javascript"></script>
 
     <!-- light box -->

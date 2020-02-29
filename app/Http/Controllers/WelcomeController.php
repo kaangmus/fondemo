@@ -20,6 +20,7 @@ class WelcomeController extends Controller
     public function index()
     {
         $sliders = Slider::orderBy('published_at', 'asc')->take(20)->get();
+        $whoadvisors = Advisor::all();
         $advisors=Advisor::where('status','advisor')->orderBy('published_at', 'asc')->get();
         $whoweares=Advisor::where('status','whoweare')->orderBy('published_at', 'asc')->get();
         $mediums=Contentpage::where('type','medium')->orderBy('published_at','desc')->take(2)->get();
@@ -50,7 +51,7 @@ class WelcomeController extends Controller
         $longitude = $maps->count() && (request()->filled('category') || request()->filled('search')) ? $maps->average('longitude') : -0.12775829999998223;
       
         return view('welcome', compact('sliders','advisors','whoweares',
-        'ngopricestotal','digitalbrochures','app_url','fundposts','faposts','larges','mediums','years','maps','mapplaces','latitude','longitude'));
+        'ngopricestotal','digitalbrochures','app_url','fundposts','faposts','larges','mediums','years','maps','mapplaces','latitude','longitude','whoadvisors'));
     }
     public function exhibitionPost($id)
     {

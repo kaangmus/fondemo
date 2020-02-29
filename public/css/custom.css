@@ -99,6 +99,7 @@ table.dataTable thead .sorting_desc {
     color: #fff;
     position: relative;
     text-align: center;
+    min-height: 850px;
 }
 
 
@@ -1353,25 +1354,9 @@ Main Components
     }
 }
 
-.video-link {
-    cursor: pointer;
-    display: block;
-    position: relative;
-    width: 90%;
-    max-width: 400px;
-    background-color: #336699;
-    margin: 0 auto 10px auto;
-    text-align: center;
-    color: #fff;
-    padding: 20px 0 20px 0;
-    transition: all 0.5s;
-}
 
-.video-link:hover {
-    background-color: #000;
-}
 
-.videooverlay {
+.overlay {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -1485,14 +1470,13 @@ Main Components
 .tabcontent {
     float: left;
     padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 60%;
+    width: 100%;
     border-left: none;
     height: 300px;
 }
 .who .box ul {
-    margin: 0;
-    padding: 0;
+    padding-left: 40%;
+    margin: 0 auto;
 }
 
 .who .box ul li {
@@ -1510,8 +1494,8 @@ Main Components
 }
 
 .who .box ul li:hover a {
-    color: #e91e63;
-    transform: rotateY(360deg);
+    color: red;
+   
 }
  .swiper-bannerslider {
      width: 100%;
@@ -1537,4 +1521,8 @@ Main Components
      -ms-flex-align: center;
      -webkit-align-items: center;
      align-items: center;
+ }
+ .whocontent {
+     width: 60%;
+    
  }
