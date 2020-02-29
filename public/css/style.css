@@ -1526,3 +1526,7 @@ section#exhibiton {
 .btton50 {
     padding-bottom:50px;
 }
+.slider_content.bannercaption8,
+.slider_content.bannercaption9 {
+    top: 60%;
+}
