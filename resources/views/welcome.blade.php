@@ -115,7 +115,7 @@
           @foreach ($mediums as $key=>$medium)
           <div class="col-md-6">
             <div class="post-thumb ts-resize">
-              <a @if($medium->video) href="javascript:void(0)" vidUrl="{{$app_url}}/video/intro.mp4" id="video_lightbox"@else href="{{$slider->btn_link}}" @endif>
+              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif">
                 @if($medium->featured_image)
                 <img src="{{ $medium->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
                 @endif
@@ -164,7 +164,7 @@
                     @endif
                   </div>
                   <div class="whoheader">
-                    <h2 class="maincolor text-light">{{$whoadvisor->name}}</h2>
+                    <h3 class="maincolor text-light">{{$whoadvisor->name}}</h3>
                     <h4>{{$whoadvisor->level}} </h4>
                    <div class="social">
                       @if($whoadvisor->facebook) <a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-facebook-square"></i></a>@endif

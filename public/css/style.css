@@ -444,7 +444,7 @@ nav.navbar.navbar-expand-lg.fixed-top.myheader a,nav.navbar.navbar-expand-lg.fix
     
 }
 .header_top ul li {
-    padding: 0px 30px;
+    padding: 20px 30px;
 }
 li.nav-item.social {
     padding: 0px;
@@ -1448,7 +1448,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 .slider_content {
     position: absolute;
-    top: 9%;
+    top: 10%;
     padding: 0px 40px;
 }
 a#video_link {
@@ -1546,4 +1546,8 @@ section#exhibiton {
 .social a {
     font-size: 25px;
     margin-right: 10px;
+    color: #4F9DBD;
+}
+.social a{
+    color:#ff643a;
 }
