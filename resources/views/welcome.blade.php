@@ -11,15 +11,18 @@
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
               <div class="slider_content">
                   <article class="d-flex align-items-center justify-content-center">
-                    <a class="text-center">
+                    <a class="text-center banner_title">
                       <h2 class="sliderfont text-light text-center">{{ $slider->title ?? '' }}</h2>
                       @if($slider->description)<h4 id="fontsize">{{ $slider->description ?? '' }}</h4>@endif
-                       
-                        @if($slider->id==1)
-                          <a href="javascript:void(0)" id="video_link"  class="main_button" vidUrl="/video/intro.mp4">{{$slider->btn_text}}</a>
-                        @else
-                           <a class="main_button" href="{{$slider->btn_link}}">{{$slider->btn_text}}</a>
-                       @endif
+                       @if($slider->btn_text)
+                        <div class="slider_btn">
+                          @if($slider->id==1)
+                            <a href="javascript:void(0)" id="video_link"  class="main_button" vidUrl="/video/intro.mp4">{{$slider->btn_text}}</a>
+                          @else
+                            <a class="main_button" href="{{$slider->btn_link}}">{{$slider->btn_text}}</a>
+                          @endif
+                         </div> 
+                       @endif   
 
                     </div>
                   </article>
@@ -894,6 +897,7 @@ prevEl: '.swiper-button-prev3',
 </script>
 <script>
   var swiper = new Swiper('.bannerswiper', {
+
   loop: true,
   lazy: true,
   pagination: {
