@@ -758,7 +758,7 @@ img{
     color: #000!important;
 }
 a.search.map .toped {
-    top: 10%;
+    top: 6%;
 }
 
  .grants_home{
@@ -803,8 +803,7 @@ div#species_essay img {
 }
 .toped {
     position: absolute;
-    top: 13%;
-    left: 68%;
+    left: 62%;
     transform: translate(-50%, -50%);
     width: 100%;
 }

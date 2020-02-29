@@ -587,7 +587,7 @@ $jsons=array_slice($json, -11, 11, true);
 
       <h2 class="maincolor text-center ">GRANTS TIMELINE</h2>
       <p class="text-light text-center">USD
-        <?php echo number_format($ngopricestotal); ?> FON Grants to wildlife conservation projects since 2009
+        <?php echo number_format($ngopricestotal); ?> Focused on Nature Grants to wildlife conservation projects since 2009
       </p>
 
     </div>
@@ -610,10 +610,8 @@ $jsons=array_slice($json, -11, 11, true);
     <div class="toped">
     
       {{-- <h2 class="maincolor text-center grant_tcolor"></h2> --}}
-      <p class="text-center text-light gsubtitle">
-       Search Photos by country / by year / by category
-      </p>
-    
+      <h2 class="sliderfont text-light text-center text_align18 ">Search Photos by country / by year / by category</h2>
+     
     </div>
   </a>
 </div>
