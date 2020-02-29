@@ -127,6 +127,7 @@
 @section('scripts')
 <script>
 CKEDITOR.replace( 'level', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
+CKEDITOR.replace( 'description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
 </script>
 
 <script>

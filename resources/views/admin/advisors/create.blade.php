@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group {{ $errors->has('level') ? 'has-error' : '' }}">
                             <label for="level">{{ trans('cruds.advisor.fields.level') }}</label>
-                            <input class="form-control ckeditor" type="text" name="level" id="level" value="{{ old('level', '') }}">
+                            <textarea class="form-control" type="text" name="level" id="level" value="{{ old('level', '') }}">
                             @if($errors->has('level'))
                                 <span class="help-block" role="alert">{{ $errors->first('level') }}</span>
                             @endif
@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
                             <label for="description">{{ trans('cruds.advisor.fields.description') }}</label>
-                            <textarea class="form-control ckeditor" name="description" id="description">{!! old('description') !!}</textarea>
+                            <textarea class="form-control" name="description" id="description">{!! old('description') !!}</textarea>
                             @if($errors->has('description'))
                                 <span class="help-block" role="alert">{{ $errors->first('description') }}</span>
                             @endif
@@ -125,6 +125,7 @@
 @section('scripts')
 <script>
     CKEDITOR.replace( 'level', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
+    CKEDITOR.replace( 'description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor'});
 </script>
 <script>
     Dropzone.options.photpDropzone = {

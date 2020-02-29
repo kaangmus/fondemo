@@ -164,7 +164,7 @@
                     @endif
                   </div>
                   <div class="whoheader">
-                    <h2>{{$whoadvisor->name}}</h2>
+                    <h2 class="maincolor">{{$whoadvisor->name}}</h2>
                     <h4>{{$whoadvisor->level}} </h4>
                    
                   

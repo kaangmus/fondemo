@@ -41,7 +41,7 @@
               <div>
                 <input type="hidden" name="post" value="0">
                 <input type="checkbox" name="post" id="post" value="1" {{ old('post', 0) == 1 ? 'checked' : '' }}>
-                <label for="post" style="font-weight: 400">post</label>
+                <label for="post" style="font-weight: 400">VIEW MORE</label>
               </div>
               @if($errors->has('post'))
               <span class="help-block" role="alert">{{ $errors->first('post') }}</span>
@@ -52,7 +52,7 @@
               <div>
                 <input type="hidden" name="video" value="0">
                 <input type="checkbox" name="video" id="video" value="1" {{ old('video', 0) == 1 ? 'checked' : '' }}>
-                <label for="video" style="font-weight: 400">video</label>
+                <label for="video" style="font-weight: 400">PLAY VIDEO</label>
               </div>
               @if($errors->has('video'))
               <span class="help-block" role="alert">{{ $errors->first('video') }}</span>
@@ -63,13 +63,36 @@
               <div>
                 <input type="hidden" name="gallery" value="0">
                 <input type="checkbox" name="gallery" id="gallery" value="1" {{ old('gallery', 0) == 1 ? 'checked' : '' }}>
-                <label for="gallery" style="font-weight: 400">gallery</label>
+                <label for="gallery" style="font-weight: 400">PLAY SLIDESHOW</label>
               </div>
               @if($errors->has('gallery'))
               <span class="help-block" role="alert">{{ $errors->first('gallery') }}</span>
               @endif
               
             </div>
+            <div class="form-group {{ $errors->has('book') ? 'has-error' : '' }}">
+              <div>
+                <input type="hidden" name="book" value="0">
+                <input type="checkbox" name="book" id="book" value="1" {{ old('book', 0) == 1 ? 'checked' : '' }}>
+                <label for="book" style="font-weight: 400">PURCHASE BOOKS</label>
+              </div>
+              @if($errors->has('gallery'))
+              <span class="help-block" role="alert">{{ $errors->first('gallery') }}</span>
+              @endif
+            
+            </div>
+            <div class="form-group {{ $errors->has('photo') ? 'has-error' : '' }}">
+              <div>
+                <input type="hidden" name="photo" value="0">
+                <input type="checkbox" name="photo" id="photo" value="1" {{ old('photo', 0) == 1 ? 'checked' : '' }}>
+                <label for="photo" style="font-weight: 400">VIEW EXHIBITION PHOTOS</label>
+              </div>
+              @if($errors->has('gallery'))
+              <span class="help-block" role="alert">{{ $errors->first('gallery') }}</span>
+              @endif
+            
+            </div>
+
 
             <div class="form-group" style="display: none" id="e_cat_video">
                 <label for="e_cat_video">{{ trans('cruds.exhibationCategory.fields.e_cat_video') }}</label>

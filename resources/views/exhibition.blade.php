@@ -19,31 +19,43 @@
 			aria-labelledby="pills-{{$key}}-tab">
 			@foreach($year->yearExhibationCategories as $k=>$exbcategory)
 			<div class="row exb-item mt-2">
+				<div class="col-md-1"></div>
 				<div class="col-md-3 col-sm-12 text-center">
 					{!! $exbcategory->title !!}
 				</div>
-				<div class="col-md-6 col-sm-12">
+				<div class="col-md-4 col-sm-12">
 					{!! $exbcategory->description !!}
 				</div>
 				<div class="col-md-3 col-sm-12  align-items-center">
 					@if($exbcategory->post)
-					<a href="/exhibition/epost/{{$exbcategory->id}}" class="btn m-2 btn-md btn-warning">
-						VIEW EXHIBITION POST
+					<a href="#" class="btn m-2 btn-md btn-warning">
+						VIEW MORE
 					</a>
 					@endif
 					@if($exbcategory->video)
-					<a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-max-width="600"
+					<a href="#" data-toggle="lightbox" data-max-width="600"
 						class="btn m-2 btn-md btn-warning">
 						VIEW VIDEO HERE
 					</a>
 					@endif
 					@if($exbcategory->gallery)
-					<a href="/exhibition/egallery/{{$exbcategory->id}}" class="btn m-2 btn-md btn-warning">
-						VIEW EXHIBITION GALLERY
+					<a href="#" class="btn m-2 btn-md btn-warning">
+						PLAY SLIDESHOW
+					</a>
+					@endif
+					@if($exbcategory->book)
+					<a href="#" class="btn m-2 btn-md btn-warning">
+						PURCHASE BOOKS
+					</a>
+					@endif
+					@if($exbcategory->photo)
+					<a href="#" class="btn m-2 btn-md btn-warning">
+						VIEW EXHIBITION PHOTOS
 					</a>
 					@endif
 
 				</div>
+				<div class="col-md-1"></div>
 			</div>
 			@endforeach
 		</div>

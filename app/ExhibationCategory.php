@@ -33,6 +33,8 @@
             'title',
             'post',
             'video',
+            'photo',
+            'book',
             'gallery',
             'year_id',
             'created_at',
