@@ -1316,8 +1316,8 @@ a.button_main{
 a.button_main:hover {
     border: 1px solid #4F9DBD;
     text-decoration: none;
-    background: transparent;
-    color: #4F9DBD;
+    background: #4F9DBD;
+    color: #fff;
 }
 .content_top {
     padding: 120px 0px;
@@ -1445,5 +1445,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 .slider_content {
     position: absolute;
-    top: 7%;
+    top: 9%;
+    padding: 0px 40px;
 }
