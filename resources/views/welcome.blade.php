@@ -157,14 +157,14 @@
          @foreach($whoadvisors as $key=>$whoadvisor)
             <div id="who{{$whoadvisor->id}}" class="tabcontent">
               <div class="who">
-                <div class="box">
+                <div class="box col" >
                   <div class="img">
                    @if($whoadvisor->photp)
                     <img src="{{$whoadvisor->photp->getUrl()}}" alt="{{$whoadvisor->name}}" class="whoadvisor_photo">
                     @endif
                   </div>
                   <div class="whoheader">
-                    <h2 class="maincolor">{{$whoadvisor->name}}</h2>
+                    <h2 class="maincolor text-light">{{$whoadvisor->name}}</h2>
                     <h4>{{$whoadvisor->level}} </h4>
                    
                   
@@ -179,13 +179,12 @@
                     
                     
                   </div>
-                 <div class="clearfix"></div>
-                  <div class="whodescription">
-                    {!!$whoadvisor->description!!}
-                   </div> 
-               
                 </div>
-              </div>
+               </div> 
+                <div class="whodescription col" >
+                  {!!$whoadvisor->description!!}
+                </div>
+             
             </div>
         @endforeach
       </div>
@@ -202,7 +201,7 @@
 {{-- end who we are --}}
 
 {{-- slide showcontent --}}
-<section id="digital" class="digital_section">
+<section id="slideshows" class="digital_section">
   
     <h2 class="maincolor text-center">Slideshows</h2>
      <div class="container">

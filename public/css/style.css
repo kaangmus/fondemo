@@ -1396,7 +1396,6 @@ a.button_main:hover {
 img.whoadvisor_photo {
     width: 350px;
     height: 350px;
-    float: left;
     margin-right: 20px;
     border-radius: 50%;
 }
@@ -1452,9 +1451,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     top: 9%;
     padding: 0px 40px;
 }
-/* a#video_link {
-    margin-top: 570px;
-} */
+a#video_link {
+    margin-top: 10px;
+}
 .swiper-button-prev,
 .swiper-button-next{
     outline: none;
@@ -1529,4 +1528,18 @@ section#exhibiton {
 .slider_content.bannercaption8,
 .slider_content.bannercaption9 {
     top: 60%;
+}
+.whodescription {
+    padding-top: 10px;
+    width: 50%;
+    float: right;
+    height: 800px;
+    overflow-y: auto;
+}
+.who{
+    width: 50%;
+    display: inline-block;
+}
+.whoheader {
+    margin: 10px 0px;
 }

@@ -33,6 +33,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <div class="dropdown_list">
           <a class="dropdown-item" href="/news">ARTICLES</a>
+          <a class="dropdown-item" href="/#slideshows">SLIDESHOWS</a>
           <a class="dropdown-item" href="/speciesandessay">SPEECHES & ESSAYS</a>
           <a class="dropdown-item" href="/#map">PHOTO SEARCH MAP</a>
           <a class="dropdown-item" href="/digital">DIGITAL BROCHURES</a>
