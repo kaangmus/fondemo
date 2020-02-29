@@ -1468,7 +1468,7 @@ Main Components
     padding: 0px 12px;
     width: 100%;
     border-left: none;
-    height: 730px;
+    height: 800px;
     overflow-y: auto;
 }
 .who .box ul {
@@ -1524,6 +1524,5 @@ Main Components
     
  }
 .whodescription p {
-    font-size: 16px;
     text-align: justify;
 }
