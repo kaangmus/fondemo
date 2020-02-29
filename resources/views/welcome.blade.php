@@ -179,6 +179,7 @@
                     
                     
                   </div>
+                 <div class="clearfix"></div>
                   <div class="whodescription">
                     {!!$whoadvisor->description!!}
                    </div> 

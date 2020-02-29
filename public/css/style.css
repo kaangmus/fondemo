@@ -1247,7 +1247,7 @@ section.post a {
 .grand_banner {
     position: absolute;
     width: 100%;
-    top: 10%;
+    top: 15%;
 }
 .wh-100 {
     width: 100px;
@@ -1402,7 +1402,7 @@ img.whoadvisor_photo {
     border-radius: 50%;
 }
 .whodescription {
-    padding-top: 40px;
+    padding-top: 10px;
 }
 .middle {
     transition: .5s ease;
@@ -1484,4 +1484,7 @@ a.grants_button img{
     -moz-transition: all 0.5s ease;
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease;
+}
+.whoheader {
+    padding-top: 27%;
 }

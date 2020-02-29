@@ -1484,7 +1484,7 @@ Main Components
 .who .box ul li a {
     display: block;
     color: #4F9DBD;
-    margin: 0 10px;
+    margin-right:10px;
     font-size: 20px;
     transition: 0.5s;
     text-align: center;

@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  @include('partials.header')
   <div class="banner">
           
           
@@ -23,27 +24,18 @@
           <div class="container-fluid">
             
             <div class="row  justify-content-center grand_banner">
-              <h1 class="bannertitle text-light text-center">PARTICIPATE IN THE PROJECTS YOU CARE ABOUT:</h1>
-              <div class="col-12 col-md-8  h-50 ">
-                
-                {{-- <p class="lead  text-light mb-5">Sub-heading. Header 100% height with center align items</p> --}}
-                <center><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden"
-                    value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="PXJNJ89N2CVLA" /> <input
-                    alt="PayPal – The safer, easier way to pay online." border="0" name="submit"
-                    src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" type="image" /> 
-                    
-                    
-                    <img alt="" border="0"
-                    height="1" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" /></form></center>
-        
-                {{-- <div class="btn-container-wrapper p-relative d-block  zindex-1">
-                        <a class="btn btn-link btn-lg   mt-md-3 mb-4 scroll align-self-center text-light"
-                          href="http://bootstraptor.com">
-                          <i class="fa fa-angle-down fa-4x text-light"></i>
-                        </a>
-                      </div> --}}
+              <div class="slider_content">
+              
+                <span class="text-center">
+                  <h2 class="sliderfont text-light text-center text_align18">Participate in the projects you care about:</h2>
+                </span>
+                <div class="slider_btn text-center">
+                  <a class="button_main" href="#">Donate</a>
+                </div>
+              
+              
               </div>
-        
+             
             </div>
           </div>
         <div class='image-container'>
@@ -400,6 +392,7 @@
             </div>
         </div>     
     </section>
+@include('partials.footer')    
 <script src="{{ asset('js/jquery-1.12.1.min.js') }}"></script>
 <script src="{{ asset('js/popper.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
