@@ -9,7 +9,7 @@
             src="{{ asset($slider->image->getUrl('large')) }}" class="swiper-lazy"
             title="#slider-direction-{{ $slider->id}}">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-              <div class="slider_content">
+              <div class="slider_content bannercaption{{ $slider->id}}">
                   
                     <span class="text-center">
                       <h2 class="sliderfont text-light text-center text_align{{ $slider->id}}">{{ $slider->title ?? '' }}</h2>
@@ -694,7 +694,7 @@ $jsons=array_slice($json, -11, 11, true);
 {{-- end online shop --}}
 <!-- instagram -->
 <section id='instagram' class="bg_black">
-  <h1 class='maincolor text-center'>Follow Us On Instagram</h1>
+  <h1 class='maincolor text-center btton50'>Follow Us On Instagram</h1>
 
   <!-- SnapWidget -->
   <div class="container">

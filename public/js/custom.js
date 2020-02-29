@@ -38,7 +38,7 @@
      grabCursor: true,
      centeredSlides: true,
      slidesPerView: 'auto',
-     initialSlide:'6',
+     initialSlide:'5',
      coverflowEffect: {
          rotate: 0,
          stretch: 1,
