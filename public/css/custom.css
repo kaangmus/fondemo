@@ -1483,7 +1483,7 @@ Main Components
 
 .who .box ul li a {
     display: block;
-    color: #aaa;
+    color: #4F9DBD;
     margin: 0 10px;
     font-size: 20px;
     transition: 0.5s;
@@ -1491,7 +1491,7 @@ Main Components
 }
 
 .who .box ul li:hover a {
-    color: red;
+    color:#ffc107;
    
 }
  .swiper-bannerslider {

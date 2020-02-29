@@ -171,10 +171,10 @@
                       <ul>
                         
                       @if($whoadvisor->facebook) <li><a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-facebook-square"></i></a></li>@endif
-                      @if($whoadvisor->twitter)<li><a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-twitter-square"></i></a></li>@endif
-                      @if($whoadvisor->instagram) <li><a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-instagram"></i></a></li>@endif
-                      @if($whoadvisor->website)<li><a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fas fa-globe"></i></a></li>@endif
-                      @if($whoadvisor->email)<li><a href="mailto:{{$whoadvisor->facebook}}" target="_blank"><i class="fas fa-envelope-square"></i></a></li>@endif
+                      @if($whoadvisor->twitter)<li><a href="{{$whoadvisor->twitter}}" target="_blank"><i class="fab fa-twitter-square"></i></a></li>@endif
+                      @if($whoadvisor->instagram) <li><a href="{{$whoadvisor->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a></li>@endif
+                      @if($whoadvisor->website)<li><a href="{{$whoadvisor->website}}" target="_blank"><i class="fas fa-globe"></i></a></li>@endif
+                      @if($whoadvisor->email)<li><a href="mailto:{{$whoadvisor->email}}" target="_blank"><i class="fas fa-envelope-square"></i></a></li>@endif
                       </ul>
                     
                     
