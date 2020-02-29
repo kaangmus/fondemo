@@ -1452,9 +1452,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     top: 9%;
     padding: 0px 40px;
 }
-a#video_link {
+/* a#video_link {
     margin-top: 570px;
-}
+} */
 .swiper-button-prev,
 .swiper-button-next{
     outline: none;
