@@ -803,7 +803,7 @@ div#species_essay img {
 }
 .toped {
     position: absolute;
-    left: 62%;
+    left: 67%;
     transform: translate(-50%, -50%);
     width: 100%;
 }
@@ -1499,8 +1499,7 @@ a.ex_button {
     transition: all 0.4s ease 0s;
     z-index: 222;
     background: transparent;
-    display: block;
-    float: right;
+   
    
 }
 a.ex_button:hover{

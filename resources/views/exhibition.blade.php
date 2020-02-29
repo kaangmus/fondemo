@@ -26,36 +26,46 @@
 				<div class="col-md-5 col-sm-12">
 					{!! $exbcategory->description !!}
 				</div>
-				<div class="col-md-2 col-sm-12  align-items-center">
+				<div class="col-md-3 col-sm-12  align-items-center">
 					@if($exbcategory->post)
+					<div class="ex_cover_btn">
 					<a href="#" class="ex_button">
 						VIEW MORE
 					</a>
+					</div>
 					@endif
 					@if($exbcategory->video)
+					<div class="ex_cover_btn">
 					<a href="#" data-toggle="lightbox" data-max-width="600"
 						class="ex_button">
 						PLAY VIDEO
 					</a>
+					</div>
 					@endif
 					@if($exbcategory->gallery)
+					<div class="ex_cover_btn">
 					<a href="#" class="ex_button">
 						PLAY SLIDESHOW
 					</a>
+					</div>
 					@endif
 					@if($exbcategory->book)
+					<div class="ex_cover_btn">
 					<a href="#" class="ex_button">
 						PURCHASE BOOKS
 					</a>
+					</div>
 					@endif
 					@if($exbcategory->photo)
+					<div class="ex_cover_btn">
 					<a href="#" class="ex_button">
 						VIEW EXHIBITION PHOTOS
 					</a>
+					</div>
 					@endif
 
 				</div>
-				<div class="col-md-1"></div>
+				
 			</div>
 			@endforeach
 		</div>
