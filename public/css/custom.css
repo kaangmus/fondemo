@@ -817,7 +817,7 @@ h3 {
     display: none;
 }
 .bg_black{
-    background-color: #001540;
+    background-color: #333;
 }
 .timeline-horizontal .timeline-item .timeline-badge {
     top: auto;
@@ -1447,7 +1447,7 @@ Main Components
 /* Change background color of buttons on hover */
 .tab button:hover,
 .lab button:hover {
-  color: #fff;
+  color: #ff643a;
 }
 
 
@@ -1491,7 +1491,7 @@ Main Components
 }
 
 .who .box ul li:hover a {
-    color:#ffc107;
+    color: #ff643a;
    
 }
  .swiper-bannerslider {
