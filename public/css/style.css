@@ -466,13 +466,13 @@ button.btn.donate_btn {
     color: #ffffff;
     border: 0px;
     padding: 10px 15px;
-    opacity: 0.8;
+   
     text-transform: uppercase;
     margin:0px 40px;
     
 }
 button.btn.donate_btn:hover {
-    opacity: 1;
+      background: #ff643a;
 }
 
 .media {
@@ -546,7 +546,7 @@ li.nav-item.social a {
     font-family: Fjalla One, Impact, sans-serif;
 }
 h4.text-center {
-    border-top: 2px solid #ffc107;
+    border-top: 2px solid #ff643a;
     display: inline-block;
     padding-top: 10px;
     font-size: 28px;
@@ -1416,11 +1416,11 @@ img.whoadvisor_photo {
 }
 .play_button i {
     font-size: 72px;
-    color: #ffc107;
+    color: #ff643a;
 }
 .read_button {
     font-size: 31px;
-    color: #ffc107;
+    color: #ff643a;
 }
 .content_bottom {
 padding:300px;
@@ -1440,7 +1440,7 @@ span.swiper-pagination-bullet {
 }
 
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #ffc107;
+    background: #ff643a;
 }
 .slider_content {
     position: absolute;
