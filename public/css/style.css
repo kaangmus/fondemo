@@ -1541,5 +1541,9 @@ section#exhibiton {
     display: inline-block;
 }
 .whoheader {
-    margin: 10px 0px;
+    margin: 20px 0px;
+}
+.social a {
+    font-size: 25px;
+    margin-right: 10px;
 }
