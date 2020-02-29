@@ -35,7 +35,7 @@
 					@if($exbcategory->video)
 					<a href="#" data-toggle="lightbox" data-max-width="600"
 						class="ex_button">
-						VIEW VIDEO HERE
+						PLAY VIDEO
 					</a>
 					@endif
 					@if($exbcategory->gallery)

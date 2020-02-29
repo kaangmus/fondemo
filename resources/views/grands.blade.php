@@ -164,6 +164,8 @@
                   
 
                   @foreach($years as $key=>$mainyear)
+                  @if(!$mainyear->speciesbyyear->isEmpty() )
+
                 
                
                    <div class="timeline-article">
@@ -380,6 +382,7 @@
                         data-target="#year{{$mainyear->year}}">{{$mainyear->year}}</span>
                     </div>
                   </div>
+                  @endif
                   @endforeach
                  
 
@@ -397,6 +400,11 @@
 <script src="{{ asset('js/popper.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script type="text/javascript">
+$(window).scroll(function () {
+  var sticky = $('.myheader'),
+  scroll = $(window).scrollTop();
+  
+  if (scroll <= 90) sticky.removeClass('sticky'); else sticky.addClass('sticky'); });
 
 
     $(".view_more").on("click", function () {
