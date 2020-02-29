@@ -1485,3 +1485,38 @@ a.grants_button img{
     -ms-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+a.ex_button {
+    border: 1px solid #ff643a;
+    border-radius: 30px;
+    color: #ff643a;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+    z-index: 222;
+    background: transparent;
+}
+a.ex_button:hover{
+    color: #fff;
+    background: #ff643a;
+    border: 1px solid #ff643a;
+    text-decoration: none;
+    
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #4F9DBD;
+}
+.nav-pills .nav-link {
+    border-radius: .25rem;
+    color: #4F9DBD;
+}
+.nav-pills .nav-link:hover{
+     color: #ff643a;
+}
+]

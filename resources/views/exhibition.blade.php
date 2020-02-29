@@ -28,28 +28,28 @@
 				</div>
 				<div class="col-md-3 col-sm-12  align-items-center">
 					@if($exbcategory->post)
-					<a href="#" class="btn m-2 btn-md btn-warning">
+					<a href="#" class="ex_button">
 						VIEW MORE
 					</a>
 					@endif
 					@if($exbcategory->video)
 					<a href="#" data-toggle="lightbox" data-max-width="600"
-						class="btn m-2 btn-md btn-warning">
+						class="ex_button">
 						VIEW VIDEO HERE
 					</a>
 					@endif
 					@if($exbcategory->gallery)
-					<a href="#" class="btn m-2 btn-md btn-warning">
+					<a href="#" class="ex_button">
 						PLAY SLIDESHOW
 					</a>
 					@endif
 					@if($exbcategory->book)
-					<a href="#" class="btn m-2 btn-md btn-warning">
+					<a href="#" class="ex_button">
 						PURCHASE BOOKS
 					</a>
 					@endif
 					@if($exbcategory->photo)
-					<a href="#" class="btn m-2 btn-md btn-warning">
+					<a href="#" class="ex_button">
 						VIEW EXHIBITION PHOTOS
 					</a>
 					@endif
