@@ -10,9 +10,10 @@
             title="#slider-direction-{{ $slider->id}}">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
               <div class="slider_content">
-                  <article class="d-flex align-items-center justify-content-center">
-                    <a class="text-center banner_title">
+                  
+                    <span class="text-center">
                       <h2 class="sliderfont text-light text-center">{{ $slider->title ?? '' }}</h2>
+                     </span> 
                       @if($slider->description)<h4 id="fontsize">{{ $slider->description ?? '' }}</h4>@endif
                        @if($slider->btn_text)
                         <div class="slider_btn">
@@ -24,9 +25,9 @@
                          </div> 
                        @endif   
 
-                    </div>
-                  </article>
-            </div>
+                  </div>
+                 
+           </div>
 
         
    
