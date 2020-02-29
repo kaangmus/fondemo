@@ -18,9 +18,9 @@
                        @if($slider->btn_text)
                         <div class="slider_btn">
                           @if($slider->id==1)
-                            <a href="javascript:void(0)" id="video_link"  class="main_button" vidUrl="/video/intro.mp4">{{$slider->btn_text}}</a>
+                            <a href="javascript:void(0)" id="video_link"  class="button_main" vidUrl="/video/intro.mp4">{{$slider->btn_text}}</a>
                           @else
-                            <a class="main_button" href="{{$slider->btn_link}}">{{$slider->btn_text}}</a>
+                            <a class="button_main" href="{{$slider->btn_link}}">{{$slider->btn_text}}</a>
                           @endif
                          </div> 
                        @endif   

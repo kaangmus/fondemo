@@ -1296,6 +1296,29 @@ a.main_button:hover {
     background: transparent;
     color: #fff;
 }
+a.button_main{
+     border:1px solid #fff;
+     border-radius: 30px;
+     color: #fff;
+     cursor: pointer;
+     display: inline-block;
+     font-size: 17px;
+     font-weight: 600;
+     margin-top: 30px;
+     padding: 10px 20px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: all 0.4s ease 0s;
+     z-index: 222;
+     background: transparent;
+
+}
+a.button_main:hover {
+    border: 1px solid #4F9DBD;
+    text-decoration: none;
+    background: transparent;
+    color: #4F9DBD;
+}
 .content_top {
     padding: 120px 0px;
 }
@@ -1420,9 +1443,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .slider_content {
     position: absolute;
 }
-.slider_btn {
-    margin-top: 540px;
-}
-h2.sliderfont.text-light.text-center {
-    margin-top: -378px;
+.slider_content {
+    position: absolute;
+    top: 7%;
 }
