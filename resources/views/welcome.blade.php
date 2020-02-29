@@ -12,7 +12,7 @@
               <div class="slider_content">
                   
                     <span class="text-center">
-                      <h2 class="sliderfont text-light text-center">{{ $slider->title ?? '' }}</h2>
+                      <h2 class="sliderfont text-light text-center text_align{{ $slider->id}}">{{ $slider->title ?? '' }}</h2>
                      </span> 
                       @if($slider->description)<h4 id="fontsize">{{ $slider->description ?? '' }}</h4>@endif
                        @if($slider->btn_text)
