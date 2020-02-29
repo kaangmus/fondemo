@@ -29,8 +29,8 @@
             <div class="col-md-1">
                 <div class="social_share">
                 <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fas fa-envelope-open"></i></a>
                 </div>
 
             </div>
