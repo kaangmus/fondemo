@@ -610,7 +610,7 @@ $jsons=array_slice($json, -11, 11, true);
     <div class="toped">
     
       {{-- <h2 class="maincolor text-center grant_tcolor"></h2> --}}
-      <h2 class="sliderfont text-light text-center text_align18 ">Search Photos by country / by year / by category</h2>
+      <h2 class="sliderfont text-light text-center text_align18 ">Search and purchase photos by country / by year / by category</h2>
      
     </div>
   </a>

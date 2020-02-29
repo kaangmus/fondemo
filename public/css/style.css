@@ -1500,7 +1500,8 @@ a.ex_button {
     z-index: 222;
     background: transparent;
     display: block;
-    width: 240px;
+    float: right;
+   
 }
 a.ex_button:hover{
     color: #fff;
