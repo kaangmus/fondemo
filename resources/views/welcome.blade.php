@@ -601,7 +601,7 @@ $jsons=array_slice($json, -11, 11, true);
 {{-- end google map --}} 
 
 <div id="grants_homeid" class="grants_home">
-  <a href="#" class="search map">
+  <a href="javascript:void(0)" class="search map">
     <img src="{{asset('images/searchmap.jpg')}}" alt="Snow" style="width:100%;">
     <div class="toped">
     

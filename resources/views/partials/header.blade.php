@@ -18,10 +18,10 @@
           
           <div class="dropdown_list">
            <a class="dropdown-item" href="#">OUR MISSION</a>
-          <a class="dropdown-item" href="/#team">WHO WE ARE</a>
-           <a class="dropdown-item" href="/#team">ADVISERS</a>
-           <a class="dropdown-item" href="/grants">GRANTS</a>
-           <a class="dropdown-item" href="/EXHIBITIONS">EXHIBITIONS</a>
+          <a class="dropdown-item" href="javascript:void(0)">WHO WE ARE</a>
+           <a class="dropdown-item" href="javascript:void(0)">ADVISERS</a>
+           <a class="dropdown-item" href="javascript:void(0)">GRANTS</a>
+           <a class="dropdown-item" href="javascript:void(0)">EXHIBITIONS</a>
           </div>
         </div>
       </li>
@@ -32,12 +32,12 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <div class="dropdown_list">
-          <a class="dropdown-item" href="/news">ARTICLES</a>
-          <a class="dropdown-item" href="/#slideshows">SLIDESHOWS</a>
-          <a class="dropdown-item" href="/speciesandessay">SPEECHES & ESSAYS</a>
-          <a class="dropdown-item" href="/#map">PHOTO SEARCH MAP</a>
-          <a class="dropdown-item" href="/digital">DIGITAL BROCHURES</a>
-          <a class="dropdown-item" href="/#instagram">INSTRAGRAM</a>
+          <a class="dropdown-item" href="javascript:void(0)">ARTICLES</a>
+          <a class="dropdown-item" href="javascript:void(0)">SLIDESHOWS</a>
+          <a class="dropdown-item" href="javascript:void(0)">SPEECHES & ESSAYS</a>
+          <a class="dropdown-item" href="javascript:void(0)">PHOTO SEARCH MAP</a>
+          <a class="dropdown-item" href="javascript:void(0)">DIGITAL BROCHURES</a>
+          <a class="dropdown-item" href="javascript:void(0)">INSTRAGRAM</a>
           </div>
         </div>
       </li>
@@ -48,9 +48,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <div class="dropdown_list">
-          <a class="dropdown-item" href="/artprint">ART PRINTS</a>
-          <a class="dropdown-item" href="/books">BOOKS</a>
-          <a class="dropdown-item" href="/scarves">SCARVES</a>
+          <a class="dropdown-item" href="javascript:void(0)">ART PRINTS</a>
+          <a class="dropdown-item" href="javascript:void(0)">BOOKS</a>
+          <a class="dropdown-item" href="javascript:void(0)">SCARVES</a>
           </div>
         </div>
       </li>
@@ -58,7 +58,7 @@
       <form class="form-inline">
          <button class="btn donate_btn" type="button">donate</button>
       </form>
-      <li class="nav-item social"> <a class="nav-link" target="_blank"  href="https://www.instagram.com/fonassociation/"><i class="fab fa-facebook-square"></i></a></li>
+      <li class="nav-item social"> <a class="nav-link" target="_blank"  href="https://www.instagram.com/fonassociation/"><i class="fab fa-instagram"></i></a></li>
       <li class="nav-item social"> <a class="nav-link" title="twitter" target="_blank" href="https://twitter.com/focusedonnature"><i class="fab fa-twitter-square"></i></a></li>
       <li class="nav-item social"> <a class="nav-link" title="facebook"target="_blank"  href="https://www.facebook.com/fonassociation"><i class="fab fa-facebook-square"></i></a></li>
     </ul>

@@ -1551,3 +1551,13 @@ section#exhibiton {
 .social a{
     color:#ff643a;
 }
+.social_share a {
+    font-size: 27px;
+    display: block;
+}
+.social_share a:hover {
+    color: #ff643a;
+}
+.social_share a {
+    color: #4F9DBD;
+}
