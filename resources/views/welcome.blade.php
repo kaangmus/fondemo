@@ -146,7 +146,7 @@
     <div class="row">
       
       <div class="tab">
-      <h2 class="maincolor text-center">who we are</h2>
+      <h2 class="maincolor">who we are</h2>
         @foreach($whoweares as $key=>$whoweare)
         <button class="tablinks" onclick="openCity(event, 'who{{$whoweare->id}}')"
           id="{{$key == 0 ? 'defaultOpen':''}}">{{$whoweare->name}}</button>
@@ -189,8 +189,8 @@
         @endforeach
       </div>
 
-      <div class="tab">
-        <h2 class="maincolor text-center">ADVISERS</h2>
+      <div class="lab">
+        <h2 class="maincolor">ADVISERS</h2>
         @foreach($advisors as $key=>$advisor)
         <button class="tablinks" onclick="openCity(event, 'who{{$advisor->id}}')">{{$advisor->name}}</button>
         @endforeach
