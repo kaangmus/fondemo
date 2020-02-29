@@ -23,10 +23,10 @@
 				<div class="col-md-3 col-sm-12 text-center">
 					{!! $exbcategory->title !!}
 				</div>
-				<div class="col-md-4 col-sm-12">
+				<div class="col-md-5 col-sm-12">
 					{!! $exbcategory->description !!}
 				</div>
-				<div class="col-md-3 col-sm-12  align-items-center">
+				<div class="col-md-2 col-sm-12  align-items-center">
 					@if($exbcategory->post)
 					<a href="#" class="ex_button">
 						VIEW MORE
