@@ -1492,13 +1492,15 @@ a.ex_button {
     display: inline-block;
     font-size: 17px;
     font-weight: 600;
-    margin-top: 30px;
-    padding: 10px 20px;
+    margin-top: 5px;
+    padding: 10px 10px;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.4s ease 0s;
     z-index: 222;
     background: transparent;
+    display: block;
+    width: 240px;
 }
 a.ex_button:hover{
     color: #fff;
@@ -1518,4 +1520,6 @@ a.ex_button:hover{
 .nav-pills .nav-link:hover{
      color: #ff643a;
 }
-]
+section#exhibiton {
+    padding:60px 0px 0px;
+}
