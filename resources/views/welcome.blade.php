@@ -164,8 +164,8 @@
                     @endif
                   </div>
                   <div class="whoheader">
-                    <h2 class=" text-light">{{$whoadvisor->name}}</h2>
-                    <h4>{{$whoadvisor->level}} </h4>
+                    <h3 class="text-light">{{$whoadvisor->name}}</h3>
+                    <p>{{$whoadvisor->level}} </p>
                    <div class="who-we-social">
                       @if($whoadvisor->facebook) <a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-facebook-square"></i></a>@endif
                       @if($whoadvisor->twitter)<a href="{{$whoadvisor->twitter}}" target="_blank"><i class="fab fa-twitter-square"></i></a>@endif

@@ -1567,3 +1567,10 @@ section#exhibiton {
     
     color: #ff643a;
 }
+
+.whoheader {
+    margin-top: 40px;
+}
+.who-we-social a {
+    margin-right: 10px;
+}
