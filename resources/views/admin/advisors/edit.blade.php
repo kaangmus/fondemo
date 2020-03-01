@@ -29,11 +29,11 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.advisor.fields.photp_helper') }}</span>
                         </div>
-                        <div class="form-group {{ $errors->has('level') ? 'has-error' : '' }}">
+                       <div class="form-group {{ $errors->has('level') ? 'has-error' : '' }}">
                             <label for="level">{{ trans('cruds.advisor.fields.level') }}</label>
-                            <input class="form-control ckeditor" type="text" name="level" id="level" value="{{ old('level', $advisor->level) }}">
+                            <textarea class="form-control" type="text" name="level" id="level">{!! old('level', '') !!}</textarea>
                             @if($errors->has('level'))
-                                <span class="help-block" role="alert">{{ $errors->first('level') }}</span>
+                            <span class="help-block" role="alert">{{ $errors->first('level') }}</span>
                             @endif
                             <span class="help-block">{{ trans('cruds.advisor.fields.level_helper') }}</span>
                         </div>
