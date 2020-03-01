@@ -31,7 +31,7 @@
                         </div>
                        <div class="form-group {{ $errors->has('level') ? 'has-error' : '' }}">
                             <label for="level">{{ trans('cruds.advisor.fields.level') }}</label>
-                            <textarea class="form-control" type="text" name="level" id="level">{!! old('level', '') !!}</textarea>
+                            <textarea class="form-control" type="text" name="level" id="level">{!! old('level', $advisor->level) !!}</textarea>
                             @if($errors->has('level'))
                             <span class="help-block" role="alert">{{ $errors->first('level') }}</span>
                             @endif
