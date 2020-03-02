@@ -43,8 +43,7 @@
 
 
 
-
-
+<a class="popup-youtube" href="https://www.youtube.com/watch?v=XbVLyCLejXg">Open YouTube video</a>
 
 <!-- End Slider Area -->
 
@@ -115,13 +114,13 @@
           @foreach ($mediums as $key=>$medium)
           <div class="col-md-6">
             <div class="post-thumb ts-resize">
-              <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif">
+              <a href="@if($key==0)https://www.youtube.com/watch?v=XbVLyCLejXg"@else"/post/{{$medium->id}}"@endif @if($key==0)class="popup-youtube" @endif>
                 @if($medium->featured_image)
                 <img src="{{ $medium->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
                 @endif
               </a>
               <div class="new_third_text">
-                <a href="@if($medium->link){{$medium->link}}@else/post/{{$medium->id}}@endif"
+                <a href="@if($key==0)https://www.youtube.com/watch?v=XbVLyCLejXg"@else"/post/{{$medium->id}}"@endif @if($key==0)class="popup-youtube" @endif
                   @if($medium->link)target="_blank"@endif>
                   <h3>{{$medium->title}}</h3>
                   <p>{!!$medium->excerpt!!}</p>
