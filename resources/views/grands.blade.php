@@ -38,12 +38,12 @@
              
             </div>
           </div>
-        <div class='image-container'>
-         
-          <img src="{{asset('images/gbanner.jpg')}}" data-src="{{asset('images/gbanner.jpg')}}" class="bannertp  w-100">
-         
-          
-          </div>
+
+          <figure class="placeholder" data-large="{{asset('images/gbanner.jpg')}}">
+            <img src="{{asset('images/gbanner.jpg')}}" class="img-small">
+            <div style="padding-bottom: 50%;"></div>
+          </figure>
+
 
           
          <div class="scroll_down_area">
@@ -429,16 +429,31 @@ $(window).scroll(function () {
 
 
 
-     $(function(){
-    $(window).on('load', function(){
-    $('[data-src]').each(function(){
-    var $this = $(this),
-    src = $(this).data('src');
-    $this.attr('src', src);
-    
-    });
-    });
-    });
+  window.onload = function() {
+  var placeholders = document.querySelectorAll('.placeholder');
+  for (var i = 0; i < placeholders.length; i++) {
+    loadImage(placeholders[i]);
+  }
+
+  function loadImage(placeholder) {
+    var small = placeholder.children[0];
+
+    // 1: load small image and show it
+    var img = new Image();
+    img.src = small.src;
+    img.onload = function() {
+      small.classList.add('loaded');
+    };
+
+    // 2: load large image
+    var imgLarge = new Image();
+    imgLarge.src = placeholder.dataset.large;
+    imgLarge.onload = function() {
+      imgLarge.classList.add('loaded');
+    };
+    placeholder.appendChild(imgLarge);
+  }
+}
 </script>
 </body>
 

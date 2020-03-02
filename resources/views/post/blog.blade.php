@@ -59,7 +59,7 @@ var stickyTop = $('.sidebarfix').offset().top;
 
 $(window).scroll(function() {
 var windowTop = $(window).scrollTop();
-if (stickyTop < windowTop && $(".single_post").height() + $(".single_post").offset().top - $(".sidebarfix").height()> windowTop) {
+if (stickyTop > windowTop && $(".single_post").height() + $(".single_post").offset().top - $(".sidebarfix").height()> windowTop) {
     $('.sidebarfix').css('position', 'fixed');
     } else {
     $('.sidebarfix').css('position', 'relative');
