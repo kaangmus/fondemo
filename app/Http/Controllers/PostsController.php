@@ -28,6 +28,8 @@ class PostsController extends Controller
      }
 
        public function sidebar(ContentPage $post){
+
+        dd($post);
      
          $relates = ContentPage::with(['categories'])->OrderBy('published_at', 'asc')->get();
 

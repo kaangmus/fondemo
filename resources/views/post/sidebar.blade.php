@@ -1,5 +1,6 @@
 <ul class="sidebarfix">
     @foreach ($relates as $key=>$relate)
+    @if($relate->id!=$post->id)
    
     <div class="latest_news  flex-column flex-md-row">
         <a href="@if($relate->link){{$relate->link}}@else/post/{{$relate->id}}@endif" @if($relate->link) target="_blank"
@@ -19,7 +20,7 @@
             </a>
         </div>
     </div>
-    
+    @endif
     @endforeach
 
 </ul>
