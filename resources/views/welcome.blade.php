@@ -116,7 +116,7 @@
             <div class="post-thumb ts-resize">
               <a href="@if($key==0)https://www.youtube.com/watch?v=XbVLyCLejXg"@else"/post/{{$medium->id}}"@endif @if($key==0)class="popup-youtube" @endif>
                 @if($medium->featured_image)
-                <img src="{{ $medium->featured_image->getUrl() }}" class="attachment-digiqole-medium" alt="">
+                <img src="{{ $medium->featured_image->getUrl('medium') }}" class="attachment-digiqole-medium" alt="">
                 @endif
               </a>
               <div class="new_third_text">
