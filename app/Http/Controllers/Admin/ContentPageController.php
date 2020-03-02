@@ -117,4 +117,14 @@ class ContentPageController extends Controller
 
         return response(null, Response::HTTP_NO_CONTENT);
     }
+    {
+        abort_if(Gate::denies('exhibition_post_create') && Gate::denies('exhibition_post_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
+        $model         = new ExhibitionPost();
+        $model->id     = $request->input('crud_id', 0);
+        $model->exists = true;
+        $media         = $model->addMediaFromRequest('upload')->toMediaCollection('ck-media', 'public');
+
+        return response()->json(['id' => $media->id, 'url' => $media->getUrl()], Response::HTTP_CREATED);
+    }
 }

@@ -3,11 +3,13 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('/grants', 'GrandsController@index');
 Route::view('/digital', 'digital');
-
+Route::get('/pages/{page}', 'Admin\PageController@page')->name('page');
 Route::get('/digitalpdf/{id}', 'Admin\DigitalBrochuresController@get_digital_pdf');
 Route::get('/news', 'PostsController@index');
 Route::get('post/{post}', 'PostsController@show')->name('post');
-Route::get('/post/{id}', 'PostsController@showBlogDetail');
+
+ 
+
 Route::get('/categories/{id}', 'WelcomeController@showBlogDetail');
 Route::get('/shop', 'ShopController@index');
 Route::get('/exhibition/epost/{id}', 'WelcomeController@exhibitionPost');

@@ -8,6 +8,9 @@ use App\Http\Requests\MassDestroyPageRequest;
 use App\Http\Requests\StorePageRequest;
 use App\Http\Requests\UpdatePageRequest;
 use App\Page;
+use App\ContentPage;
+use App\ContentTag;
+use App\ContentCategory;
 use Gate;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\Models\Media;
@@ -104,4 +107,13 @@ class PageController extends Controller
 
         return response()->json(['id' => $media->id, 'url' => $media->getUrl()], Response::HTTP_CREATED);
     }
+
+     public function page(page $page )
+    {
+       $relates = ContentPage::with(['categories'])->OrderBy('published_at', 'asc')->get();
+
+        return view('page', compact('page','relates'));
+    }
+
+
 }
