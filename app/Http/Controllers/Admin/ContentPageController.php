@@ -117,10 +117,11 @@ class ContentPageController extends Controller
 
         return response(null, Response::HTTP_NO_CONTENT);
     }
+     public function storeCKEditorImages(Request $request)
     {
-        abort_if(Gate::denies('exhibition_post_create') && Gate::denies('exhibition_post_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        // abort_if(Gate::denies('page_create') && Gate::denies('page_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $model         = new ExhibitionPost();
+        $model         = new Page();
         $model->id     = $request->input('crud_id', 0);
         $model->exists = true;
         $media         = $model->addMediaFromRequest('upload')->toMediaCollection('ck-media', 'public');

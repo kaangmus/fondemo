@@ -165,7 +165,7 @@
                   </div>
                   <div class="whoheader">
                     <h3 class="text-light">{{$whoadvisor->name}}</h3>
-                    <p>{{$whoadvisor->level}} </p>
+                    {!!$whoadvisor->level!!} </p>
                    <div class="who-we-social">
                       @if($whoadvisor->facebook) <a href="{{$whoadvisor->facebook}}" target="_blank"><i class="fab fa-facebook-square"></i></a>@endif
                       @if($whoadvisor->twitter)<a href="{{$whoadvisor->twitter}}" target="_blank"><i class="fab fa-twitter-square"></i></a>@endif
@@ -626,7 +626,7 @@ $jsons=array_slice($json, -11, 11, true);
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="javascript:void(0)">
+                <a href="/pages/1">
                   <img src="{{asset('shop/shop1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
                     height="250px">
                 </a>
