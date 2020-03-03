@@ -37,6 +37,7 @@
     <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
     <script src="{{ asset('js/swiper.min.js') }}"></script>
      <script src="{{ asset('js/slick.min.js') }}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.1/lazysizes.min.js"></script>
     <script src="{{ asset('nivo-slider/js/jquery.nivo.slider.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/custom.js') }}" type="text/javascript"></script>
 

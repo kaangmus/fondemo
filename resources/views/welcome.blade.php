@@ -49,10 +49,18 @@
           <a href="{{$fundpost->link}}" target="_blank">
 
             @if($fundpost->featured_image)
-            <figure class="placeholder mr-3 wh-100" data-large="{{ $fundpost->featured_image->getUrl('medium') }}">
-              <img src="{{ $fundpost->featured_image->getUrl('thumb') }}" class=" img-small">
-              <div style="padding-bottom: 50%;"></div>
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="2000" data-height="1661">
+                  <img class="progressiveMedia-thumbnail"
+                    src="{{ $fundpost->featured_image->getUrl('thumb') }}" alt="" />
+                  <img class="progressiveMedia-image lazyload"
+                    data-src="{{ $fundpost->featured_image->getUrl('medium') }}" alt="" />
+                </div>
+              </div>
             </figure>
+           
             @endif
           </a>
           <div class="media-body align-self-center">
@@ -71,9 +79,15 @@
           <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif"
             @if($fapost->link)target="_blank"@endif>
             @if($fapost->featured_image)
-            <figure class="placeholder mr-3 wh-100" data-large="{{ $fapost->featured_image->getUrl('medium') }}">
-              <img src="{{ $fapost->featured_image->getUrl('thumb') }}" class=" img-small">
-              <div style="padding-bottom: 50%;"></div>
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="2000" data-height="1661">
+                  <img class="progressiveMedia-thumbnail" src="{{ $fapost->featured_image->getUrl('thumb') }}" alt="" />
+                  <img class="progressiveMedia-image lazyload" data-src="{{ $fapost->featured_image->getUrl('medium') }}"
+                    alt="" />
+                </div>
+              </div>
             </figure>
             
             @endif
@@ -97,10 +111,15 @@
           <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif"
             @if($larges->link)target="_blank"@endif>
             @if($larges->featured_image)
-            <figure class="placeholder" data-large="{{ $larges->featured_image->getUrl() }}">
-              <img src="{{ $larges->featured_image->getUrl('thumb') }}" class="attachment-digiqole-medium img-small">
-              <div style="padding-bottom: 50%;"></div>
-            </figure>
+             <figure class="graf-figure">
+                <div class="aspectRatioPlaceholder">
+                  <div class="aspectRatioPlaceholder-fill"></div>
+                  <div class="progressiveMedia lazyload" data-width="2000" data-height="1661">
+                    <img class="progressiveMedia-thumbnail" src="{{ $larges->featured_image->getUrl('thumb') }}" alt="" />
+                    <img class="progressiveMedia-image lazyload" data-src="{{ $larges->featured_image->getUrl() }}" alt="" />
+                  </div>
+                </div>
+              </figure>
             @endif
           </a>
           <div class="new_second_text">
@@ -117,18 +136,24 @@
           @foreach ($mediums as $key=>$medium)
           <div class="col-md-6">
             <div class="post-thumb ts-resize">
-              <a href="@if($key==0)https://www.youtube.com/watch?v=XbVLyCLejXg" @else "/post/{{$medium->id}}" @endif
+              <a @if($key==0)href="https://www.youtube.com/watch?v=XbVLyCLejXg" @else href="/post/{{$medium->id}}" @endif
                 @if($key==0)class="popup-youtube" @endif>
                 @if($medium->featured_image)
-                <figure class="placeholder" data-large="{{ $medium->featured_image->getUrl() }}">
-                  <img src="{{ $medium->featured_image->getUrl('thumb') }}" class="img-small">
-                  <div style="padding-bottom: 50%;"></div>
-                </figure>
+
+                <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="2000" data-height="1661">
+                        <img class="progressiveMedia-thumbnail" src="{{ $medium->featured_image->getUrl('thumb') }}"" alt="" />
+                        <img class="progressiveMedia-image lazyload" data-src="{{ $medium->featured_image->getUrl('medium') }}" alt="" />
+                      </div>
+                    </div>
+                  </figure>
                 
                 @endif
               </a>
               <div class="new_third_text">
-                <a href="@if($key==0)https://www.youtube.com/watch?v=XbVLyCLejXg" @else "/post/{{$medium->id}}" @endif
+                <a @if($key==0)href="https://www.youtube.com/watch?v=XbVLyCLejXg" @else href="/post/{{$medium->id}}" @endif
                   @if($key==0)class="popup-youtube" @endif @if($medium->link)target="_blank"@endif>
                   <h3>{{$medium->title}}</h3>
                   <p>{!!$medium->excerpt!!}</p>
@@ -216,8 +241,7 @@
               <div class="post-thumb ts-resize img_hover">
 
                 <a href="javascript:void(0)">
-                  <img src="{{asset('slideshow/slideshow1.jpg')}}" class="attachment-digiqole-medium" alt=""
-                    width="445px" height="300px">
+                  <img src="{{asset('slideshow/slideshow1.jpg')}}">
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -238,13 +262,15 @@
 
             <div class="swiper-slide">
               <div class="post-thumb ts-resize img_hover">
-                <a href="javascript:void(0)">
-                  <img src="{{asset('slideshow/slideshow2.jpg')}}" class="attachment-digiqole-medium" alt=""
-                    width="445px">
-                  <div class="middle">
-                    <div class="play_button"><i class="far fa-play-circle"></i></div>
-                  </div>
-                </a>
+               <a href="javascript:void(0)">
+         
+                  <img src="{{asset('slideshow/slideshow2.jpg')}}" >
+                  
+                <div class="middle">
+                  <div class="play_button"><i class="far fa-play-circle"></i></div>
+                </div>
+              
+              </a>
                 <div class="new_third_text">
 
                   <h3>Clarion Call</h3>

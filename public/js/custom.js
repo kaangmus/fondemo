@@ -14,32 +14,6 @@
 
 
 
-  window.onload = function () {
-      var placeholders = document.querySelectorAll('.placeholder');
-      for (var i = 0; i < placeholders.length; i++) {
-          loadImage(placeholders[i]);
-      }
-
-      function loadImage(placeholder) {
-          var small = placeholder.children[0];
-
-          // 1: load small image and show it
-          var img = new Image();
-          img.src = small.src;
-          img.onload = function () {
-              small.classList.add('loaded');
-          };
-
-          // 2: load large image
-          var imgLarge = new Image();
-          imgLarge.src = placeholder.dataset.large;
-          imgLarge.onload = function () {
-              imgLarge.classList.add('loaded');
-          };
-          placeholder.appendChild(imgLarge);
-      }
-  }
-
  var swiper = new Swiper('.swiper_digital', {
      effect: 'coverflow',
      grabCursor: true,
@@ -62,14 +36,6 @@
 
 
 
- $(".image-container img").one('lazyloaded load', function () {
-     $(this).parent().find(".curtain").remove();
- }).each(function (e) {
-     if (this.complete) {
-         $(this).trigger("lazyloaded load");
-         $(this).parent().find(".curtain").remove();
-     }
- });
 
 
 $(document).ready(function () {
@@ -126,3 +92,34 @@ $('.popup-youtube').magnificPopup({
 
 
 });
+
+// Pure-media v1.0
+
+// Developer: https://github.com/localnetwork/
+
+;(function() {
+    'use strict';
+
+    // set progressive image loading
+    var progressiveMedias = document.querySelectorAll('.progressiveMedia');
+    for (var i = 0; i < progressiveMedias.length; i++) {
+        loadImage(progressiveMedias[i]);
+    }
+
+    // global function
+    function loadImage(progressiveMedia) {
+
+        // calculate aspect ratio
+        // for the aspectRatioPlaceholder-fill
+        // that helps to set a fixed fill for loading images
+        var width = progressiveMedia.dataset.width,
+        height = progressiveMedia.dataset.height,
+        fill = height / width * 100,
+        placeholderFill = progressiveMedia.previousElementSibling;
+
+        placeholderFill.setAttribute('style', 'padding-bottom:'+fill+'%;');
+
+
+    }
+
+})();
