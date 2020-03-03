@@ -6,7 +6,7 @@
       @foreach($sliders as $key => $slider)
       <div class="swiper-slide">
         <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}"
-          class="swiper-lazy" >
+          class="swiper-lazy">
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="slider_content bannercaption{{ $slider->id}}">
 
@@ -36,8 +36,6 @@
   </div>
 </div>
 
-
-
 <!-- End Slider Area -->
 
 <section id="blog">
@@ -52,15 +50,15 @@
             <figure class="graf-figure">
               <div class="aspectRatioPlaceholder">
                 <div class="aspectRatioPlaceholder-fill"></div>
-                <div class="progressiveMedia lazyload" data-width="2000" data-height="1661">
-                  <img class="progressiveMedia-thumbnail"
-                    src="{{ $fundpost->featured_image->getUrl('thumb') }}" alt="" />
+                <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                  <img class="progressiveMedia-thumbnail" src="{{ $fundpost->featured_image->getUrl('thumb') }}"
+                    alt="" />
                   <img class="progressiveMedia-image lazyload"
                     data-src="{{ $fundpost->featured_image->getUrl('medium') }}" alt="" />
                 </div>
               </div>
             </figure>
-           
+
             @endif
           </a>
           <div class="media-body align-self-center">
@@ -82,14 +80,14 @@
             <figure class="graf-figure">
               <div class="aspectRatioPlaceholder">
                 <div class="aspectRatioPlaceholder-fill"></div>
-                <div class="progressiveMedia lazyload" data-width="2000" data-height="1661">
+                <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
                   <img class="progressiveMedia-thumbnail" src="{{ $fapost->featured_image->getUrl('thumb') }}" alt="" />
-                  <img class="progressiveMedia-image lazyload" data-src="{{ $fapost->featured_image->getUrl('medium') }}"
-                    alt="" />
+                  <img class="progressiveMedia-image lazyload"
+                    data-src="{{ $fapost->featured_image->getUrl('medium') }}" alt="" />
                 </div>
               </div>
             </figure>
-            
+
             @endif
           </a>
           <div class="media-body align-self-center">
@@ -111,15 +109,16 @@
           <a href="@if($larges->link){{$larges->link}}@else/post/{{$larges->id}}@endif"
             @if($larges->link)target="_blank"@endif>
             @if($larges->featured_image)
-             <figure class="graf-figure">
-                <div class="aspectRatioPlaceholder">
-                  <div class="aspectRatioPlaceholder-fill"></div>
-                  <div class="progressiveMedia lazyload" data-width="2000" data-height="1661">
-                    <img class="progressiveMedia-thumbnail" src="{{ $larges->featured_image->getUrl('thumb') }}" alt="" />
-                    <img class="progressiveMedia-image lazyload" data-src="{{ $larges->featured_image->getUrl() }}" alt="" />
-                  </div>
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                  <img class="progressiveMedia-thumbnail" src="{{ $larges->featured_image->getUrl('thumb') }}" alt="" />
+                  <img class="progressiveMedia-image lazyload" data-src="{{ $larges->featured_image->getUrl() }}"
+                    alt="" />
                 </div>
-              </figure>
+              </div>
+            </figure>
             @endif
           </a>
           <div class="new_second_text">
@@ -136,25 +135,27 @@
           @foreach ($mediums as $key=>$medium)
           <div class="col-md-6">
             <div class="post-thumb ts-resize">
-              <a @if($key==0)href="https://www.youtube.com/watch?v=XbVLyCLejXg" @else href="/post/{{$medium->id}}" @endif
-                @if($key==0)class="popup-youtube" @endif>
+              <a @if($key==0)href="https://www.youtube.com/watch?v=XbVLyCLejXg" @else href="/post/{{$medium->id}}"
+                @endif @if($key==0)class="popup-youtube" @endif>
                 @if($medium->featured_image)
 
                 <figure class="graf-figure">
-                    <div class="aspectRatioPlaceholder">
-                      <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="2000" data-height="1661">
-                        <img class="progressiveMedia-thumbnail" src="{{ $medium->featured_image->getUrl('thumb') }}"" alt="" />
-                        <img class="progressiveMedia-image lazyload" data-src="{{ $medium->featured_image->getUrl('medium') }}" alt="" />
-                      </div>
+                  <div class="aspectRatioPlaceholder">
+                    <div class="aspectRatioPlaceholder-fill"></div>
+                    <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                      <img class="progressiveMedia-thumbnail" src="{{ $medium->featured_image->getUrl('thumb') }}"
+                        alt="" />
+                      <img class="progressiveMedia-image lazyload"
+                        data-src="{{ $medium->featured_image->getUrl('medium') }}" alt="" />
                     </div>
-                  </figure>
-                
+                  </div>
+                </figure>
+
                 @endif
               </a>
               <div class="new_third_text">
-                <a @if($key==0)href="https://www.youtube.com/watch?v=XbVLyCLejXg" @else href="/post/{{$medium->id}}" @endif
-                  @if($key==0)class="popup-youtube" @endif @if($medium->link)target="_blank"@endif>
+                <a @if($key==0)href="https://www.youtube.com/watch?v=XbVLyCLejXg" @else href="/post/{{$medium->id}}"
+                  @endif @if($key==0)class="popup-youtube" @endif @if($medium->link)target="_blank"@endif>
                   <h3>{{$medium->title}}</h3>
                   <p>{!!$medium->excerpt!!}</p>
 
@@ -238,10 +239,19 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
 
                 <a href="javascript:void(0)">
-                  <img src="{{asset('slideshow/slideshow1.jpg')}}">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow1.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -261,16 +271,23 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
-               <a href="javascript:void(0)">
-         
-                  <img src="{{asset('slideshow/slideshow2.jpg')}}" >
-                  
-                <div class="middle">
-                  <div class="play_button"><i class="far fa-play-circle"></i></div>
-                </div>
-              
-              </a>
+              <div class="post-thumb ts-resize img_hover slide_img_width">
+                <a href="javascript:void(0)">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow2.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
+                  <div class="middle">
+                    <div class="play_button"><i class="far fa-play-circle"></i></div>
+                  </div>
+
+                </a>
                 <div class="new_third_text">
 
                   <h3>Clarion Call</h3>
@@ -285,10 +302,18 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('slideshow/slideshow3.jpg')}}" class="attachment-digiqole-medium" alt=""
-                    width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow3.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -303,10 +328,18 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('slideshow/slideshow4.jpg')}}" class="attachment-digiqole-medium" alt=""
-                    width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow4.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -325,10 +358,18 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('slideshow/slideshow5.jpg')}}" class="attachment-digiqole-medium" alt=""
-                    width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow5.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -345,10 +386,18 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('slideshow/slideshow6.jpg')}}" class="attachment-digiqole-medium" alt=""
-                    width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow6.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -365,10 +414,18 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('slideshow/slideshow7.JPG')}}" class="attachment-digiqole-medium" alt=""
-                    width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow1.JPG')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -414,12 +471,10 @@ $jsons=array_slice($json, -11, 11, true); @endphp
           @foreach ($jsons as $key=> $value)
 
           <div class="swiper-slide digital">
-            <td>
 
-              <img class='crop' src='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/files/shot.jpg'
-                data-rel='fh5-light-box-demo' data-href='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/'
-                data-width='1000' data-height='600' data-title='Flick through the Digital Brochure'>
-            </td>
+            <img class='crop' src='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/files/shot.jpg'
+              data-rel='fh5-light-box-demo' data-href='https://online.fliphtml5.com/ekgb/{{$value->fliphtml}}/'
+              data-width='1000' data-height='600' data-title='Flick through the Digital Brochure'>
 
           </div>
 
@@ -446,9 +501,18 @@ $jsons=array_slice($json, -11, 11, true); @endphp
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('species/species1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species1.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="read_button"><i class="fas fa-bars"></i>READ</div>
                   </div>
@@ -467,9 +531,18 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('species/species2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species2.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -489,9 +562,18 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('species/species3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species3.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="read_button"><i class="fas fa-bars"></i>READ</div>
                   </div>
@@ -511,9 +593,18 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('species/species4.JPG')}}" class="attachment-digiqole-medium" alt="" width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species4.JPG')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="play_button"><i class="far fa-play-circle"></i></div>
                   </div>
@@ -532,9 +623,18 @@ $jsons=array_slice($json, -11, 11, true); @endphp
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('species/species5.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species5.jpg')}}"
+                          alt="" />
+                      </div>
+                    </div>
+                  </figure>
                   <div class="middle">
                     <div class="read_button"><i class="fas fa-bars"></i>READ</div>
                   </div>
@@ -570,7 +670,16 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 <!-- Grands -->
 <div id="grants_homeid" class="grants_home overflow-hidden">
   <a href="/grants" class="grants_button">
-    <img src="{{asset('images/gbanner.jpg')}}" alt="Snow" style="width:100%;">
+    <figure class="graf-figure">
+      <div class="aspectRatioPlaceholder">
+        <div class="aspectRatioPlaceholder-fill"></div>
+        <div class="progressiveMedia lazyload" data-width="1600" data-height="931">
+          <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+          <img class=" progressiveMedia-image lazyload" data-src="{{asset('images/gbanner.jpg')}}" alt="" />
+        </div>
+      </div>
+    </figure>
+
     <div class="granttimelime">
 
       <h2 class="maincolor text-center ">GRANTS TIMELINE</h2>
@@ -614,10 +723,17 @@ $jsons=array_slice($json, -11, 11, true); @endphp
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="/pages/1">
-                  <img src="{{asset('shop/shop1.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('shop/shop1.jpg')}}" alt="" />
+                      </div>
+                    </div>
+                  </figure>
                 </a>
                 <div class="new_third_text">
 
@@ -629,10 +745,17 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('shop/shop2.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="250px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('shop/shop2.jpg')}}" alt="" />
+                      </div>
+                    </div>
+                  </figure>
                 </a>
                 <div class="new_third_text">
 
@@ -644,10 +767,17 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             </div>
 
             <div class="swiper-slide">
-              <div class="post-thumb ts-resize img_hover">
+              <div class="post-thumb ts-resize img_hover slide_img_width">
                 <a href="javascript:void(0)">
-                  <img src="{{asset('shop/shop3.jpg')}}" class="attachment-digiqole-medium" alt="" width="445px"
-                    height="300px">
+                  <figure class="graf-figure">
+                    <div class="aspectRatioPlaceholder">
+                      <div class="aspectRatioPlaceholder-fill"></div>
+                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image lazyload" data-src="{{asset('shop/shop3.jpg')}}" alt="" />
+                      </div>
+                    </div>
+                  </figure>
                 </a>
                 <div class="new_third_text">
 
@@ -676,63 +806,151 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 
   <!-- SnapWidget -->
   <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-3">
-          <div class="feature-gallery">
-            <a href='https://www.instagram.com/p/B9JrodhKItZ/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B9JrodhKItZ/media/?size=m"></a>
-          </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3">
+        <div class="feature-gallery">
+          <a href='https://www.instagram.com/p/B9JrodhKItZ/' target="-blank">
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                  <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                  <img class="progressiveMedia-image thumb lazyload"
+                    data-src="https://www.instagram.com/p/B9JrodhKItZ/media/?size=m" alt="" />
+                </div>
+              </div>
+            </figure>
+          </a>
         </div>
-        <!--/feature-gallery--->
-        <div class="col-md-3 col-sm-3">
-          <div class="feature-gallery">
-            <a href='https://www.instagram.com/p/B9C2ZFiKUOw/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B9C2ZFiKUOw/media/?size=m"></a>
-          </div>
+      </div>
+      <!--/feature-gallery--->
+      <div class="col-md-3 col-sm-3">
+        <div class="feature-gallery">
+          <a href='https://www.instagram.com/p/B9C2ZFiKUOw/' target="-blank">
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                  <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                  <img class=" progressiveMedia-image thumb lazyload"
+                    data-src="https://www.instagram.com/p/B9C2ZFiKUOw/media/?size=m" alt="" />
+                </div>
+              </div>
+            </figure>
+
+          </a>
         </div>
-        <!--/feature-gallery--->
-        <div class="col-md-3 col-sm-3">
-          <div class="feature-gallery">
-            <a href='https://www.instagram.com/p/B89qmlvqTVU/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B89qmlvqTVU/media/?size=m"></a>
-          </div>
+      </div>
+      <!--/feature-gallery--->
+      <div class="col-md-3 col-sm-3">
+        <div class="feature-gallery">
+          <a href='https://www.instagram.com/p/B89qmlvqTVU/' target="-blank">
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                  <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                  <img class=" progressiveMedia-image thumb lazyload"
+                    data-src="https://www.instagram.com/p/B89qmlvqTVU/media/?size=m" alt="" />
+                </div>
+              </div>
+            </figure>
+          </a>
         </div>
-        <!--/feature-gallery--->
-        <div class="col-md-3 col-sm-3">
-          <div class="feature-gallery">
-            <a href='https://www.instagram.com/p/B8zeMtGqJAK/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8zeMtGqJAK/media/?size=m"></a>
-          </div>
+      </div>
+      <!--/feature-gallery--->
+      <div class="col-md-3 col-sm-3">
+        <div class="feature-gallery">
+          <a href='https://www.instagram.com/p/B8zeMtGqJAK/' target="-blank">
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                  <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                  <img class=" progressiveMedia-image thumb lazyload"
+                    data-src="https://www.instagram.com/p/B8zeMtGqJAK/media/?size=m" alt="" />
+                </div>
+              </div>
+            </figure>
+
+          </a>
         </div>
-        <!--/feature-gallery--->
-        <div class="col-md-3 col-sm-3">
-          <div class="feature-gallery">
-            <a href='https://www.instagram.com/p/B8tZyocKqNj/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8tZyocKqNj/media/?size=m"></a>
-          </div>
+      </div>
+      <!--/feature-gallery--->
+      <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="feature-gallery">
+
+          <a href='https://www.instagram.com/p/B8tZyocKqNj/' target="-blank">
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                  <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                  <img class=" progressiveMedia-image thumb lazyload"
+                    data-src="https://www.instagram.com/p/B8tZyocKqNj/media/?size=m" alt="" />
+                </div>
+              </div>
+            </figure>
+          </a>
         </div>
-        <!--/feature-gallery--->
-        <div class="col-md-3 col-sm-3">
-          <div class="feature-gallery">
-            <a href='https://www.instagram.com/p/B8oDJfWqC6X/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8oDJfWqC6X/media/?size=m"></a>
-          </div>
+      </div>
+      <!--/feature-gallery--->
+      <div class="col-md-3 col-sm-3">
+        <div class="feature-gallery">
+          <a href='https://www.instagram.com/p/B8oDJfWqC6X/' target="-blank">
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                  <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                  <img class=" progressiveMedia-image thumb lazyload"
+                    data-src="https://www.instagram.com/p/B8oDJfWqC6X/media/?size=m" alt="" />
+                </div>
+              </div>
+            </figure>
+          </a>
         </div>
-        <!--/feature-gallery--->
-        <div class="col-md-3 col-sm-3">
-          <div class="feature-gallery">
-            <a href='https://www.instagram.com/p/B8cV18IKUwu/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8cV18IKUwu/media/?size=m"></a>
-          </div>
+      </div>
+      <!--/feature-gallery--->
+      <div class="col-md-3 col-sm-3">
+        <div class="feature-gallery">
+          <a href='https://www.instagram.com/p/B8cV18IKUwu/' target="-blank">
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                  <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                  <img class=" progressiveMedia-image thumb lazyload"
+                    data-src="https://www.instagram.com/p/B8cV18IKUwu/media/?size=m" alt="" />
+                </div>
+              </div>
+            </figure>
+          </a>
         </div>
-        <!--/feature-gallery--->
-        <div class="col-md-3 col-sm-3">
-          <div class="feature-gallery">
-            <a href='https://www.instagram.com/p/B8PSZcVqB_R/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8PSZcVqB_R/media/?size=m"></a>
-          </div>
+      </div>
+      <!--/feature-gallery--->
+      <div class="col-md-3 col-sm-3">
+        <div class="feature-gallery">
+          <a href='https://www.instagram.com/p/B8PSZcVqB_R/' target="-blank">
+            <figure class="graf-figure">
+              <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                  <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                  <img class=" progressiveMedia-image thumb lazyload"
+                    data-src="https://www.instagram.com/p/B8PSZcVqB_R/media/?size=m" alt="" />
+                </div>
+              </div>
+            </figure>
+          </a>
         </div>
-        <!--/feature-gallery--->
-    
-   
- 
+      </div>
+      <!--/feature-gallery--->
+
     </div>
-   
-{{-- 
-    <iframe src="https://snapwidget.com/embed/794602" class="snapwidget-widget" allowtransparency="true" frameborder="0"
-      scrolling="no" style="border:none; overflow:hidden;  width:100%; height: 610px;"></iframe> --}}
+
+    {{--
+        <iframe src="https://snapwidget.com/embed/794602" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; height: 610px;"></iframe> --}}
   </div>
 </section>
 
@@ -912,11 +1130,11 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 </script>
 <script>
   var swiper = new Swiper('.bannerswiper', {
-        
+
         loop: true,
         lazy: true,
         autoplay: {
-        delay: 3000,
+            delay: 3000,
         },
         pagination: {
             el: '.swiper-pagination',
@@ -928,17 +1146,16 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         },
     });
     var mySwiper = document.querySelector('.slider_btn').swiper
-    
+
     $(".slider_btn").mouseenter(function() {
-    mySwiper.autoplay.stop();
-   
+        mySwiper.autoplay.stop();
+
     });
-    
+
     $(".slider_btn").mouseleave(function() {
-    mySwiper.autoplay.start();
-  
+        mySwiper.autoplay.start();
+
     });
-  
 </script>
 <script>
   $(document).ready(function() {

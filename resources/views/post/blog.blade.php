@@ -3,25 +3,21 @@
 @section('content')
 
 
-<div class="banner">
-    <div class="container-fluid">
-        <div class="row  justify-content-center sub_banner_title">
-            
-        </div>
+<div class="banner_single">
+
         @if($post->featured_image)
-                <div class="sub_img">
-                    <div class='image-container'>
-                        
-                        <img src="{{ $post->featured_image->getUrl() }}" class="bannertp lazyload">
-                    
-                        <div class='curtain'>
-                            <div class='shine'></div>
-                        </div>
-                    </div>
+        <figure class="graf-figure">
+            <div class="aspectRatioPlaceholder">
+                <div class="aspectRatioPlaceholder-fill"></div>
+                <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                    <img class="progressiveMedia-thumbnail" src="{{ $post->featured_image->getUrl('thumb') }}" alt="" />
+                    <img class="progressiveMedia-image lazyload" data-src="{{ $post->featured_image->getUrl() }}"
+                        alt="" />
                 </div>
+            </div>
+        </figure>
         @endif
 
-    </div>
 </div>
 <section class="single_post">
     <div class="container">

@@ -6,7 +6,17 @@
         <a href="@if($relate->link){{$relate->link}}@else/post/{{$relate->id}}@endif" @if($relate->link) target="_blank"
             @endif>
             @if($relate->featured_image)
-            <img src="{{ $relate->featured_image->getUrl('medium') }}" alt="#" class="mr-3 wh-100">
+             <figure class="graf-figure">
+                <div class="aspectRatioPlaceholder">
+                    <div class="aspectRatioPlaceholder-fill"></div>
+                    <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                        <img class="progressiveMedia-thumbnail" src="{{ $relate->featured_image->getUrl('thumb') }}" alt="" />
+                        <img class="progressiveMedia-image lazyload" data-src="{{ $relate->featured_image->getUrl('medium') }}"
+                            alt="" />
+                    </div>
+                </div>
+            </figure>
+
             @endif
         </a>
         <div class="media-body align-self-center">
