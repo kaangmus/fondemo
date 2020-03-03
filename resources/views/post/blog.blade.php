@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="banner_single">
+<div class="banner_single header" >
 
         @if($post->featured_image)
         <figure class="graf-figure">
@@ -19,7 +19,7 @@
         @endif
 
 </div>
-<section class="single_post">
+<section class="single_post content" id="content">
     <div class="container">
         <div class="row">
             <div class="col-md-1">
@@ -31,13 +31,17 @@
 
             </div>
 
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <h1 class="post_title">{{$post->title }}</h1>
                 {!!$post->page_text!!}
+               
              
             </div>
-            <div class="col-md-4 ">
+            
+            <div class="col-md-5 sidebar">
+             
                 @include('post.sidebar')
+                </div>
             </div>
         </div>
     </div>
@@ -49,18 +53,18 @@
 
 @endsection
 @section('scripts')
+<script src="{{ asset('js/stickysidebar.min.js') }}"></script>
 <script>
-$(document).ready(function() {
-var stickyTop = $('.sidebarfix').offset().top;
-
-$(window).scroll(function() {
-var windowTop = $(window).scrollTop();
-if (stickyTop > windowTop && $(".single_post").height() + $(".single_post").offset().top - $(".sidebarfix").height()> windowTop) {
-    $('.sidebarfix').css('position', 'fixed');
-    } else {
-    $('.sidebarfix').css('position', 'relative');
+    jQuery(document).ready(function($){
+    $('.sidebar').stickySidebar({
+    topSpacing: 110,
+    container: '.container',
+    sidebarInner: '.sidebar-inner',
+    callback: function() {
+    console.log('Sticky sidebar fired!');
     }
     });
     });
-</script>
+
+        </script>
 @endsection

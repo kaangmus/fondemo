@@ -1,6 +1,10 @@
 
 <!-- ========================= Subscribe ========================= -->
-<footer class="footer-area bg_black text-light">
+
+<footer class="footer-area bg_black text-light clearfix">
+        <div class="sticky-stopper"></div>
+        
+        
         <section class="section-subscribe text-center">
             <div class="container">
               

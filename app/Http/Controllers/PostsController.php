@@ -27,15 +27,15 @@ class PostsController extends Controller
 
      }
 
-       public function sidebar(ContentPage $post){
+    //    public function sidebar(ContentPage $post){
 
-        dd($post);
+    //     dd($post);
      
-         $relates = ContentPage::with(['categories'])->OrderBy('published_at', 'asc')->get();
+    //      $relates = ContentPage::with(['categories'])->OrderBy('published_at', 'asc')->get();
 
-        return view('post.sidebar', compact('relates'));
+    //     return view('post.sidebar', compact('relates'));
 
-     }
+    //  }
 
 
 

@@ -50,7 +50,7 @@
             <figure class="graf-figure">
               <div class="aspectRatioPlaceholder">
                 <div class="aspectRatioPlaceholder-fill"></div>
-                <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                <div class="progressiveMedia lazyload" data-width="90" data-height="90">
                   <img class="progressiveMedia-thumbnail" src="{{ $fundpost->featured_image->getUrl('thumb') }}"
                     alt="" />
                   <img class="progressiveMedia-image lazyload"
@@ -80,7 +80,7 @@
             <figure class="graf-figure">
               <div class="aspectRatioPlaceholder">
                 <div class="aspectRatioPlaceholder-fill"></div>
-                <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                <div class="progressiveMedia lazyload" data-width="90" data-height="90">
                   <img class="progressiveMedia-thumbnail" src="{{ $fapost->featured_image->getUrl('thumb') }}" alt="" />
                   <img class="progressiveMedia-image lazyload"
                     data-src="{{ $fapost->featured_image->getUrl('medium') }}" alt="" />

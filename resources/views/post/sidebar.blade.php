@@ -1,4 +1,6 @@
-<ul class="sidebarfix">
+
+<div class="sidebar-inner">
+<ul >
     @foreach ($relates as $key=>$relate)
     @if($relate->id!=$post->id)
    
@@ -9,14 +11,14 @@
              <figure class="graf-figure">
                 <div class="aspectRatioPlaceholder">
                     <div class="aspectRatioPlaceholder-fill"></div>
-                    <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                    <div class="progressiveMedia lazyload" data-width="90" data-height="90">
                         <img class="progressiveMedia-thumbnail" src="{{ $relate->featured_image->getUrl('thumb') }}" alt="" />
                         <img class="progressiveMedia-image lazyload" data-src="{{ $relate->featured_image->getUrl('medium') }}"
                             alt="" />
                     </div>
                 </div>
             </figure>
-
+         
             @endif
         </a>
         <div class="media-body align-self-center">
@@ -34,3 +36,4 @@
     @endforeach
 
 </ul>
+</div>
