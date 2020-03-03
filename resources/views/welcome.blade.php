@@ -120,7 +120,7 @@
               <a href="@if($key==0)https://www.youtube.com/watch?v=XbVLyCLejXg" @else "/post/{{$medium->id}}" @endif
                 @if($key==0)class="popup-youtube" @endif>
                 @if($medium->featured_image)
-                <figure class="placeholder" data-large="{{ $medium->featured_image->getUrl('medium') }}">
+                <figure class="placeholder" data-large="{{ $medium->featured_image->getUrl() }}">
                   <img src="{{ $medium->featured_image->getUrl('thumb') }}" class="img-small">
                   <div style="padding-bottom: 50%;"></div>
                 </figure>
@@ -415,7 +415,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
   <p class="text-center"></p>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 overflow-hidden">
+      <div class="col-md-12 ">
         <div class="swiper-container swiper-speecies">
           <div class="swiper-wrapper">
 
@@ -650,6 +650,60 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 
   <!-- SnapWidget -->
   <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-3">
+          <div class="feature-gallery">
+            <a href='https://www.instagram.com/p/B9JrodhKItZ/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B9JrodhKItZ/media/?size=m"></a>
+          </div>
+        </div>
+        <!--/feature-gallery--->
+        <div class="col-md-3 col-sm-3">
+          <div class="feature-gallery">
+            <a href='https://www.instagram.com/p/B9C2ZFiKUOw/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B9C2ZFiKUOw/media/?size=m"></a>
+          </div>
+        </div>
+        <!--/feature-gallery--->
+        <div class="col-md-3 col-sm-3">
+          <div class="feature-gallery">
+            <a href='https://www.instagram.com/p/B89qmlvqTVU/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B89qmlvqTVU/media/?size=m"></a>
+          </div>
+        </div>
+        <!--/feature-gallery--->
+        <div class="col-md-3 col-sm-3">
+          <div class="feature-gallery">
+            <a href='https://www.instagram.com/p/B8zeMtGqJAK/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8zeMtGqJAK/media/?size=m"></a>
+          </div>
+        </div>
+        <!--/feature-gallery--->
+        <div class="col-md-3 col-sm-3">
+          <div class="feature-gallery">
+            <a href='https://www.instagram.com/p/B8tZyocKqNj/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8tZyocKqNj/media/?size=m"></a>
+          </div>
+        </div>
+        <!--/feature-gallery--->
+        <div class="col-md-3 col-sm-3">
+          <div class="feature-gallery">
+            <a href='https://www.instagram.com/p/B8oDJfWqC6X/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8oDJfWqC6X/media/?size=m"></a>
+          </div>
+        </div>
+        <!--/feature-gallery--->
+        <div class="col-md-3 col-sm-3">
+          <div class="feature-gallery">
+            <a href='https://www.instagram.com/p/B8cV18IKUwu/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8cV18IKUwu/media/?size=m"></a>
+          </div>
+        </div>
+        <!--/feature-gallery--->
+        <div class="col-md-3 col-sm-3">
+          <div class="feature-gallery">
+            <a href='https://www.instagram.com/p/B8PSZcVqB_R/' target="-blank"><img class="thumb" src="https://www.instagram.com/p/B8PSZcVqB_R/media/?size=m"></a>
+          </div>
+        </div>
+        <!--/feature-gallery--->
+    
+   
+ 
+    </div>
+   
 {{-- 
     <iframe src="https://snapwidget.com/embed/794602" class="snapwidget-widget" allowtransparency="true" frameborder="0"
       scrolling="no" style="border:none; overflow:hidden;  width:100%; height: 610px;"></iframe> --}}
