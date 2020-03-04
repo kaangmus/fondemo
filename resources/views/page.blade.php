@@ -10,14 +10,17 @@
         </div>
         @if($page->feature_image)
         <div class="sub_img">
-            <div class='image-container'>
-
-                <img src="{{ $page->feature_image->getUrl() }}" class="bannertp lazyload">
-
-                <div class='curtain'>
-                    <div class='shine'></div>
+            <figure class="graf-figure">
+                <div class="aspectRatioPlaceholder">
+                    <div class="aspectRatioPlaceholder-fill"></div>
+                    <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
+                        <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
+                        <img class=" progressiveMedia-image thumb lazyload"
+                    data-src="{{ $page->feature_image->getUrl() }}" alt="{{$page->title}}" />
+                    </div>
                 </div>
-            </div>
+            </figure>
+            
         </div>
         @endif
 

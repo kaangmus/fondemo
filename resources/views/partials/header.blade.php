@@ -48,7 +48,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <div class="dropdown_list">
-          <a class="dropdown-item" href="/pages/2">ART PRINTS</a>
+          <a class="dropdown-item" href="/pages/1">ART PRINTS</a>
           <a class="dropdown-item" href="javascript:void(0)">BOOKS</a>
           <a class="dropdown-item" href="javascript:void(0)">SCARVES</a>
           </div>

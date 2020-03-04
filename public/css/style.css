@@ -1413,6 +1413,7 @@ img.whoadvisor_photo {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 999;
 }
 .img_hover:hover .middle {
     opacity: 1;
@@ -1579,24 +1580,9 @@ section#exhibiton {
 .latest_news.flex-column.flex-md-row figure {
     float: left;
 }
-.swiper-slideshow,
-.swiper-speecies {
-    overflow: unset;
-}
-.swiper-button-next3{
-    right: -40px;
-    
-}
-.swiper-button-next4
- {
-    right: -30px;
-}
-.swiper-button-prev3{
-    left: -40px;
 
-}
-.swiper-button-prev4 {
-left: -30px;
+img.progressiveMedia-image.thumb.lazyloaded {
+    transform: scale(1.03);
 }
 
 
@@ -1720,4 +1706,8 @@ left: -30px;
 }
 .granttimelime{
     z-index: 999;
+}
+.slider_padding {
+    padding: 0px 60px;
+    position: relative;
 }
