@@ -95,4 +95,17 @@ class GalleryController extends Controller
 
         return response(null, Response::HTTP_NO_CONTENT);
     }
+    public function gallery()
+    {
+         $galleries = Gallery::all();
+       foreach ($galleries as $key => $value) {
+          
+         if($key==0){
+            $photogallery= $value->gallery;
+         }
+       }
+    
+
+        return view('gallery', compact('photogallery'));
+    }
 }

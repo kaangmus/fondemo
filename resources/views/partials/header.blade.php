@@ -18,10 +18,10 @@
           
           <div class="dropdown_list">
            <a class="dropdown-item" href="/pages/2">OUR MISSION</a>
-          <a class="dropdown-item" href="javascript:void(0)">WHO WE ARE</a>
-           <a class="dropdown-item" href="javascript:void(0)">ADVISERS</a>
-           <a class="dropdown-item" href="javascript:void(0)">GRANTS</a>
-           <a class="dropdown-item" href="javascript:void(0)">EXHIBITIONS</a>
+          <a class="dropdown-item" href="/#team">WHO WE ARE</a>
+           <a class="dropdown-item" href="/#team">ADVISERS</a>
+           <a class="dropdown-item" href="/#grants_homeid">GRANTS</a>
+           <a class="dropdown-item" href="/#exhibiton">EXHIBITIONS</a>
           </div>
         </div>
       </li>
@@ -32,12 +32,12 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <div class="dropdown_list">
-          <a class="dropdown-item" href="javascript:void(0)">ARTICLES</a>
-          <a class="dropdown-item" href="javascript:void(0)">SLIDESHOWS</a>
-          <a class="dropdown-item" href="javascript:void(0)">SPEECHES & ESSAYS</a>
-          <a class="dropdown-item" href="javascript:void(0)">PHOTO SEARCH MAP</a>
-          <a class="dropdown-item" href="javascript:void(0)">DIGITAL BROCHURES</a>
-          <a class="dropdown-item" href="javascript:void(0)">INSTRAGRAM</a>
+          <a class="dropdown-item" href="/news">ARTICLES</a>
+          <a class="dropdown-item" href="/#slideshows">SLIDESHOWS</a>
+          <a class="dropdown-item" href="/#speeches">SPEECHES & ESSAYS</a>
+          <a class="dropdown-item" href="/#photomap">PHOTO SEARCH MAP</a>
+          <a class="dropdown-item" href="/#digital">DIGITAL BROCHURES</a>
+          <a class="dropdown-item" href="/#instagram">INSTRAGRAM</a>
           </div>
         </div>
       </li>
@@ -49,8 +49,8 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <div class="dropdown_list">
           <a class="dropdown-item" href="/pages/1">ART PRINTS</a>
-          <a class="dropdown-item" href="javascript:void(0)">BOOKS</a>
-          <a class="dropdown-item" href="javascript:void(0)">SCARVES</a>
+          <a class="dropdown-item" href="/#shop">BOOKS</a>
+          <a class="dropdown-item" href="/#shop">SCARVES</a>
           </div>
         </div>
       </li>
@@ -128,5 +128,6 @@
   </div>
 </nav>
 </header>
+<div class="menufix_content"></div>
 
 

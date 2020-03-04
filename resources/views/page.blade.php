@@ -42,6 +42,36 @@
                 <h1 class="post_title">{{$page->title }}</h1>
                 {!!$page->content!!}
 
+                @if($page->id==1)
+
+
+                <div class="row">
+                  @foreach($gallerys as $key=>$gallery)  
+                  @foreach($gallery->gallery as $key => $media)
+
+                    <div class="col-md-3 col-sm-3">
+                        <div class="feature-gallery">
+                            <a href='#' target="-blank">
+                                <figure class="graf-figure">
+                                    <div class="aspectRatioPlaceholder">
+                                        <div class="aspectRatioPlaceholder-fill"></div>
+                                        <div class="progressiveMedia lazyload" data-width="300" data-height="300">
+                                            <img class="progressiveMedia-thumbnail" src="{{ $media->getUrl('thumb') }}" alt="" />
+                                            <img class="progressiveMedia-image thumb lazyload"
+                                                data-src="{{ $media->getUrl('medium') }}" alt="" />
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+                    @endforeach
+                   </div> 
+              
+
+                @endif
+
             </div>
             <div class="col-md-4 ">
                 
@@ -56,19 +86,19 @@
 
 
 @endsection
-{{-- @section('scripts')
+ @section('scripts')
+<script src="{{ asset('js/stickysidebar.min.js') }}"></script>
 <script>
-    $(document).ready(function() {
-var stickyTop = $('.sidebarfix').offset().top;
-
-$(window).scroll(function() {
-var windowTop = $(window).scrollTop();
-if (stickyTop < windowTop && $(".single_post").height() + $(".single_post").offset().top - $(".sidebarfix").height()> windowTop) {
-    $('.sidebarfix').css('position', 'fixed');
-    } else {
-    $('.sidebarfix').css('position', 'relative');
+    jQuery(document).ready(function($){
+    $('.sidebar').stickySidebar({
+    topSpacing: 110,
+    container: '.container',
+    sidebarInner: '.sidebar-inner',
+    callback: function() {
+    console.log('Sticky sidebar fired!');
     }
     });
     });
+
 </script>
-@endsection --}}
+@endsection

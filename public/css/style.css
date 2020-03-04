@@ -244,7 +244,7 @@ nav.navbar.navbar-default.navbar-fixed-top.animated.pulse.sticky{
   
 }
 section {
-    padding: 60px 0px;
+    padding: 100px 0px 60px;
 }
 .infolist a {
     display: block;
@@ -1522,9 +1522,7 @@ a.ex_button:hover{
 .nav-pills .nav-link:hover{
      color: #ff643a;
 }
-section#exhibiton {
-    padding:60px 0px 0px;
-}
+
 .btton50 {
     padding-bottom:50px;
 }

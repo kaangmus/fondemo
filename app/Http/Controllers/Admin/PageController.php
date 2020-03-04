@@ -10,6 +10,7 @@ use App\Http\Requests\UpdatePageRequest;
 use App\Page;
 use App\ContentPage;
 use App\ContentTag;
+use App\Gallery;
 use App\ContentCategory;
 use Gate;
 use Illuminate\Http\Request;
@@ -111,8 +112,9 @@ class PageController extends Controller
      public function page(page $page )
     {
        $relates = ContentPage::with(['categories'])->OrderBy('published_at', 'asc')->get();
+        $gallerys = Gallery::all();
 
-        return view('page', compact('page','relates'));
+        return view('page', compact('page','relates','gallerys'));
     }
 
 

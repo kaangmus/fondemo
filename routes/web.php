@@ -7,6 +7,7 @@ Route::get('/pages/{page}', 'Admin\PageController@page')->name('page');
 Route::get('/digitalpdf/{id}', 'Admin\DigitalBrochuresController@get_digital_pdf');
 Route::get('/news', 'PostsController@index');
 Route::get('post/{post}', 'PostsController@show')->name('post');
+Route::get('/gallery', 'Admin\GalleryController@gallery')->name('gallery');
 
  
 

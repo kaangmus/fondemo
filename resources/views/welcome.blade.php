@@ -246,7 +246,7 @@
                       <figure class="graf-figure">
                         <div class="aspectRatioPlaceholder">
                           <div class="aspectRatioPlaceholder-fill"></div>
-                          <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                          <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                             <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                             <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow1.jpg')}}"
                               alt="" />
@@ -277,7 +277,7 @@
                       <figure class="graf-figure">
                         <div class="aspectRatioPlaceholder">
                           <div class="aspectRatioPlaceholder-fill"></div>
-                          <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                          <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                             <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                             <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow2.jpg')}}"
                               alt="" />
@@ -308,7 +308,7 @@
                       <figure class="graf-figure">
                         <div class="aspectRatioPlaceholder">
                           <div class="aspectRatioPlaceholder-fill"></div>
-                          <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                          <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                             <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                             <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow3.jpg')}}"
                               alt="" />
@@ -334,7 +334,7 @@
                       <figure class="graf-figure">
                         <div class="aspectRatioPlaceholder">
                           <div class="aspectRatioPlaceholder-fill"></div>
-                          <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                          <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                             <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                             <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow4.jpg')}}"
                               alt="" />
@@ -364,7 +364,7 @@
                       <figure class="graf-figure">
                         <div class="aspectRatioPlaceholder">
                           <div class="aspectRatioPlaceholder-fill"></div>
-                          <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                          <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                             <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                             <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow5.jpg')}}"
                               alt="" />
@@ -392,7 +392,7 @@
                       <figure class="graf-figure">
                         <div class="aspectRatioPlaceholder">
                           <div class="aspectRatioPlaceholder-fill"></div>
-                          <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                          <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                             <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                             <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow6.jpg')}}"
                               alt="" />
@@ -420,7 +420,7 @@
                       <figure class="graf-figure">
                         <div class="aspectRatioPlaceholder">
                           <div class="aspectRatioPlaceholder-fill"></div>
-                          <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                          <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                             <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                             <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow1.JPG')}}"
                               alt="" />
@@ -490,7 +490,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 
 </section>
 {{-- end digital --}} {{-- slide showcontent --}}
-<section id="digital" class="digital_section">
+<section id="speeches" class="SPEECHES_section">
 
   <h2 class="maincolor text-center">SPEECHES & ESSAYS </h2>
   <p class="text-center"></p>
@@ -504,7 +504,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                   <figure class="graf-figure">
                     <div class="aspectRatioPlaceholder">
                       <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                      <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                         <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species1.jpg')}}"
                           alt="" />
@@ -534,7 +534,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                   <figure class="graf-figure">
                     <div class="aspectRatioPlaceholder">
                       <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                      <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                         <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species2.jpg')}}"
                           alt="" />
@@ -565,7 +565,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                   <figure class="graf-figure">
                     <div class="aspectRatioPlaceholder">
                       <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                      <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                         <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species3.jpg')}}"
                           alt="" />
@@ -596,7 +596,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                   <figure class="graf-figure">
                     <div class="aspectRatioPlaceholder">
                       <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                      <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                         <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species4.JPG')}}"
                           alt="" />
@@ -626,7 +626,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                   <figure class="graf-figure">
                     <div class="aspectRatioPlaceholder">
                       <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                      <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                         <img class=" progressiveMedia-image lazyload" data-src="{{asset('species/species5.jpg')}}"
                           alt="" />
@@ -692,7 +692,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 <div id="map" style="width: 100%; height: 700px;"></div>
 {{-- end google map --}}
 
-<div id="grants_homeid" class="grants_home">
+<div id="photomap" class="grants_home">
   <a href="javascript:void(0)" class="search map">
     <img src="{{asset('images/searchmap.jpg')}}" alt="Snow" style="width:100%;">
     <div class="toped">
@@ -707,7 +707,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 </div>
 
 {{-- online shop --}}
-<section id="digital" class="shop_section">
+<section id="shop" class="shop_section">
 
   <h2 class="maincolor text-center">SHOP</h2>
   <p class="text-center"></p>
@@ -723,7 +723,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                   <figure class="graf-figure">
                     <div class="aspectRatioPlaceholder">
                       <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                      <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                         <img class=" progressiveMedia-image lazyload" data-src="{{asset('shop/shop1.jpg')}}" alt="" />
                       </div>
@@ -745,7 +745,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                   <figure class="graf-figure">
                     <div class="aspectRatioPlaceholder">
                       <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                      <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                         <img class=" progressiveMedia-image lazyload" data-src="{{asset('shop/shop2.jpg')}}" alt="" />
                       </div>
@@ -767,7 +767,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                   <figure class="graf-figure">
                     <div class="aspectRatioPlaceholder">
                       <div class="aspectRatioPlaceholder-fill"></div>
-                      <div class="progressiveMedia lazyload" data-width="440" data-height="300">
+                      <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
                         <img class=" progressiveMedia-image lazyload" data-src="{{asset('shop/shop3.jpg')}}" alt="" />
                       </div>
@@ -1107,7 +1107,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 <script>
   var swiper = new Swiper('.swiper-speecies', {
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 30,
         navigation: {
             nextEl: '.swiper-button-next4',
             prevEl: '.swiper-button-prev4',
@@ -1118,7 +1118,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 <script>
   var swiper = new Swiper('.swiper-shop', {
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 30,
         navigation: {
             nextEl: '.swiper-button-next5',
             prevEl: '.swiper-button-prev5',
@@ -1173,6 +1173,47 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             $('.close').fadeOut(500);
         });
     });
+
+    $('.popup-youtube').magnificPopup({
+    type: 'iframe',
+    
+    
+    iframe: {
+    patterns: {
+    youtube: {
+    index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+    
+    id: 'v=', // String that splits URL in a two parts, second part should be %id%
+    // Or null - full URL will be returned
+    // Or a function that should return %id%, for example:
+    // id: function(url) { return 'parsed id'; }
+    
+    src: '//www.youtube.com/embed/%id%?rel=0&autoplay=1' // URL that will be set as a source for iframe.
+    },
+    }
+    }
+    
+    
+    });
 </script>
+<script>var swiper = new Swiper('.swiper_digital', {
+effect: 'coverflow',
+grabCursor: true,
+centeredSlides: true,
+slidesPerView: 'auto',
+initialSlide:'5',
+coverflowEffect: {
+rotate: 0,
+stretch: 1,
+depth: 100,
+modifier: 5,
+slideShadows: true,
+},
+
+navigation: {
+nextEl: '.swiper-button-next2',
+prevEl: '.swiper-button-prev2',
+},
+});</script>
 
 @endsection
