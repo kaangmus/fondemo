@@ -46,10 +46,7 @@ padding-bottom: 0px;
         -webkit-align-items: center;
         align-items: center;
     }
-    .slider_gallery_container {
-    width: 770px;
-    margin: 0 auto;
-    }
+    
 </style>
 
 @section('content')

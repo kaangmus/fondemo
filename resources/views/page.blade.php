@@ -1,6 +1,15 @@
 @extends('layouts.front')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
+<style>
+    .slider_gallery_container {
+    width: 770px;
+    margin: 0 auto;
+    }
+    .swiper-button-prev, .swiper-button-next {
+    top: 78%;
+    }
+</style>
 
 @section('content')
 
@@ -49,22 +58,41 @@
               <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
                 <div class="row">
              
-                  @foreach($gallerys as $key=>$gallery)  
-                  @foreach($gallery->gallery as $key => $media)
+                  
 
-                    <div class="col-md-3 col-sm-3">
-                        <div class="feature-gallery">
-                            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                <a class="gallery_link" href="{{ $media->getUrl('large') }}"
-                                    data-caption="focus on nature<br><em class='text-muted'>© fon</em>" data-width="1920" data-height="1280"
-                                    itemprop="contentUrl">
-                                    <img src="{{ $media->getUrl() }}" itemprop="thumbnail" alt="Image description">
-                                </a>
-                            </figure>
+                   <div class="slider_gallery_container">
+                
+                    <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                        <div class="slider_gallery">
+                            <div class="swiper-container swiper-gallery">
+                
+                                <div class="swiper-wrapper">
+                
+                                   @foreach($gallerys as $key=>$gallery)
+                                     @foreach($gallery->gallery as $key => $media)
+                                    <div class="swiper-slide gallery pswp__item">
+                                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                            <a class="gallery_link" href="{{ $media->getUrl('large') }}"
+                                                data-caption="focus on nature<br><em class='text-muted'>© fon</em>" data-width="1920"
+                                                data-height="1280" itemprop="contentUrl">
+                                                <img src="{{ $media->getUrl() }}" itemprop="thumbnail" alt="Image description">
+                                            </a>
+                                        </figure>
+                
+                                    </div>
+                                    @endforeach
+                                    @endforeach
+                                    
+                
+                                </div>
+                            </div>
+                
+                            <div class="swiper-button-prev gallerynav"></div>
+                            <div class="swiper-button-next gallerynav"></div>
                         </div>
                     </div>
-                    @endforeach
-                    @endforeach
+                </div>
+                    
                    </div> 
                 </div>
 
@@ -107,7 +135,9 @@
                 <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
                 <button class="pswp__button pswp__button--share" title="Share"></button>
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                {{-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> --}}
+                <button class="pswp__button pswp__button--buy" title="buy this photo">buy photo</button>
+                {{-- <button class="text-light buynow" title="buy this photo">Buy Photo</button> --}}
+                {{-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out">Buy Photo</button> --}}
                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
                 <!-- element will get class pswp__preloader--active when preloader is running -->
                 <div class="pswp__preloader">
@@ -193,5 +223,27 @@
       });
 
     }(jQuery));
+</script>
+<script>
+    var swiper = new Swiper('.swiper-gallery', {
+     slidesPerView: 1,
+    spaceBetween: 30,
+   
+    effect: 'fade',
+    loop: true,
+ 
+    autoplay: {
+    delay: 2500,
+    
+    },
+    
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 </script>
 @endsection
