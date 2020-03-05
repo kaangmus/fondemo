@@ -79,7 +79,7 @@ padding-bottom: 0px;
                              @foreach ($photogallery as $media)
                              <div class="swiper-slide gallery pswp__item">
                                  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                    <a href="{{ $media->getUrl('large') }}"
+                                    <a class="gallery_link" href="{{ $media->getUrl('large') }}"
                                         data-caption="focus on nature<br><em class='text-muted'>© fon</em>" data-width="1920"
                                         data-height="1280" itemprop="contentUrl">
                                         <img src="{{ $media->getUrl() }}" itemprop="thumbnail" alt="Image description">
@@ -215,7 +215,7 @@ padding-bottom: 0px;
       });
 
       // Define click event on gallery item
-      $('a').click(function(event){
+      $('.gallery_link').click(function(event){
 
         // Prevent location change
         event.preventDefault();
