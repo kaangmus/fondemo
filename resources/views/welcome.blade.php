@@ -6,7 +6,7 @@
       @foreach($sliders as $key => $slider)
       <div class="swiper-slide">
         <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}"
-          class="swiper-lazy">
+          class="swiper-lazy w-100">
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="slider_content bannercaption{{ $slider->id}}">
 
