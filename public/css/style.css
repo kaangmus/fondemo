@@ -829,14 +829,6 @@ h2.maincolor.text-center.grant_tcolor,
 }
 
 
-
-
-
-img {
-    width: 100%;
-    height: auto;
-}
-
 .curtain {
     position: absolute;
     top: 0;
@@ -1710,7 +1702,7 @@ img.progressiveMedia-image.thumb.lazyloaded {
     position: relative;
 }
 .gallerynav {
-    top: 78%;
+    top: 82%;
 }
 button.pswp__button.pswp__button--buy {
     background: #fff;
