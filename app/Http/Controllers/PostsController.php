@@ -21,7 +21,8 @@ class PostsController extends Controller
      public function show(ContentPage $post){
      
         
-         $relates = ContentPage::with(['categories'])->OrderBy('published_at', 'asc')->get();
+        $relates = ContentPage::with(['categories'])->OrderBy('published_at', 'asc')->get();
+        
         return view('post.blog', compact('post','relates'));
         
 
