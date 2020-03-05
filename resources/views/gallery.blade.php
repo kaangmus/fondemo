@@ -1,13 +1,16 @@
 @extends('layouts.front')
-<link rel="stylesheet" href="{{ asset('swipe/photoswipe.css') }}">
-<link rel="stylesheet" href="{{ asset('swipe/default-skin.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
 <style>
     html,
     body {
         position: relative;
         height: 100%;
     }
-
+.slider_gallery {
+position: relative;
+padding: 0px 60px;
+}
     body {
         background: #eee;
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -43,8 +46,8 @@ padding-bottom: 0px;
         -webkit-align-items: center;
         align-items: center;
     }
-    .slider_post {
-    width: 650px;
+    .slider_gallery_container {
+    width: 770px;
     margin: 0 auto;
     }
 </style>
@@ -65,68 +68,75 @@ padding-bottom: 0px;
                 <h2 class="text-center maincolor">Sample gallery</h2>
 
 
-            <div class="slider_post">
+            <div class="slider_gallery_container">
             
-
-                <div class="slider_padding">
+              <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                <div class="slider_gallery">
                     <div class="swiper-container swiper-gallery">
+
                         <div class="swiper-wrapper">
+                            
                              @foreach ($photogallery as $media)
                              <div class="swiper-slide gallery pswp__item">
-                                      <a href='javascript:void(0)' class="swiper_img">
-                              
-                                            <img class='swiper_img'src="{{ $media->getUrl('large') }}" alt="" />
-                                           </a> 
-                                            
-                             
-                                    </div>
+                                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="{{ $media->getUrl('large') }}"
+                                        data-caption="focus on nature<br><em class='text-muted'>© fon</em>" data-width="1920"
+                                        data-height="1280" itemprop="contentUrl">
+                                        <img src="{{ $media->getUrl() }}" itemprop="thumbnail" alt="Image description">
+                                    </a>
+                                </figure>
+     
+                             </div>
                                 @endforeach
+                               
                             </div>
                          </div>   
 
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-             
+               </div>
             </div>   
 
         
         </div>
 </section>
-<div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+
+
+
+</div>
+</div>
+</div>
+
+
+<div class="spacer"></div>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
     <!-- Background of PhotoSwipe. 
-         It's a separate element, as animating opacity is faster than rgba(). -->
+           It's a separate element as animating opacity is faster than rgba(). -->
     <div class="pswp__bg"></div>
-
     <!-- Slides wrapper with overflow:hidden. -->
     <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- Container that holds slides. 
+              PhotoSwipe keeps only 3 of them in the DOM to save memory.
+              Don't modify these 3 pswp__item elements, data is added later on. -->
         <div class="pswp__container">
-            <!-- don't modify these 3 pswp__item elements, data is added later on -->
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
         </div>
-
         <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
         <div class="pswp__ui pswp__ui--hidden">
-
             <div class="pswp__top-bar">
-
                 <!--  Controls are self-explanatory. Order can be changed. -->
-
                 <div class="pswp__counter"></div>
-
                 <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
                 <button class="pswp__button pswp__button--share" title="Share"></button>
-
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
+                {{-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> --}}
                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
                 <!-- element will get class pswp__preloader--active when preloader is running -->
                 <div class="pswp__preloader">
@@ -137,27 +147,19 @@ padding-bottom: 0px;
                     </div>
                 </div>
             </div>
-
             <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                 <div class="pswp__share-tooltip"></div>
             </div>
-
             <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
             </button>
-
             <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
             </button>
-
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
             </div>
-
         </div>
-
     </div>
-
 </div>
-
 
 
 
@@ -165,8 +167,8 @@ padding-bottom: 0px;
 
 @endsection
 @section('scripts')
-<script src="{{ asset('swipe/photoswipe.min.js') }}"></script>
-<script src="{{ asset('swipe/photoswipe-ui-default.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-gallery', {
      slidesPerView: 1,
@@ -190,43 +192,47 @@ padding-bottom: 0px;
     });
 </script>
 
-
 <script>
-var openPhotoSwipe = function() {
-var pswpElement = document.querySelectorAll('.pswp')[0];
+    'use strict';
 
-// build items array
-var items = [
-{
-src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
-w: 964,
-h: 1024
-},
-{
-src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
-w: 1024,
-h: 683
-}
-];
+    /* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
 
-// define options (if needed)
-var options = {
-// history & focus options are disabled on CodePen
-history: false,
-focus: false,
+    (function($){
 
-showAnimationDuration: 0,
-hideAnimationDuration: 0
+      // Init empty gallery array
+      var container = [];
 
-};
+      // Loop over gallery items and push it to the array
+      $('#gallery').find('figure').each(function(){
+        var $link = $(this).find('a'),
+            item = {
+              src: $link.attr('href'),
+              w: $link.data('width'),
+              h: $link.data('height'),
+              title: $link.data('caption')
+            };
+        container.push(item);
+      });
 
-var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-gallery.init();
-};
+      // Define click event on gallery item
+      $('a').click(function(event){
 
-openPhotoSwipe();
+        // Prevent location change
+        event.preventDefault();
 
-document.getElementsByClassName('swiper_img').onclick = openPhotoSwipe;
+        // Define object and gallery options
+        var $pswp = $('.pswp')[0],
+            options = {
+              index: $(this).parent('figure').index(),
+              bgOpacity: 0.85,
+              showHideOpacity: true
+            };
+
+        // Initialize PhotoSwipe
+        var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
+        gallery.init();
+      });
+
+    }(jQuery));
 </script>
-
 @endsection
