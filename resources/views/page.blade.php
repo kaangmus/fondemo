@@ -55,6 +55,8 @@
 
                 @if($page->id==1)
 
+                 <h2>Prints Highlights:</h2>
+
               <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
                 <div class="row">
              
@@ -72,7 +74,7 @@
                                      @foreach($gallery->gallery as $key => $media)
                                     <div class="swiper-slide gallery pswp__item">
                                         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                            <a class="gallery_link" href="{{ $media->getUrl('large') }}"
+                                            <a class="gallery_link" href="{{ $media->getUrl() }}"
                                                 data-caption="focus on nature<br><em class='text-muted'>© fon</em>" data-width="1920"
                                                 data-height="1280" itemprop="contentUrl">
                                                 <img src="{{ $media->getUrl() }}" itemprop="thumbnail" alt="Image description">
@@ -135,7 +137,7 @@
                 <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
                 <button class="pswp__button pswp__button--share" title="Share"></button>
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--buy" title="buy this photo">buy photo</button>
+                <button class="pswp__button pswp__button--buy" title="buy this photo">Buy Photo</button>
                 {{-- <button class="text-light buynow" title="buy this photo">Buy Photo</button> --}}
                 {{-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out">Buy Photo</button> --}}
                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
