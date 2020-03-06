@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <figure class="placeholder">
+    <figure class="image">
       <img src="{{asset('images/gbanner.jpg')}}" class="img-small">
    
     </figure>

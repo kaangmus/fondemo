@@ -1,24 +1,18 @@
 @extends('layouts.front')
+@push('styles')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
-<style>
-    .slider_gallery_container {
-    width: 770px;
-    margin: 0 auto;
-    }
-    .swiper-button-prev, .swiper-button-next {
-    top: 78%;
-    }
-</style>
+@endpush
+
+
+
 
 @section('content')
 
 
 <div class="banner">
     <div class="container-fluid">
-        <div class="row  justify-content-center sub_banner_title">
 
-        </div>
         @if($page->feature_image)
         <div class="sub_img">
             <figure class="graf-figure">
@@ -26,12 +20,12 @@
                     <div class="aspectRatioPlaceholder-fill"></div>
                     <div class="progressiveMedia lazyload" data-width="1275" data-height="850">
                         <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
-                        <img class=" progressiveMedia-image  lazyload"
-                    data-src="{{ $page->feature_image->getUrl() }}" alt="{{$page->title}}" />
+                        <img class=" progressiveMedia-image  lazyload" data-src="{{ $page->feature_image->getUrl() }}"
+                            alt="{{$page->title}}" />
                     </div>
                 </div>
             </figure>
-            
+
         </div>
         @endif
 
@@ -49,60 +43,62 @@
 
             </div>
 
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <h1 class="post_title">{{$page->title }}</h1>
                 {!!$page->content!!}
 
                 @if($page->id==1)
 
-                 <h2 class="text-center">Prints Highlights:</h2>
+                <h1 class="post_title text-center">Prints Highlights:</h1>
 
-              <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-                <div class="row">
-             
-                  
+                <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                    <div class="row">
 
-                   <div class="slider_gallery_container">
-                
-                    <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
-                        <div class="slider_gallery">
-                            <div class="swiper-container swiper-gallery">
-                
-                                <div class="swiper-wrapper">
-                
-                                   @foreach($gallerys as $key=>$gallery)
-                                     @foreach($gallery->gallery as $key => $media)
-                                    <div class="swiper-slide gallery pswp__item">
-                                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                                            <a class="gallery_link" href="{{ $media->getUrl() }}"
-                                                data-caption="focus on nature<br><em class='text-muted'>© fon</em>" data-width="1920"
-                                                data-height="1280" itemprop="contentUrl">
-                                                <img src="{{ $media->getUrl() }}" itemprop="thumbnail" alt="Image description">
-                                            </a>
-                                        </figure>
-                
+
+
+                        <div class="slider_gallery_container">
+
+                            <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                                <div class="slider_gallery">
+                                    <div class="swiper-container swiper-gallery">
+
+                                        <div class="swiper-wrapper">
+
+                                            @foreach($gallerys as $key=>$gallery)
+                                            @foreach($gallery->gallery as $key => $media)
+                                            <div class="swiper-slide gallery pswp__item">
+                                                <figure itemprop="associatedMedia" itemscope
+                                                    itemtype="http://schema.org/ImageObject">
+                                                    <a class="gallery_link" href="{{ $media->getUrl() }}"
+                                                        data-caption="Ecuador, January 2020<br><em class='text-muted'>© HAK</em>"
+                                                        data-width="1920" data-height="1280" itemprop="contentUrl">
+                                                        <img src="{{ $media->getUrl() }}" itemprop="thumbnail"
+                                                            alt="Image description">
+                                                    </a>
+                                                </figure>
+
+                                            </div>
+                                            @endforeach
+                                            @endforeach
+
+
+                                        </div>
                                     </div>
-                                    @endforeach
-                                    @endforeach
-                                    
-                
+
+                                    {{-- <div class="swiper-button-prev gallerynav"></div>
+                            <div class="swiper-button-next gallerynav"></div> --}}
                                 </div>
                             </div>
-                
-                            <div class="swiper-button-prev gallerynav"></div>
-                            <div class="swiper-button-next gallerynav"></div>
                         </div>
+
                     </div>
-                </div>
-                    
-                   </div> 
                 </div>
 
                 @endif
 
             </div>
-            <div class="col-md-4 ">
-                
+            <div class="col-md-5 ">
+
                 @include('post.sidebar')
             </div>
         </div>
@@ -165,21 +161,21 @@
 </div>
 
 @endsection
- @section('scripts')
- <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
+@section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
 <script src="{{ asset('js/stickysidebar.min.js') }}"></script>
 <script>
-    jQuery(document).ready(function($){
-    $('.sidebar').stickySidebar({
-    topSpacing: 110,
-    container: '.container',
-    sidebarInner: '.sidebar-inner',
-    callback: function() {
-    console.log('Sticky sidebar fired!');
-    }
-    });
-    });
+    // jQuery(document).ready(function($){
+    // $('.sidebar').stickySidebar({
+    // topSpacing: 110,
+    // container: '.container',
+    // sidebarInner: '.sidebar-inner',
+    // callback: function() {
+    // console.log('Sticky sidebar fired!');
+    // }
+    // });
+    // });
 
 </script>
 
@@ -192,9 +188,11 @@
 
       // Init empty gallery array
       var container = [];
+    
 
       // Loop over gallery items and push it to the array
       $('#gallery').find('figure').each(function(){
+          
         var $link = $(this).find('a'),
             item = {
               src: $link.attr('href'),
@@ -216,8 +214,16 @@
             options = {
               index: $(this).parent('figure').index(),
               bgOpacity: 0.85,
-              showHideOpacity: true
+              showHideOpacity: true,
+              maxSpreadZoom: 1,
+            getDoubleTapZoom: function (isMouseClick, item) {
+            return item.initialZoomLevel;
+            },
+            // UI options
+            zoomEl: false
+              
             };
+            
 
         // Initialize PhotoSwipe
         var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
@@ -240,10 +246,10 @@
       pagination: {
         el: '.swiper-pagination',
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
     });
 </script>
 @endsection

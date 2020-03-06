@@ -91,7 +91,7 @@
 
 @endsection
 @section('scripts')
-<script src="{{ asset('js/stickysidebar.min.js') }}"></script>
+{{-- <script src="{{ asset('js/stickysidebar.min.js') }}"></script>
 <script>
     jQuery(document).ready(function($){
     $('.sidebar').stickySidebar({
@@ -104,5 +104,5 @@
     });
     });
 
-        </script>
+        </script> --}}
 @endsection

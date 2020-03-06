@@ -1,7 +1,14 @@
 /**************** extend css start ****************/
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+#mainfont {
+    font-family: 'Audiowide',
+        cursive;
+    text-transform: uppercase;
+    line-height: 4;
+}
+
 h1,h2,h3,h4,h5,h6{
     font-family: Fjalla One, Impact, sans-serif;
 }
@@ -18,12 +25,7 @@ h6{
     text-transform: uppercase;
     
 }
-#mainfont{
-    font-family: 'Audiowide',
-    cursive;
-    text-transform: uppercase;
-    line-height: 4;
-}
+
 a#mainfont img {
     width: 95px;
 }
@@ -37,13 +39,18 @@ nav.navbar.navbar-expand-lg.fixed-top.myheader.is_desktop.sticky #mainfont .logo
     display: none;
 }
 body {
+     font-family: 'Lato',
+     'Helvetica',
+     sans-serif;
+     font-size:18px;
+  
   padding: 0;
   margin: 0;
   font-size: 14px;
 }
 p{
     font-family: 'Lato','Helvetica', sans-serif;
-    font-size:18px;
+    
     
 }
 .sliderfont{
@@ -1546,6 +1553,7 @@ a.ex_button:hover{
     font-size: 27px;
     display: block;
     color: #4F9DBD;
+    margin:10px;
 }
 .social_share a:hover {
     color: #ff643a;
@@ -1711,4 +1719,14 @@ section#exhibiton {
 }
 .latest_news.flex-column.flex-md-row p {
     margin: 0px;
+}
+.post_title {
+    text-transform: capitalize;
+}
+.pswp--zoom-allowed .pswp__img {
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: grab;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
 }

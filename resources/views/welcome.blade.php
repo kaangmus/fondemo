@@ -432,7 +432,7 @@
                           <div class="aspectRatioPlaceholder-fill"></div>
                           <div class="progressiveMedia lazyload" data-width="450" data-height="300">
                             <img class="progressiveMedia-thumbnail" src="{{asset('images/loadimg.jpg')}}" alt="" />
-                            <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow1.JPG')}}"
+                            <img class=" progressiveMedia-image lazyload" data-src="{{asset('slideshow/slideshow7.JPG')}}"
                               alt="" />
                           </div>
                         </div>
@@ -529,7 +529,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 
                   <h3>The Living Sea</h3>
                   <p></p>
-                  <p>National Museum of Natural History and Science , </p>
+                  <p>National Museum of Natural History and Science</p>
 
                   <p>Lisbon, September 2019</p>
 
@@ -651,11 +651,11 @@ $jsons=array_slice($json, -11, 11, true); @endphp
                 <div class="new_third_text">
 
                   <h3>SIPA</h3>
-                  <p></p>
-                  <p>School of International and Public Affairs, </p>
+                
+                  <p>School of International and Public Affairs </p>
 
                   <p>March 2019</p>
-                  <p></p>
+                  
 
                   </a>
                 </div>
@@ -1181,7 +1181,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
     // Or a function that should return %id%, for example:
     // id: function(url) { return 'parsed id'; }
     
-    src: '//www.youtube.com/embed/%id%?rel=0&autoplay=1' // URL that will be set as a source for iframe.
+    src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
     },
     }
     }
