@@ -55,7 +55,7 @@
 
                 @if($page->id==1)
 
-                 <h2>Prints Highlights:</h2>
+                 <h2 class="text-center">Prints Highlights:</h2>
 
               <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
                 <div class="row">
@@ -229,13 +229,11 @@
 <script>
     var swiper = new Swiper('.swiper-gallery', {
      slidesPerView: 1,
-    spaceBetween: 30,
-   
-    effect: 'fade',
+    effect: 'slide',
     loop: true,
  
     autoplay: {
-    delay: 2500,
+    delay: 3000,
     
     },
     

@@ -9,6 +9,7 @@
     <link rel="icon" href="{{ settings('favicon') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
@@ -32,7 +33,7 @@
     @include('partials.footer')
 
     <script src="{{ asset('js/jquery-1.12.1.min.js') }}"></script>
-    <script src="{{ asset('js/jquery-3.3.1.slim.min.js') }}"></script>
+    {{-- <script src="{{ asset('js/jquery-3.3.1.slim.min.js') }}"></script> --}}
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>

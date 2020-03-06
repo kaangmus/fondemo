@@ -17,7 +17,7 @@
           <div class="slider_btn">
             @if($slider->id==1)
             <a href="javascript:void(0)" id="video_link" class="button_main video_play_button"
-              vidUrl="/video/intro.mp4">{{$slider->btn_text}}</a> @else
+              vvidUrl="/video/intro.mp4">{{$slider->btn_text}}</a> @else
             <a class="button_main" href="{{$slider->btn_link}}">{{$slider->btn_text}}</a> @endif
           </div>
           @endif
@@ -34,7 +34,17 @@
     <div class="swiper-button-next swiper-button-next1"></div>
     <div class="swiper-button-prev swiper-button-prev1"></div>
   </div>
+
+ 
 </div>
+<div class="voverlay vvid-link" vidUrl="#"></div>
+<div class="vmain-vid-box">
+
+  <div class="vvideoWrapper">
+    <video autoplay="autoplay" class="vmyVideo" src="" frameborder="0" controls></video>
+  </div>
+</div>
+<img class="vclose vvid-link" vidUrl="#" src="images/cancel.svg">
 
 <!-- End Slider Area -->
 
@@ -949,14 +959,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
   </div>
 </section>
 
-<div class="overlay vid-link" vidUrl="#"></div>
-<div class="main-vid-box">
-
-  <div class="videoWrapper">
-    <video autoplay="autoplay" class="myVideo" src="" frameborder="0" controls></video>
-  </div>
-</div>
-<img class="close vid-link" vidUrl="#" src="images/cancel.svg"> {{-- instagram --}} @endsection @section('scripts')
+{{-- instagram --}} @endsection @section('scripts')
 
 <script src='https://fliphtml5.com/plugin/LightBox/js/fliphtml5-light-box-api-min.js'></script>
 <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
@@ -1132,7 +1135,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         loop: true,
         lazy: true,
         autoplay: {
-            delay: 3000,
+            delay: 5000,
         },
         pagination: {
             el: '.swiper-pagination',
@@ -1143,17 +1146,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             prevEl: '.swiper-button-prev1',
         },
     });
-    var mySwiper = document.querySelector('.slider_btn').swiper
-
-    $(".slider_btn").mouseenter(function() {
-        mySwiper.autoplay.stop();
-
-    });
-
-    $(".slider_btn").mouseleave(function() {
-        mySwiper.autoplay.start();
-
-    });
+    
 </script>
 <script>
   $(document).ready(function() {
@@ -1215,5 +1208,22 @@ nextEl: '.swiper-button-next2',
 prevEl: '.swiper-button-prev2',
 },
 });</script>
+<script>
+$('#video_link').click(function() {
+$('.vmyVideo').attr("src", $(this).attr("vvidUrl"));
+$('.voverlay').fadeIn(500, function(){
+$('.vmain-vid-box').fadeIn(500);
+$('.vclose').fadeIn(500);
+});
+});
+
+$('.vclose, .voverlay').click(function() {
+$('.voverlay').fadeOut(500);
+$('.vmyVideo').attr("src", $(this).attr("vvidUrl"));
+$('.vmain-vid-box').fadeOut(500);
+$('.vclose').fadeOut(500);
+});
+
+</script>
 
 @endsection

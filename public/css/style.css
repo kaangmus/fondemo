@@ -1545,13 +1545,12 @@ a.ex_button:hover{
 .social_share a {
     font-size: 27px;
     display: block;
+    color: #4F9DBD;
 }
 .social_share a:hover {
     color: #ff643a;
 }
-.social_share a {
-    color: #4F9DBD;
-}
+
 .who-we-social a i {
     font-size: 30px;
     color: #4F9DBD;
@@ -1706,4 +1705,10 @@ img.progressiveMedia-image.thumb.lazyloaded {
 }
 button.pswp__button.pswp__button--buy {
     background: #fff;
+}
+section#exhibiton {
+    padding-bottom: 0px;
+}
+.latest_news.flex-column.flex-md-row p {
+    margin: 0px;
 }
