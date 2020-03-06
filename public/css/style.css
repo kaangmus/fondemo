@@ -1731,3 +1731,6 @@ section#exhibiton {
     cursor: -webkit-grab;
     cursor: -moz-grab;
 }
+.whoheader p {
+    font-size: 14px;
+}
