@@ -1,4 +1,5 @@
 @extends('layouts.front')
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
 <style>
@@ -13,14 +14,16 @@
     }
 </style>
 
+
+
+
+
 @section('content')
 
 
 <div class="banner">
     <div class="container-fluid">
-        <div class="row  justify-content-center sub_banner_title">
 
-        </div>
         @if($page->feature_image)
         <div class="sub_img">
             <figure class="graf-figure">
@@ -51,13 +54,13 @@
 
             </div>
 
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <h1 class="post_title">{{$page->title }}</h1>
                 {!!$page->content!!}
 
                 @if($page->id==1)
 
-                <h2 class="text-center">Prints Highlights:</h2>
+                <h1 class="post_title text-center">Prints Highlights:</h1>
 
                 <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
                     <div class="row">
@@ -78,7 +81,7 @@
                                                 <figure itemprop="associatedMedia" itemscope
                                                     itemtype="http://schema.org/ImageObject">
                                                     <a class="gallery_link" href="{{ $media->getUrl() }}"
-                                                        data-caption="focus on nature<br><em class='text-muted'>© fon</em>"
+                                                        data-caption="Ecuador, January 2020<br><em class='text-muted'>© HAK</em>"
                                                         data-width="1920" data-height="1280" itemprop="contentUrl">
                                                         <img src="{{ $media->getUrl() }}" itemprop="thumbnail"
                                                             alt="Image description">
@@ -93,6 +96,8 @@
                                         </div>
                                     </div>
 
+                                    {{-- <div class="swiper-button-prev gallerynav"></div>
+                            <div class="swiper-button-next gallerynav"></div> --}}
                                 </div>
                             </div>
                         </div>
@@ -103,7 +108,7 @@
                 @endif
 
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-5 ">
 
                 @include('post.sidebar')
             </div>
@@ -139,7 +144,7 @@
                 <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
                 <button class="pswp__button pswp__button--share" title="Share"></button>
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--buy" title="buy this photo">BUY PRINT</button>
+                <button class="pswp__button pswp__button--buy" title="buy this photo">Buy Photo</button>
                 {{-- <button class="text-light buynow" title="buy this photo">Buy Photo</button> --}}
                 {{-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out">Buy Photo</button> --}}
                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
@@ -194,9 +199,11 @@
 
       // Init empty gallery array
       var container = [];
+    
 
       // Loop over gallery items and push it to the array
       $('#gallery').find('figure').each(function(){
+          
         var $link = $(this).find('a'),
             item = {
               src: $link.attr('href'),
@@ -218,8 +225,16 @@
             options = {
               index: $(this).parent('figure').index(),
               bgOpacity: 0.85,
-              showHideOpacity: true
+              showHideOpacity: true,
+              maxSpreadZoom: 1,
+            getDoubleTapZoom: function (isMouseClick, item) {
+            return item.initialZoomLevel;
+            },
+            // UI options
+            zoomEl: false
+              
             };
+            
 
         // Initialize PhotoSwipe
         var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
@@ -242,10 +257,10 @@
       pagination: {
         el: '.swiper-pagination',
       },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
     });
 </script>
 @endsection

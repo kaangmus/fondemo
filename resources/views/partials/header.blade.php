@@ -58,9 +58,9 @@
       <form class="form-inline">
          <button class="btn donate_btn" type="button">donate</button>
       </form>
-      <li class="nav-item social"> <a class="nav-link" target="_blank"  href="https://www.instagram.com/fonassociation/"><i class="fab fa-instagram"></i></a></li>
-      <li class="nav-item social"> <a class="nav-link" title="twitter" target="_blank" href="https://twitter.com/focusedonnature"><i class="fab fa-twitter-square"></i></a></li>
-      <li class="nav-item social"> <a class="nav-link" title="facebook"target="_blank"  href="https://www.facebook.com/fonassociation"><i class="fab fa-facebook-square"></i></a></li>
+      <li class="nav-item menusocial"> <a class="nav-link" target="_blank"  href="https://www.instagram.com/fonassociation/"><i class="fab fa-instagram"></i></a></li>
+      <li class="nav-item menusocial"> <a class="nav-link" title="twitter" target="_blank" href="https://twitter.com/focusedonnature"><i class="fab fa-twitter-square"></i></a></li>
+      <li class="nav-item menusocial"> <a class="nav-link" title="facebook"target="_blank"  href="https://www.facebook.com/fonassociation"><i class="fab fa-facebook-square"></i></a></li>
     </ul>
     
   </div>

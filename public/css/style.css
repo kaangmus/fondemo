@@ -454,7 +454,7 @@ nav.navbar.navbar-expand-lg.fixed-top.myheader a,nav.navbar.navbar-expand-lg.fix
 .header_top ul li {
     padding: 20px 30px;
 }
-li.nav-item.social {
+li.nav-item.menusocial {
     padding: 0px;
 }
 nav.navbar.navbar-expand-lg.fixed-top.myheader .dropdown-menu a {
@@ -1544,7 +1544,7 @@ a.ex_button:hover{
 .whoheader {
     margin: 20px 0px;
 }
-.social a {
+.menusocial a {
     font-size: 25px;
     margin-right: 10px;
     color: #000;
@@ -1733,4 +1733,7 @@ section#exhibiton {
 }
 .whoheader p {
     font-size: 14px;
+}
+li.nav-item.menusocial a i {
+    line-height: 4;
 }
