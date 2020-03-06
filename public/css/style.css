@@ -1737,3 +1737,6 @@ section#exhibiton {
 li.nav-item.menusocial a i {
     line-height: 4;
 }
+form.form-inline {
+    font-size: 1;
+}
