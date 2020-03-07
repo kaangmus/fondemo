@@ -144,7 +144,7 @@
                 <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
                 <button class="pswp__button pswp__button--share" title="Share"></button>
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--buy" title="buy this photo">Buy Photo</button>
+                <button class="pswp__button pswp__button--buy" title="buy this photo">BUY PRINT</button>
                 {{-- <button class="text-light buynow" title="buy this photo">Buy Photo</button> --}}
                 {{-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out">Buy Photo</button> --}}
                 <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
