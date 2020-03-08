@@ -18,8 +18,8 @@
           
           <div class="dropdown_list">
            <a class="dropdown-item" href="/pages/2">OUR MISSION</a>
-          <a class="dropdown-item" href="/#team">WHO WE ARE</a>
-           <a class="dropdown-item" href="/#team">ADVISERS</a>
+          <a class="dropdown-item" href="/#whoweare">WHO WE ARE</a>
+           <a class="dropdown-item" href="/#advisers">ADVISERS</a>
            <a class="dropdown-item" href="/#grants_homeid">GRANTS</a>
            <a class="dropdown-item" href="/#exhibiton">EXHIBITIONS</a>
           </div>

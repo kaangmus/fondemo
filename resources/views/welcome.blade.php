@@ -60,7 +60,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h4 class="text-center">Emergency funds</h4> @foreach ($fundposts as $key=>$fundpost)
+        <h4 class="text-center text-light">Emergency funds</h4> @foreach ($fundposts as $key=>$fundpost)
         <div class="latest_news  flex-column flex-md-row">
           <a href="{{$fundpost->link}}" target="_blank">
 
@@ -90,7 +90,7 @@
         </div>
         @endforeach
         <h4 class="p-1"></h4>
-        <h4 class="text-center">Focused Articles</h4> @foreach ($faposts as $key=>$fapost)
+        <h4 class="text-center text-light">Focused Articles</h4> @foreach ($faposts as $key=>$fapost)
         <div class="latest_news  flex-column flex-md-row">
           <a href="@if($fapost->link){{$fapost->link}}@else/post/{{$fapost->id}}@endif"
             @if($fapost->link)target="_blank"@endif>
@@ -189,6 +189,7 @@
       <!-- row -->
     </div>
 </section>
+
 <!-- MEMBER -->
 
 {{-- who we are
@@ -248,41 +249,32 @@
 </section>
 {{-- end who we are --}} 
 
-<section class="who_we_are">
-  <h2 class="maincolor text-center">WHO We Are</h2>
+<section id="whoweare" class="who_we_are">
+  <h2 class="maincolor text-center btton50">WHO We Are</h2>
   <div class="container">
     
       <div class="flex_container">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+       @foreach($whoweares as $key=>$whoweare)
+        <div>@if($whoweare->photp)
+        <img src="{{$whoweare->photp->getUrl()}}" alt="{{$whoweare->name}}" class="who_photo"> @endif</div>
+       @endforeach
       </div>
     
   </div>
   </section>
-<section class="adviser bg_black">
-  <h2 class="maincolor text-center">Advisers</h2>
+<section id="advisers" class="adviser bg_black ">
+  <h2 class="maincolor text-center btton50">Advisers</h2>
   <div class="container">
     
       <div class="flex_container adviser">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        @foreach($advisors as $key=>$advisor)
+          <div>@if($advisor->photp)
+          <img src="{{$advisor->photp->getUrl()}}" alt="{{$advisor->name}}" class="ad_photo"> @endif</div>
+        @endforeach
       </div>
     
   </div>
-  </section>
+</section>
 
 
 {{-- slide showcontent --}}

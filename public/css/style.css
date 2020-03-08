@@ -691,10 +691,10 @@ a.scrool_down {
 a.news_paragraph:hover,
 .new_third_text a:hover {
     text-decoration: none;
-    color: #969696 !important;
+    
 }
 .new_third_text a{
-    color: #000;
+    color: #fff;
 }
 .post-thumb.ts-resize {
     margin-bottom: 15px;
@@ -713,7 +713,6 @@ a.news_paragraph:hover,
     text-align: left;
     overflow: hidden;
     position: relative;
-    background: #fff;
     padding: 10px;
     min-height: 125px;
 }
@@ -1747,23 +1746,23 @@ form.form-inline {
 }
 .flex_container>div {
     width: 100px;
+    height: 100px;
     margin: 10px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
 }
 .flex_container>div {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
-    border: 1px solid;
     border-radius: 50%;
 }
-.flex_container.adviser>div {
-    border: 1px solid #fff;
+.flex_container div>img {
+    border-radius: 50%;
 }
 
 
