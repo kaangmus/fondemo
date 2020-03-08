@@ -254,10 +254,21 @@
   <div class="container">
     
       <div class="flex_container">
-       @foreach($whoweares as $key=>$whoweare)
-        <div>@if($whoweare->photp)
-        <img src="{{$whoweare->photp->getUrl()}}" alt="{{$whoweare->name}}" class="who_photo"> @endif</div>
-       @endforeach
+          @foreach($whoweares as $key=>$whoweare)
+            <div>
+              @if($whoweare->photp)
+                <figure class="graf-figure">
+                  <div class="aspectRatioPlaceholder">
+                    <div class="aspectRatioPlaceholder-fill"></div>
+                    <div class="progressiveMedia lazyload" data-width="100" data-height="100">
+                      <img class="progressiveMedia-thumbnail" src="{{$whoweare->photp->getUrl()}}" alt="{{$whoweare->name}}" />
+                      <img class="progressiveMedia-image lazyload" data-src="{{$whoweare->photp->getUrl()}}" alt="{{$whoweare->name}}" />
+                    </div>
+                  </div>
+                </figure>
+              @endif
+            </div>
+          @endforeach
       </div>
     
   </div>
@@ -268,10 +279,21 @@
     
       <div class="flex_container adviser">
         @foreach($advisors as $key=>$advisor)
-          <div>@if($advisor->photp)
-          <img src="{{$advisor->photp->getUrl()}}" alt="{{$advisor->name}}" class="ad_photo"> @endif</div>
-        @endforeach
-      </div>
+          <div>
+            @if($advisor->photp)
+              <figure class="graf-figure">
+                <div class="aspectRatioPlaceholder">
+                  <div class="aspectRatioPlaceholder-fill"></div>
+                  <div class="progressiveMedia lazyload" data-width="100" data-height="100">
+                    <img class="progressiveMedia-thumbnail" src="{{$advisor->photp->getUrl()}}" alt="{{$advisor->name}}" />
+                    <img class="progressiveMedia-image lazyload" data-src="{{$advisor->photp->getUrl()}}" alt="{{$advisor->name}}" />
+                  </div>
+                </div>
+              </figure>
+             @endif
+            </div>
+             @endforeach
+         </div>
     
   </div>
 </section>
