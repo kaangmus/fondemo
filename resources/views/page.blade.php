@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
 <style>
     .slider_gallery_container {
-        width: 770px;
+        width: 100%;
         margin: 0 auto;
     }
 

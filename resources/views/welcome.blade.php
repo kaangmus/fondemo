@@ -871,7 +871,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
   <!-- SnapWidget -->
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <div class="feature-gallery">
           <a href='https://www.instagram.com/p/B9JrodhKItZ/' target="-blank">
             <figure class="graf-figure">
@@ -888,7 +888,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         </div>
       </div>
       <!--/feature-gallery--->
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <div class="feature-gallery">
           <a href='https://www.instagram.com/p/B9C2ZFiKUOw/' target="-blank">
             <figure class="graf-figure">
@@ -906,7 +906,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         </div>
       </div>
       <!--/feature-gallery--->
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <div class="feature-gallery">
           <a href='https://www.instagram.com/p/B89qmlvqTVU/' target="-blank">
             <figure class="graf-figure">
@@ -923,7 +923,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         </div>
       </div>
       <!--/feature-gallery--->
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <div class="feature-gallery">
           <a href='https://www.instagram.com/p/B8zeMtGqJAK/' target="-blank">
             <figure class="graf-figure">
@@ -959,7 +959,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         </div>
       </div>
       <!--/feature-gallery--->
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <div class="feature-gallery">
           <a href='https://www.instagram.com/p/B8oDJfWqC6X/' target="-blank">
             <figure class="graf-figure">
@@ -976,7 +976,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         </div>
       </div>
       <!--/feature-gallery--->
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3 col-xs-3">
         <div class="feature-gallery">
           <a href='https://www.instagram.com/p/B8cV18IKUwu/' target="-blank">
             <figure class="graf-figure">
@@ -993,7 +993,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         </div>
       </div>
       <!--/feature-gallery--->
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <div class="feature-gallery">
           <a href='https://www.instagram.com/p/B8PSZcVqB_R/' target="-blank">
             <figure class="graf-figure">
