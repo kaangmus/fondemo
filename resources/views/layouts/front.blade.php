@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('nivo-slider/css/nivo-slider.css')}}" >
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
@@ -32,8 +33,10 @@
 
     @include('partials.footer')
 
-    <script src="{{ asset('js/jquery-1.12.1.min.js') }}"></script>
+  
     {{-- <script src="{{ asset('js/jquery-3.3.1.slim.min.js') }}"></script> --}}
+    <script src="{{ asset('js/jquery-1.12.1.min.js') }}"></script>
+    <script src="{{ asset('js/video.popup.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>

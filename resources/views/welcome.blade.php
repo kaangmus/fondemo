@@ -1,8 +1,12 @@
 @extends('layouts.front') @section('content')
+
+  
 <!-- Start Slider Area -->
 <div id="slidercontainer" class="slider-area">
+
   <div class="bannerswiper">
     <div class="swiper-wrapper">
+    
       @foreach($sliders as $key => $slider)
       <div class="swiper-slide">
         <img srcset="{{$slider->image->getUrl('thumb') }}" src="{{ asset($slider->image->getUrl('large')) }}"
@@ -17,7 +21,9 @@
           <div class="slider_btn">
             @if($slider->id==1)
             <a href="javascript:void(0)" id="video_link" class="button_main video_play_button"
-              vvidUrl="/video/intro.mp4">{{$slider->btn_text}}</a> @else
+              vvidUrl="/video/intro.mp4">{{$slider->btn_text}}</a>
+           
+             @else 
             <a class="button_main" href="{{$slider->btn_link}}">{{$slider->btn_text}}</a> @endif
           </div>
           @endif
@@ -46,9 +52,11 @@
 </div>
 <img class="vclose vvid-link" vidUrl="#" src="images/cancel.svg">
 
+
+
 <!-- End Slider Area -->
 
-<section id="blog">
+<section id="blog" class="bg_black">
   <div class="container">
     <div class="row">
       <div class="col-md-4">
@@ -183,7 +191,7 @@
 </section>
 <!-- MEMBER -->
 
-{{-- who we are --}}
+{{-- who we are
 <section id="team" class="member bg_black text-white">
   <div class="container ">
     <div class="row">
@@ -239,6 +247,43 @@
   </div>
 </section>
 {{-- end who we are --}} 
+
+<section class="who_we_are">
+  <h2 class="maincolor text-center">WHO We Are</h2>
+  <div class="container">
+    
+      <div class="flex_container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    
+  </div>
+  </section>
+<section class="adviser bg_black">
+  <h2 class="maincolor text-center">Advisers</h2>
+  <div class="container">
+    
+      <div class="flex_container adviser">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    
+  </div>
+  </section>
+
 
 {{-- slide showcontent --}}
 <section id="slideshows" class="digital_section">
@@ -494,7 +539,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
         <div class="swiper-button-prev swiper-button-prev2"></div>
         <div class="swiper-button-next swiper-button-next2"></div>
       </div>
-      <a class="button_main" href="#">View all Brochures</a>
+      <a class="button_main" href="javascript:void(0)">View all Brochures</a>
     </div>
   </div>
 
@@ -961,6 +1006,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 
 {{-- instagram --}} @endsection @section('scripts')
 
+
 <script src='https://fliphtml5.com/plugin/LightBox/js/fliphtml5-light-box-api-min.js'></script>
 <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script>
@@ -1075,7 +1121,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
     });
 </script>
 
-<script>
+{{-- <script>
   function openCity(evt, cityName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -1092,7 +1138,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
-</script>
+</script> --}}
 <script>
 
   var swiper = new Swiper('.swiper-slideshow', {
@@ -1131,12 +1177,17 @@ $jsons=array_slice($json, -11, 11, true); @endphp
 </script>
 <script>
   var swiper = new Swiper('.bannerswiper', {
-
+        slidesPerView:1,
         loop: true,
         lazy: true,
-        autoplay: {
-            delay: 5000,
-        },
+        preventClicks: false,
+        paginationClickable: false,
+       
+        loopedSlides: 50,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -1145,6 +1196,7 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             nextEl: '.swiper-button-next1',
             prevEl: '.swiper-button-prev1',
         },
+        
     });
     
 </script>
@@ -1209,7 +1261,7 @@ prevEl: '.swiper-button-prev2',
 },
 });</script>
 <script>
-$('#video_link').click(function() {
+  $('.video_play_button').click(function() {
 $('.vmyVideo').attr("src", $(this).attr("vvidUrl"));
 $('.voverlay').fadeIn(500, function(){
 $('.vmain-vid-box').fadeIn(500);
@@ -1225,5 +1277,7 @@ $('.vclose').fadeOut(500);
 });
 
 </script>
+
+
 
 @endsection

@@ -8,7 +8,7 @@
         var defaults = {
             backgroundColor: "#000000",
             opener: "video",
-            maxweight: "640",
+            // maxweight: "640",
             pausevideo: false,
             idvideo: ""
         };

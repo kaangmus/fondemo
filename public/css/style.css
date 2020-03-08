@@ -686,7 +686,7 @@ a.scrool_down {
     float: left;
 }
 .latest_news.flex-column.flex-md-row a {
-    color: #000;
+    color: #fff;
 }
 a.news_paragraph:hover,
 .new_third_text a:hover {
@@ -715,7 +715,7 @@ a.news_paragraph:hover,
     position: relative;
     background: #fff;
     padding: 10px;
-    min-height: 105px;
+    min-height: 125px;
 }
 img{
     max-width: 100%;
@@ -1739,4 +1739,108 @@ li.nav-item.menusocial a i {
 }
 form.form-inline {
     font-size: 1;
+}
+
+.flex_container {
+    display: flex;
+    justify-content: center;
+}
+.flex_container>div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+.flex_container>div {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+.flex_container.adviser>div {
+    border: 1px solid #fff;
+}
+
+
+#closer_videopopup {
+    position: absolute;
+    display: table-cell;
+    right: 2%;
+    top: 2%;
+    font-size: 32px;
+    text-align: center;
+    vertical-align: middle;
+    padding: auto;
+    cursor: default;
+    background: none;
+    border: none;
+    color: #ffffff;
+
+
+    z-index: 100004;
+}
+
+#opct {
+    position: fixed;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.90;
+    opacity: 0.9;
+}
+
+#videCont {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin: auto;
+    max-width: 720px;
+    height: 0;
+    height: auto !important;
+}
+
+#yt_video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+}
+
+video {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    opacity: 1 !important;
+
+}
+
+#video1 {
+    cursor: pointer;
+    cursor: hand;
+}
+.swiper-slide.swiper-slide-duplicate.swiper-slide-active {
+    z-index: 999999999;
 }
