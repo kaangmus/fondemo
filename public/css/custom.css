@@ -99,8 +99,7 @@ table.dataTable thead .sorting_desc {
     color: #fff;
     position: relative;
     text-align: center;
-    min-height: 850px;
-    width: 100%;
+    
 }
 
 
@@ -1252,10 +1251,18 @@ Main Components
 .cd-horizontal-timeline .events-content p {
     line-height: 1.6;
 }
+@media only screen and (min-width: 991px) {
+    .toped {
+        left: 1% !Important;
+    }
+}
 
 @media only screen and (min-width: 768px) {
     .cd-horizontal-timeline .events-content h2 {
         font-size: 7rem;
+    }
+    .toped{
+        left:1%!Important;
     }
 
     .cd-horizontal-timeline .events-content em {

@@ -1163,6 +1163,29 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             nextEl: '.swiper-button-next3',
             prevEl: '.swiper-button-prev3',
         },
+        breakpoints: {
+          375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+            425: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+        640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        },
+        768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        },
+        1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        },
+        }
+      
         
 
     });
@@ -1175,6 +1198,29 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             nextEl: '.swiper-button-next4',
             prevEl: '.swiper-button-prev4',
         },
+        breakpoints: {
+          375: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          },
+          425: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          },
+        640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        },
+        768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        },
+        1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        },
+        }
+        
 
     });
 </script>
@@ -1186,22 +1232,45 @@ $jsons=array_slice($json, -11, 11, true); @endphp
             nextEl: '.swiper-button-next5',
             prevEl: '.swiper-button-prev5',
         },
+        breakpoints: {
+          375: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+            425: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+        640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        },
+        768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        },
+        1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        },
+        }
+       
 
     });
 </script>
 <script>
   var swiper = new Swiper('.bannerswiper', {
-        slidesPerView:1,
+    slidesPerView: 1,
+    spaceBetween: 30,
         loop: true,
         lazy: true,
         preventClicks: false,
         paginationClickable: false,
-       
-        loopedSlides: 50,
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction: false,
-        // },
+
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+         },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

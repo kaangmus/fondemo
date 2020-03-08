@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap&subset=latin-ext');
+ html,
+ body {
+     position: relative;
+     height: 100%;
+ }
 #mainfont {
     font-family: 'Audiowide',
         cursive;
@@ -1848,3 +1853,16 @@ video {
 .latest_news.single.flex-column.flex-md-row a {
     color: #000;
 }
+.bannerswiper{
+     width: 100%;
+     height: 100%;
+     margin-left: auto;
+     margin-right: auto;
+         position: relative;
+         overflow: hidden;
+         list-style: none;
+         padding: 0;
+         z-index: 1;
+}
+ .swiper-slide img {
+ }
