@@ -41,9 +41,7 @@
     <div class="swiper-button-prev swiper-button-prev1"></div>
   </div>
 
- 
-</div>
-<div class="voverlay vvid-link" vidUrl="#"></div>
+ <div class="voverlay vvid-link" vidUrl="#"></div>
 <div class="vmain-vid-box">
 
   <div class="vvideoWrapper">
@@ -51,6 +49,7 @@
   </div>
 </div>
 <img class="vclose vvid-link" vidUrl="#" src="images/cancel.svg">
+</div>
 
 
 
